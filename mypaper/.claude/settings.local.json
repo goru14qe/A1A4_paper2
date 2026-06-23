@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdflatex -interaction=nonstopmode template.tex)",
+      "Bash(updmap-sys --enable Map=psfonts.map)",
+      "Bash(updmap --enable Map=psfonts.map)",
+      "Bash(lualatex -interaction=nonstopmode template.tex)"
+    ]
+  }
+}

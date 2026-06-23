@@ -1,1 +1,9 @@
-.plots
+# Ignore all directories
+*
+
+# Unignore src
+!.gitignore
+!mypaper/
+!mypaper/**
+!Python_files/
+!Python_files/**
