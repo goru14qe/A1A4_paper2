@@ -533,8 +533,8 @@ at $\mathrm{NRMSE}=11.7\%$. The aperiodic arrangement produces a spatially disor
 field with a comparatively small dynamic range, so a point-by-point metric such as
 $R^2$ becomes stringent and is highly sensitive to the exact bar placement; the overall
 magnitude and the jet/wake distribution are nonetheless captured to within
-$\approx 12\%$. This contrast---reproducible, low-error fields for the periodic
-packings versus a looser, placement-sensitive match for the irregular one---already
+$\approx 12\%$. This contrast--reproducible, low-error fields for the periodic
+packings versus a looser, placement-sensitive match for the irregular one--already
 foreshadows the flow-locking analysis of Sec.~\ref{sec:locking}.
 
 \begin{table}[h]
@@ -586,10 +586,47 @@ flanking the central jet.}
 \subsection{Layer-Resolved Development}
 \label{sec:validation:layers}
 
-% TODO (user supplying layer images): in-slit layer fields/profiles L13-L17,
-% sim vs PIV; per-layer error; development of the locked flow layer by layer.
-\todo[inline]{Layer-resolved validation: write once layer images are added (in-slit
-fields/profiles L13-L17, sim vs PIV, per-layer error).}
+Beyond the surface fields, the PIV data resolve the flow within the individual layers,
+allowing the simulation to be validated layer by layer in the developed region. The
+complete dataset comprises in-slit velocity fields and profiles for every measured layer
+(L13-L17) of each topology, Reynolds number and measurement position; reproducing all of
+these contour sets here would be neither practical nor informative, as the layers are
+mutually similar by virtue of the flow locking established in Sec.~\ref{sec:locking}. We
+therefore present a single representative case--the $30^\circ$ packing at $Re_P = 300$,
+Pos\,3, which shows the closest agreement of the dataset ($R^2 = 0.93$, $\mathrm{NRMSE} =
+5.1\%$; Table~\ref{tab:validation})--and note that it is typical of the regular-packing
+comparisons.
+
+Figure~\ref{fig:validation_layers} compares the simulated and measured fields in the top
+three layers. The velocity-magnitude contours and in-plane streamlines
+(Fig.~\ref{fig:validation_layers}a) reproduce the measured jet-recirculation structure of
+each layer, and the absolute-difference maps remain small and unbiased across the plane,
+the residuals concentrating in thin shear layers at the jet edges where the steepest
+gradients amplify any sub-pixel misregistration between simulation and PIV. The
+quantitative line profiles (Fig.~\ref{fig:validation_layers}b), taken at four streamwise
+heights within the $10\,\mathrm{mm}$ layer, show the simulated profiles of layers L15, L16
+and L17 collapsing onto one another and lying within the experimental $\pm\sigma$ band over
+almost the entire span. This figure therefore makes two points at once: the simulation
+faithfully reproduces the PIV-measured layer flow, and the three layers are mutually
+interchangeable--a direct, measurement-anchored manifestation of the flow locking
+quantified in Sec.~\ref{sec:locking}.
+
+\begin{figure}[h]
+\centering
+\subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
+\includegraphics[width=0.92\linewidth]{30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png}}\\
+\subfloat[velocity-magnitude profiles at four heights: sim.\ layers L15-L17 vs.\ PIV mean $\pm\sigma$]{%
+\includegraphics[width=0.92\linewidth]{30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png}}
+\caption{Representative layer-resolved validation for the $30^\circ$ packing at
+$Re_P = 300$, Pos\,3 (layers L15-L17). (a)~Time-mean velocity-magnitude contours with
+in-plane streamlines, experiment (left) versus simulation (right); (b)~velocity-magnitude
+profiles at $2$, $4$, $6$ and $8\,\mathrm{mm}$ from the lower layer face, comparing the
+three simulated layers (coloured) with the PIV mean and its $\pm\sigma$ band (blue). The
+simulated layers reproduce the measured flow and collapse onto one another, jointly
+confirming validation accuracy and flow locking. Full per-layer contour sets for all
+cases are provided as supplementary material.}
+\label{fig:validation_layers}
+\end{figure}
 
 %% ============================================================
 \section{Flow Locking Framework}
@@ -605,13 +642,25 @@ the irregular packing, and weakens as the Reynolds number rises.
 \subsection{Physical Interpretation: Twist-and-Repeat Flow Locking}
 \label{sec:locking:concept}
 
-% The packing has a twist-and-repeat rule: rotate by theta and shift up by one layer
-% -> same structure (like a screw thread / spiral staircase).
-% Flow locking means the flow obeys the same rule as the geometry.
-% The irregular packing has no twist-and-repeat rule -> cannot lock -> clean control.
-% Hypotheses: H1 regular packings lock with period N; H2 irregular does not lock;
-% H3 locking weakens as Re_p rises toward unsteady flow.
-\todo[inline]{Write §4.1 physical concept in plain language}
+The regular packings obey a simple geometric construction rule: rotating the bed by the
+twist angle $\theta$ and shifting it up by one layer maps the structure onto itself.
+The slit pattern therefore advances like a screw thread, returning to its starting
+orientation every $N = 180^\circ/\theta$ layers ($N=6$ for $\theta=30^\circ$, $N=9$ for
+$\theta=40^\circ$; Sec.~\ref{sec:geometry:topology}). We define \emph{flow locking} as
+the situation in which the time-mean flow obeys the same rule as the geometry: once the
+mean field of a layer is de-rotated by $-n\theta$ back into a common reference frame
+(Sec.~\ref{sec:geometry:coords}), every layer collapses onto a single, repeating
+pore-scale pattern that simply spirals upward with the slits. A locked flow is thus
+fully described by the field within a single layer period.
+
+The irregular packing is built without a twist-and-repeat rule and so provides a clean
+control: lacking any geometric period, its de-rotated layers have no reason to coincide,
+and any apparent repetition would be coincidental. This contrast lets us test three
+hypotheses. (H1)~The regular packings lock with their geometric period $N$. (H2)~The
+irregular packing does not lock. (H3)~Locking weakens as the pore Reynolds number $Re_P$
+rises and the flow approaches the unsteady regime. The remainder of this section turns
+the qualitative ``repeats across layers'' observation of~\citet{velten2026} into the
+measured order parameter $L(n)$ and evaluates these three hypotheses in turn.
 
 \subsection{Locking Order Parameter \texorpdfstring{$L(n)$}{L(n)}}
 \label{sec:locking:Ln}
@@ -627,54 +676,259 @@ where $\tilde{\bm{u}}_n$ is the time-mean in-plane velocity field of layer $n$,
 de-rotated by $-n\theta$ to a common reference frame, and $N = 180^\circ/\theta$ is
 the layer period ($N=6$ for $\theta=30^\circ$; $N=9$ for $\theta=40^\circ$).
 $L = 1$ means the de-rotated layers are identical (perfectly locked); $L \to 0$ means
-no repeat. For the irregular packing (no period $N$) adjacent layers ($n \to n+1$)
-are compared instead.
-% Also: development length how many layers from inlet before L(n) plateaus.
-\todo[inline]{Write §4.2 construction, pair-mask note, development length}
+no repeat. For the irregular packing, which has no period $N$, adjacent layers
+($n \to n+1$) are compared instead, so that any short-range similarity is given the best
+possible chance of registering.
+
+In practice each de-rotated layer field is first interpolated onto a common
+$(x',z')$ grid spanning the measurement plane, with $z'$ taken layer-local (measured
+from the lower face of each $10\,\mathrm{mm}$ slab) so that the layers overlay. Because
+the de-rotation maps the irregular footprint of each layer's fluid region slightly
+differently, the grid coverage is not identical between layers; $L(n)$ is therefore
+evaluated on a \emph{pairwise} mask containing only the grid points that are fluid in
+\emph{both} layers being compared. Imposing a single mask common to all layers would
+discard most of the plane and is deliberately avoided. The stacked in-plane components
+$(\tilde u_{x'}, \tilde u_{z'})$ enter the cosine measure together, so $L$ rewards both
+the correct flow magnitude and the correct in-plane direction.
+
+The analysis is restricted to the developed window L13-L17 (the third geometric period
+from the inlet), where the layer-to-layer matrix is already flat (Sec.~\ref{sec:locking:topologies});
+the mean flow has therefore completed any inlet development and reached its locked state
+well before this depth.
 
 \subsection{Antisymmetry Index \texorpdfstring{$A(n)$}{A(n)}}
 \label{sec:locking:An}
 
-% A(n): cosine similarity of de-rotated field with its point-reflection about axis.
-% A -> 1 (or -1 depending on sign convention) for antisymmetric locked state.
-% Result: A moderate (~0.42-0.46) lead with L, treat A cautiously.
-% Possibly need to revisit axis definition.
-\todo[inline]{Write §4.3 antisymmetry index; revisit A definition if needed}
+A locked state should also inherit the point symmetry of the slit arrangement. This can
+be probed with an antisymmetry index $A(n)$, the cosine similarity between the de-rotated
+field and its reflection about the column axis (transverse component reversed, streamwise
+component mirrored). For the regular packings $A$ is only moderate ($A \approx 0.4$-$0.5$):
+the cosine measure is dominated by the strong, near-symmetric streamwise jet, so a single
+in-plane plane samples the axial symmetry only indirectly. Because the point symmetry is
+already established directly and far more convincingly by the Pos\,3$\leftrightarrow$Pos\,5
+mirror agreement (Sec.~\ref{sec:numerics:symmetry}), we lead the locking argument with
+$L(n)$ and retain $A(n)$ only as a minor supporting diagnostic.
 
 \subsection{Locking Across Topologies}
 \label{sec:locking:topologies}
 
-% 30 deg: L ~ 1.000 (off-diagonal matrix), de-rotated layers collapse headline.
-% 40 deg: L ~ 0.99, still strong locking.
-% Irregular: L = 0.10-0.68, erratic confirms geometric periodicity is required.
-% Figure: Fig. 6 (visual de-rotated layer fields collapsing for 30/40, not irregular).
-% Figure: Fig. 7a (L heatmap + L vs mean for all three topologies).
-Figure~\ref{fig:Ln} shows the layer-to-layer locking matrix and $L(n)$ versus layer
-for the three topologies.
-For the 30\textdegree{} packing all off-diagonal entries are $L \approx 1.000$,
-confirming near-perfect locking across the developed window (L13-L17).
-The 40\textdegree{} packing locks at $L \approx 0.99$, still strongly locked but
-slightly reduced owing to the larger per-layer twist angle.
-The irregular packing yields $L = 0.10$-$0.68$ with no systematic pattern,
-confirming that the geometric twist-and-repeat rule is a necessary condition for
-flow locking.
-\todo[inline]{Write §4.4 quantify L for each topology; add development curve}
+The locking visual of Fig.~\ref{fig:lockvis} makes the effect immediately apparent. It
+shows the de-rotated velocity-magnitude fields and in-plane streamlines of all fifteen
+layers of the $30^\circ$ packing at $Re_P=100$ and $Re_P=300$. Once each layer is rotated
+back into the common frame, the layers are nearly indistinguishable: the same central
+high-velocity jet, the same pair of flanking slit jets, and the same recirculation pockets
+recur in every layer, simply translated upward with the spiralling slits. The pattern
+holds at both Reynolds numbers, confirming the locked state qualitatively; the slightly
+greater layer-to-layer variation visible at $Re_P=300$ anticipates the Reynolds-number
+weakening quantified in Sec.~\ref{sec:locking:reynolds}.
+
+\begin{figure}[h]
+\centering
+\subfloat[$Re_P = 100$]{\includegraphics[width=\linewidth]{30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png}}\\
+\subfloat[$Re_P = 300$]{\includegraphics[width=\linewidth]{30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png}}
+\caption{Flow-locking visual for the $30^\circ$ packing at Pos\,3: time-mean
+velocity-magnitude fields with in-plane streamlines for all fifteen layers L03-L17, each
+de-rotated by $-n\theta$ into the common reference frame, at (a)~$Re_P = 100$ and
+(b)~$Re_P = 300$. After de-rotation the layers collapse onto a single repeating pore-scale
+pattern--the central jet, flanking slit jets and recirculation pockets recur in every
+layer--demonstrating that the mean flow follows the geometric twist-and-repeat rule at
+both Reynolds numbers.}
+\label{fig:lockvis}
+\end{figure}
+
+This impression is quantified in Fig.~\ref{fig:Ln}, which shows the layer-to-layer
+locking matrix $L$ and the per-layer locking $L(n)$ against the across-layer mean for the
+three topologies.
+For the $30^\circ$ packing every off-diagonal entry is $L \approx 1.000$ (lowest
+$\approx 0.997$) and $L(n) \approx 0.998$ for all layers, confirming near-perfect locking
+across the developed window L13-L17 (Fig.~\ref{fig:Ln}a). This is corroborated by the
+per-layer mean speed, which varies by only a coefficient of variation of $1.4\%$ across
+the fifteen layers at Pos\,3 ($1.8\%$ at Pos\,1)--the layers are statistically
+interchangeable.
+The $40^\circ$ packing locks almost as strongly, with off-diagonal $L \approx 0.99$
+(range $0.987$-$1.000$) and $L(n) \ge 0.99$ (Fig.~\ref{fig:Ln}b); the slight
+reduction is consistent with the larger per-layer twist angle, which redistributes more
+momentum across the plane between successive layers.
+The irregular packing behaves completely differently (Fig.~\ref{fig:Ln}c): off-diagonal
+entries scatter erratically between $L = 0.10$ and $0.68$ with no systematic structure,
+and $L(n)$ against the mean ranges from $0.66$ to $0.83$ without converging. Even though
+adjacent rather than period-$N$ layers are compared--the most generous possible
+test--no repeating pattern emerges.
+The contrast confirms hypotheses~H1 and~H2: the geometric twist-and-repeat rule is a
+necessary condition for flow locking, and removing it abolishes the layer-periodic
+organisation entirely. The irregular case thus acts as a clean negative control,
+establishing that the near-unity $L$ of the regular packings reflects genuine
+flow-geometry locking rather than a trivial artefact of the de-rotation procedure.
+
+\begin{figure}[h]
+\centering
+\subfloat[$30^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{fig7a_Ln_30.png}}\\
+\subfloat[$40^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{fig7a_Ln_40.png}}\\
+\subfloat[irregular, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{fig7a_Ln_irregular.png}}
+\caption{Locking order parameter for the three topologies at $Re_P = 100$ (Pos\,3). Left:
+the layer-to-layer matrix $L$ (Eq.~\ref{eq:Ln}) evaluated on the pairwise fluid mask;
+right: per-layer locking $L(n)$ against the across-layer mean field. The
+(a)~$30^\circ$ and (b)~$40^\circ$ packings lock at $L \approx 1.00$ and $0.99$
+respectively, whereas (c)~the irregular packing scatters between $L = 0.10$ and $0.68$
+with no systematic repeat, confirming that the geometric period is required for locking.}
+\label{fig:Ln}
+\end{figure}
+
+\subsection{Is the Locking Genuine? Discriminating Controls}
+\label{sec:locking:control}
+
+Because every layer is de-rotated into a common frame before $L$ is evaluated, it is
+natural to ask whether the near-unity values are a genuine physical result or are partly
+manufactured by the de-rotation procedure itself. Two built-in controls show that they are
+genuine.
+
+First, the de-rotation cannot create similarity where none exists. The irregular packing
+is processed through the \emph{identical} pipeline--each layer de-rotated by its own
+angle and interpolated onto the same grid--yet its layers do not coincide
+($\overline{L}=0.49$; Table~\ref{tab:control}). If de-rotation mechanically forced high
+similarity it would do so here too; it does not. The irregular packing is therefore the
+negative control for the metric, not merely for the physics.
+
+Second, de-rotation does not make different flows look alike. Comparing the de-rotated
+fields \emph{across} topologies on a common grid yields only moderate similarity--$L=0.69$
+between $30^\circ$ and $40^\circ$, and $0.44$ between $30^\circ$ and the irregular
+packing--far below the $0.998$ found \emph{within} the $30^\circ$ packing
+(Table~\ref{tab:control}). The $30^\circ$ and $40^\circ$ packings resemble each other
+partially because both organise into coherent slit jets, but they remain clearly
+distinguishable. A procedure that trivially inflated $L$ would drive all of these toward
+unity; instead, high $L$ arises only when genuinely similar fields are compared.
+
+\begin{table}[h]
+\centering
+\caption{Discriminating controls for the locking metric (Pos\,3, $Re_P=100$, layers
+L13-L17, evaluated on a common grid). Within-topology values reproduce
+Fig.~\ref{fig:Ln}; cross-topology values are much lower, confirming that the de-rotation
+does not manufacture similarity.}
+\label{tab:control}
+\begin{tabular}{lc}
+\hline
+Comparison & mean $L$ \\
+\hline
+within $30^\circ$ & 0.998 \\
+within $40^\circ$ & 0.993 \\
+within irregular & 0.49 \\
+$30^\circ$ vs.\ $40^\circ$ & 0.69 \\
+$30^\circ$ vs.\ irregular & 0.44 \\
+$40^\circ$ vs.\ irregular & 0.54 \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Locking Versus Reynolds Number}
 \label{sec:locking:reynolds}
 
-% Using 40 deg at Re_p = 100/300/500: track L and A as Re_p rises.
-% Expected: time-mean pattern persists but locked fraction weakens.
-% Bridge to Paper 2 transition study.
-% Note: Re-dependence of locking only available at 40 deg in this paper.
-\todo[inline]{Write §4.5 Re effect on L; insert Fig. 7d (Re trend panel)}
+The locked state is a property of the time-mean flow, and as $Re_P$ rises the growing
+unsteadiness is expected to erode it (hypothesis~H3). This is assessed for the $30^\circ$
+packing between $Re_P = 100$ and $Re_P = 300$ on two complementary measures: the
+layer-to-layer uniformity of the \emph{mean} field, and the level and uniformity of the
+\emph{fluctuation} field, the latter obtained directly from the resolved Reynolds-stress
+tensor $\overline{u'_i u'_j}$ recorded during the time-averaging, through the turbulent
+kinetic energy $k = \tfrac12\,\overline{u'_i u'_i}$.
+
+The mean field weakens only mildly. The qualitative pattern persists--the same central
+and slit jets remain locked to the slits--but the layer-to-layer uniformity of the mean
+speed degrades: the coefficient of variation of the per-layer mean $|\bm u|$ at Pos\,3
+rises from $1.4\%$ at $Re_P = 100$ to $4.9\%$ at $Re_P = 300$, a roughly three-fold spread
+(Fig.~\ref{fig:tke}b).
+
+The fluctuation field reveals the breakdown far more clearly (Fig.~\ref{fig:tke}). Two
+effects compound. First, the fluctuation level rises sharply: the layer-averaged $k$
+increases by almost an order of magnitude (from $0.062$ to $0.60\,\mathrm{m^2/s^2}$), so
+that the ratio of fluctuation to mean-flow kinetic energy $k/k_{\rm mean}$ climbs from
+$0.58$ at $Re_P = 100$--where the fluctuations already amount to roughly half the
+mean-flow energy, reflecting unsteady wakes shed by the bars even in the nominally laminar
+regime--to $1.03$ at $Re_P = 300$, where the fluctuations exceed the mean-flow energy.
+Second, and more tellingly for locking, the fluctuations themselves \emph{de-lock}: the
+layer-to-layer coefficient of variation of $k$ jumps from $2.2\%$ at $Re_P = 100$ to
+$11.9\%$ at $Re_P = 300$. At the lower Reynolds number not only the mean flow but even the
+turbulence statistics repeat from layer to layer (the $k/k_{\rm mean}$ curve in
+Fig.~\ref{fig:tke} is essentially flat), whereas at $Re_P = 300$ the per-layer
+fluctuation energy becomes markedly uneven. The fluctuation field, with its $5\times$
+larger scatter, is thus a more sensitive early indicator of locking breakdown than the
+mean field. Physically, locking is strongest when the flow is steady and spatially
+periodic in both its mean and its fluctuations, and erodes first through the growth and
+de-synchronisation of the unsteady component.
+
+A systematic Reynolds sweep through the laminar-turbulent transition, together with the
+hydraulic characterisation (pressure drop and friction factor) that this fluctuation
+growth ultimately governs, requires the time-resolved periodic-domain simulations and is
+the subject of the companion paper (Paper~2); here we establish only that locking is
+strongest at low $Re_P$ and weakens as the flow energises, led by the fluctuation field.
+
+\begin{figure}[h]
+\centering
+\subfloat[per-layer fluctuation energy]{\includegraphics[width=0.49\linewidth]{fig_tke_perlayer.png}}
+\subfloat[mean speed per layer, $Re_P=300$]{\includegraphics[width=0.49\linewidth]{30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png}}
+\caption{Reynolds-number weakening of flow locking for the $30^\circ$ packing (Pos\,3).
+(a)~Ratio of turbulent kinetic energy to mean-flow kinetic energy, $k/k_{\rm mean}$, per
+layer: at $Re_P = 100$ the curve is flat (coefficient of variation $2.2\%$, fluctuations
+locked layer to layer), whereas at $Re_P = 300$ the level doubles and the scatter grows
+five-fold (CoV $11.9\%$). (b)~Per-layer mean speed at $Re_P = 300$, whose milder scatter
+(CoV $4.9\%$ vs $1.4\%$ at $Re_P = 100$) shows the same trend in the mean field. The
+fluctuation field is the more sensitive indicator of locking breakdown.}
+\label{fig:tke}
+\end{figure}
+
+\subsection{Mechanism of Flow Locking}
+\label{sec:locking:mechanism}
+
+The near-unity $L$ establishes \emph{that} the flow locks; the mechanism explains
+\emph{why}. The key is momentum inheritance across the slit hand-off. A high-momentum jet
+issuing from a slit in layer $n$ enters layer $n+1$ still carrying most of its streamwise
+momentum; because the slits of layer $n+1$ are rotated by exactly $\theta$, the geometry
+realigns the incoming jet onto the next slit rather than disrupting it. The jet is thus
+\emph{handed off} from slit to slit, turning by $\theta$ per layer and returning to its
+original orientation after a full period of $N$ layers. The recirculation cells, being
+anchored to the fixed wake positions behind the bars, repeat with the same period. Locking
+is therefore the steady end state of a self-consistent, geometry-guided transport pathway:
+each layer reproduces the inlet condition that the next layer requires.
+
+Three observations support this picture. First, locking is established almost immediately:
+the per-layer statistics are already uniform from the third layer (L03) onward
+(Figs.~\ref{fig:Ln}, \ref{fig:tke}), so the alignment length is short--of order a single
+period--and the developed window L13-L17 is fully locked. Second, the topology dependence
+follows directly: the $40^\circ$ packing hands the jet off across a larger angle, demanding
+more transverse momentum redistribution per layer and slightly degrading the inheritance
+($L \approx 0.99$), while the irregular packing presents each layer with an uncorrelated
+slit pattern that breaks up rather than realigns the incoming jet, severing the inheritance
+chain entirely ($L = 0.10$-$0.68$). Third, the Reynolds-number trend is explained by where
+the fluctuations live: the resolved $k$ concentrates in the jet shear layers and bar wakes
+(Fig.~\ref{fig:tkefield}), i.e.\ precisely at the hand-off interfaces between layers. As
+$Re_P$ rises these fluctuations intensify and de-synchronise (Sec.~\ref{sec:locking:reynolds}),
+progressively scrambling the hand-off and eroding the locked state from the fluctuation
+field first.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{fig_tke_field.png}
+\caption{Resolved turbulent kinetic energy field $k$ in a representative layer (L10) of the
+$30^\circ$ packing at Pos\,3, for $Re_P = 100$ (left) and $Re_P = 300$ (right); note the
+ten-fold change in colour scale. The fluctuations concentrate in the central-jet shear
+layer and the bar wakes--the layer-to-layer hand-off interfaces--and intensify and
+spread as the Reynolds number rises, identifying where the locked state first breaks down.}
+\label{fig:tkefield}
+\end{figure}
 
 \subsection{Physical Interpretation and Hand-off to Paper~2}
 \label{sec:locking:handoff}
 
-% Locked flow = coherent jets spiralling with the rotating slits.
-% Fully described by one layer period -> justifies the reduced 6-layer periodic domain.
-\todo[inline]{Write §4.6 physical interpretation; forward pointer to Paper 2}
+Physically, the locked state is a set of coherent jets that spiral upward in lock-step
+with the rotating slits, reproducing the same pore-scale flow in every layer of a period.
+This has a direct consequence for the modelling of the bed. If the developed mean flow is
+fully described by the field within a single $N$-layer period--as the near-unity $L$
+demonstrates for the regular packings--then the full-height apparatus is informationally
+redundant: a reduced domain comprising one geometric period with periodic end conditions
+should reproduce the interior flow of the complete bed. This is precisely the premise
+exploited in Paper~2, where the locking established here is used to justify a reduced
+six-layer ($30^\circ$) periodic domain for the friction-law and laminar-turbulent
+transition study, at a small fraction of the full-apparatus cost. The irregular packing,
+which does not lock, admits no such reduction and must be simulated in full--a limitation
+that is itself a physical result of this section.
 
 %% ============================================================
 \section{Flow Organisation}
@@ -686,37 +940,113 @@ flow locking.
 \subsection{Mean Flow Picture}
 \label{sec:organisation:meanflow}
 
-% Mean velocity-magnitude fields and streamlines at Pos 1 and Pos 3, layers L13-L17.
-% Diagonal/spiral jet banding following the rotating slits; recirculation pockets.
-% Figure: Fig. 8 (locked flow in detail, 30 deg).
-\todo[inline]{Write §5.1 mean flow picture}
+Having established that the flow locks, we now describe what the locked flow looks like.
+The de-rotated mean fields of Fig.~\ref{fig:lockvis} reveal a strongly banded structure:
+the flow organises into near-vertical high-velocity jets that thread through the slit
+openings, separated by slower regions occupied by recirculation pockets in the wakes of
+the bars. Because the slits rotate by $\theta$ from one layer to the next, these jets are
+not stationary columns but spiral upward through the bed, tracing the screw-like pore
+network; the de-rotation simply unwinds this spiral and exposes the underlying repeating
+unit. At Pos\,3 the field is dominated by a central jet flanked by a symmetric pair of
+slit jets (Fig.~\ref{fig:symmetry}), while at Pos\,1 the same banded organisation appears
+shifted across the plane. The picture is consistent across all fifteen layers, which is
+simply the visual signature of the locking quantified in Sec.~\ref{sec:locking}: a single
+coherent jet-recirculation pattern, repeated layer after layer.
 
 \subsection{Channelling and Transverse Spreading}
 \label{sec:organisation:channelling}
 
-% Channelling (flow uniformity) index: participation ratio <v>^2 / <v^2>.
-% Transverse kinetic-energy fraction: (vx^2 + vy^2) / |v|^2.
-% Report per layer and as packing-average.
-\todo[inline]{Write §5.2 channelling index and transverse KE fraction}
+Two scalar measures summarise how the kinetic energy is distributed within a plane. The
+channelling index $\phi = \langle|\bm u|\rangle^2 / \langle|\bm u|^2\rangle$ (a
+participation ratio over the fluid area) equals unity for a perfectly uniform field and
+falls toward zero as the flow concentrates into ever-narrower jets. The transverse
+kinetic-energy fraction $f_\perp = \langle u_{x'}^2\rangle / \langle|\bm u|^2\rangle$
+quantifies how much of the in-plane energy resides in motion across the bed rather than
+along it.
+
+For the $30^\circ$ packing these measures confirm a moderately channelled flow with
+substantial cross-stream motion. At $Re_P = 100$, Pos\,3, $\phi = 0.66$ and
+$f_\perp = 18\%$: roughly two-thirds of the plane participates in the mean transport and
+about a fifth of the in-plane energy is transverse, reflecting the spreading imparted by
+the rotating slits. The values are robust across the plane (Pos\,1: $\phi = 0.61$,
+$f_\perp = 31\%$) and shift only weakly with Reynolds number (Pos\,3, $Re_P = 300$:
+$\phi = 0.68$, $f_\perp = 20\%$), the slight rise in $f_\perp$ indicating marginally more
+cross-flow redistribution as the flow energises. The persistently large transverse
+fraction distinguishes this rotated packing from a conventional aligned column, in which
+the flow would be predominantly streamwise.
 
 \subsection{Recirculation and Secondary Motion}
 \label{sec:organisation:recirculation}
 
-% Recirculation zones behind/between bars from mean field.
-% In-plane secondary-flow vectors driven by rotation.
-% Optional: Q-criterion / swirling strength.
-\todo[inline]{Write §5.3 recirculation; decide on optional vortex diagnostics}
+The in-plane streamlines of the mean field (Figs.~\ref{fig:lockvis} and~\ref{fig:symmetry})
+reveal organised secondary motion between the jets. In the low-velocity regions flanking
+each jet the streamlines close into recirculation cells seated in the wakes of the bars,
+where the fluid driven aside by one slit jet is returned along the bar face. These cells
+are a persistent feature of every layer, occupying the same positions relative to the jets
+and confirming that the secondary motion is locked together with the primary flow rather
+than fluctuating independently. Their rotational sense alternates across the plane in a
+manner consistent with the point symmetry verified in Sec.~\ref{sec:numerics:symmetry}.
+This secondary circulation is the mechanism behind the appreciable transverse
+kinetic-energy fraction reported above, and it is the pore-scale stirring that a
+rotationally stacked bed is intended to promote. Quantitative vortex diagnostics
+(swirling strength, $Q$-criterion) are not pursued here, as the time-mean streamline
+topology already characterises the recirculation adequately for the present purpose.
 
 \subsection{Topology Contrast: 30\textdegree{} vs 40\textdegree{} vs Irregular}
 \label{sec:organisation:contrast}
 
-% Compare on: jet strength and alignment length, channelling index, transverse-KE
-% fraction, recirculation count.
-% Expected story: 30 deg = most coherent jets; 40 deg = more cross-flow redistribution;
-% irregular = erratic transport, no organised jets.
-% Figure: Fig. 9 (topology contrast, same plane same scale).
-% Figure: Fig. 10 (summary metrics bar/scatter).
-\todo[inline]{Write §5.4 topology contrast; insert Figs. 9 and 10}
+The three topologies organise their flow in markedly different ways, summarised in
+Fig.~\ref{fig:topocontrast}, which compares the mean velocity-magnitude fields and
+streamlines at Pos\,3, $Re_P = 100$.
+The $30^\circ$ packing (Fig.~\ref{fig:topocontrast}a) produces the most coherent
+organisation: sharply defined, near-parallel slit jets separated by orderly recirculation
+cells, the banded structure that underpins its near-unity locking.
+The $40^\circ$ packing (Fig.~\ref{fig:topocontrast}b) retains organised jets but at the
+larger twist angle they are more strongly inclined and the streamlines show more
+cross-flow redistribution between layers, with more prominent swirl cells--consistent
+with its slightly reduced locking ($L \approx 0.99$) and the larger transverse spreading
+expected of the steeper twist.
+The irregular packing (Fig.~\ref{fig:topocontrast}c) is qualitatively different: the flow
+collapses to a single dominant channel surrounded by disorganised streamlines and
+scattered vortices of no fixed position, with no repeating banded structure. This erratic
+transport is the spatial counterpart of its collapsed locking parameter
+(Sec.~\ref{sec:locking:topologies}): without a geometric period there is no mechanism to
+organise the jets layer by layer.
+
+\begin{figure}[h]
+\centering
+\subfloat[$30^\circ$]{\includegraphics[width=0.85\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\\
+\subfloat[$40^\circ$]{\includegraphics[width=0.85\linewidth]{40_Re_100/surface/pos3_Surface_plot.png}}\\
+\subfloat[irregular]{\includegraphics[width=0.85\linewidth]{irregular_Re_100/surface/pos3_Surface_plot.png}}
+\caption{Topology contrast of the mean flow organisation at Pos\,3, $Re_P = 100$
+(experiment left, simulation right in each panel): (a)~the $30^\circ$ packing forms
+coherent, near-parallel slit jets with orderly recirculation; (b)~the $40^\circ$ packing
+shows more inclined jets and stronger cross-flow swirl; (c)~the irregular packing produces
+a single dominant channel with scattered, disorganised vortices and no banded structure.
+The progression from organised to erratic transport mirrors the locking parameter, which
+is near unity for the regular packings and collapses for the irregular one.}
+\label{fig:topocontrast}
+\end{figure}
+
+A compact quantitative summary of these differences--the channelling index $\phi$ and
+transverse kinetic-energy fraction $f_\perp$ for each topology--is collected in
+Fig.~\ref{fig:summary}. For the $30^\circ$ packing these are $\phi \approx 0.66$ and
+$f_\perp \approx 18\%$ (Sec.~\ref{sec:organisation:channelling}); the corresponding values
+for the $40^\circ$ and irregular packings complete the comparison.
+\todo[inline]{Decide (per metrics question): either compute $\phi$ and $f_\perp$ for
+40\textdegree{} and irregular from the raw transformed CSVs and replace the placeholder
+below with a real bar chart / small table, or drop Fig.~\ref{fig:summary} and fold the
+30\textdegree{} numbers into the text.}
+\begin{figure}[h]
+\centering
+\figplaceholder{summary metrics across topologies: channelling index $\phi$ and
+transverse kinetic-energy fraction $f_\perp$ for $30^\circ$, $40^\circ$ and irregular
+packings (bar chart). $30^\circ$ values $\phi\approx0.66$, $f_\perp\approx18\%$ available;
+$40^\circ$/irregular pending the metrics decision.}
+\caption{\emph{[Placeholder]} Summary of flow-organisation metrics across the three
+topologies. To be populated with computed $\phi$ and $f_\perp$ values.}
+\label{fig:summary}
+\end{figure}
 
 %% ============================================================
 \section{Conclusions}
