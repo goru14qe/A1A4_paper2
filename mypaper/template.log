@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.4)  24 JUN 2026 04:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.4)  24 JUN 2026 16:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,122 +697,127 @@ Underfull \vbox (badness 5460) has occurred while \output is active []
  [12 <./images//grid_coarse.png> <./images//grid_medium.png> <./images//grid_fine.png>] [13 <./images//Symmetry_Contour_Pos3_Re_100.png> <./images//Symmetry_Contour_Pos3_Re_300.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <./images//Combined_Line_Profiles_Pos3_Re_100.png> <./images//Combined_Line_Profiles_Pos3_Re_300.png>] [15]
-<images//30_Re_100/surface/pos1_Surface_plot.png, id=301, 981.6675pt x 397.0032pt>
-File: images//30_Re_100/surface/pos1_Surface_plot.png Graphic file (type png)
-<use images//30_Re_100/surface/pos1_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_100/surface/pos1_Surface_plot.png  used on input line 565.
-(pdftex.def)             Requested size: 162.23856pt x 65.61174pt.
-<images//30_Re_100/surface/pos3_Surface_plot.png, id=302, 984.7992pt x 373.1541pt>
+ [14 <./images//Combined_Line_Profiles_Pos3_Re_100.png> <./images//Combined_Line_Profiles_Pos3_Re_300.png>]
+<images//30_Re_100/surface/pos3_Surface_plot.png, id=290, 984.7992pt x 373.1541pt>
 File: images//30_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//30_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 566.
+Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 534.
 (pdftex.def)             Requested size: 162.23856pt x 61.47096pt.
-<images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png, id=303, 860.7357pt x 508.5399pt>
+<images//30_Re_300/surface/pos3_Surface_plot.png, id=291, 973.4769pt x 340.3917pt>
+File: images//30_Re_300/surface/pos3_Surface_plot.png Graphic file (type png)
+<use images//30_Re_300/surface/pos3_Surface_plot.png>
+Package pdftex.def Info: images//30_Re_300/surface/pos3_Surface_plot.png  used on input line 535.
+(pdftex.def)             Requested size: 162.23856pt x 56.72833pt.
+ [15]
+<images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png, id=301, 860.7357pt x 508.5399pt>
 File: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png Graphic file (type png)
 <use images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>
-Package pdftex.def Info: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png  used on input line 577.
+Package pdftex.def Info: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png  used on input line 547.
 (pdftex.def)             Requested size: 321.09897pt x 189.70874pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16 <./images//30_Re_100/surface/pos1_Surface_plot.png> <./images//30_Re_100/surface/pos3_Surface_plot.png>]
-<images//30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png, id=319, 1347.8355pt x 431.6928pt>
-File: images//30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png Graphic file (type png)
-<use images//30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png>
-Package pdftex.def Info: images//30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png  used on input line 617.
-(pdftex.def)             Requested size: 310.95938pt x 99.59685pt.
-<images//30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png, id=320, 859.7721pt x 724.3863pt>
-File: images//30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png Graphic file (type png)
-<use images//30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png>
-Package pdftex.def Info: images//30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png  used on input line 619.
-(pdftex.def)             Requested size: 310.95938pt x 261.99472pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17 <./images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>] [18]
-<images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png, id=342, 1855.4118pt x 710.655pt>
+ [16 <./images//30_Re_100/surface/pos3_Surface_plot.png> <./images//30_Re_300/surface/pos3_Surface_plot.png> <./images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>]
+<images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=316, 1360.8441pt x 676.4472pt>
+File: images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png Graphic file (type png)
+<use images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png>
+Package pdftex.def Info: images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 589.
+(pdftex.def)             Requested size: 310.95938pt x 154.56805pt.
+<images//30_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png, id=317, 859.7721pt x 724.3863pt>
+File: images//30_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png Graphic file (type png)
+<use images//30_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png>
+Package pdftex.def Info: images//30_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png  used on input line 591.
+(pdftex.def)             Requested size: 310.95938pt x 261.99472pt.
+<images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=318, 1360.8441pt x 799.0653pt>
+File: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png Graphic file (type png)
+<use images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png>
+Package pdftex.def Info: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 593.
+(pdftex.def)             Requested size: 310.95938pt x 182.58626pt.
+<images//irregular_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png, id=319, 859.7721pt x 724.3863pt>
+File: images//irregular_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png Graphic file (type png)
+<use images//irregular_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png>
+Package pdftex.def Info: images//irregular_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png  used on input line 595.
+(pdftex.def)             Requested size: 310.95938pt x 261.99472pt.
+
+
+LaTeX Warning: Float too large for page by 514.16042pt on input line 606.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18]
+<images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png, id=343, 1855.4118pt x 710.655pt>
 File: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png Graphic file (type png)
 <use images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png>
-Package pdftex.def Info: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png  used on input line 727.
+Package pdftex.def Info: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png  used on input line 704.
 (pdftex.def)             Requested size: 338.0pt x 129.45218pt.
-<images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png, id=343, 1843.8486pt x 710.655pt>
+<images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png, id=344, 1843.8486pt x 710.655pt>
 File: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png Graphic file (type png)
 <use images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>
-Package pdftex.def Info: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png  used on input line 728.
+Package pdftex.def Info: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png  used on input line 705.
 (pdftex.def)             Requested size: 338.0pt x 130.26546pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19]
-<images//fig7a_Ln_30.png, id=358, 650.43pt x 245.718pt>
+<images//fig7a_Ln_30.png, id=349, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_30.png Graphic file (type png)
 <use images//fig7a_Ln_30.png>
-Package pdftex.def Info: images//fig7a_Ln_30.png  used on input line 765.
+Package pdftex.def Info: images//fig7a_Ln_30.png  used on input line 742.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
-<images//fig7a_Ln_40.png, id=359, 650.43pt x 245.718pt>
+<images//fig7a_Ln_40.png, id=350, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_40.png Graphic file (type png)
 <use images//fig7a_Ln_40.png>
-Package pdftex.def Info: images//fig7a_Ln_40.png  used on input line 766.
+Package pdftex.def Info: images//fig7a_Ln_40.png  used on input line 743.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
-<images//fig7a_Ln_irregular.png, id=360, 650.43pt x 245.718pt>
+<images//fig7a_Ln_irregular.png, id=351, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_irregular.png Graphic file (type png)
 <use images//fig7a_Ln_irregular.png>
-Package pdftex.def Info: images//fig7a_Ln_irregular.png  used on input line 767.
+Package pdftex.def Info: images//fig7a_Ln_irregular.png  used on input line 744.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[19]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20]
-<images//fig_tke_perlayer.png, id=376, 375.804pt x 245.718pt>
+<images//fig_tke_perlayer.png, id=375, 375.804pt x 245.718pt>
 File: images//fig_tke_perlayer.png Graphic file (type png)
 <use images//fig_tke_perlayer.png>
-Package pdftex.def Info: images//fig_tke_perlayer.png  used on input line 865.
+Package pdftex.def Info: images//fig_tke_perlayer.png  used on input line 842.
 (pdftex.def)             Requested size: 165.62186pt x 108.29247pt.
-<images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png, id=377, 715.2321pt x 424.9476pt>
+<images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png, id=376, 715.2321pt x 424.9476pt>
 File: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png Graphic file (type png)
 <use images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png>
-Package pdftex.def Info: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png  used on input line 866.
+Package pdftex.def Info: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png  used on input line 843.
 (pdftex.def)             Requested size: 165.62186pt x 98.40375pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[21]
 <images//fig_tke_field.png, id=387, 650.43pt x 260.172pt>
 File: images//fig_tke_field.png Graphic file (type png)
 <use images//fig_tke_field.png>
-Package pdftex.def Info: images//fig_tke_field.png  used on input line 908.
+Package pdftex.def Info: images//fig_tke_field.png  used on input line 885.
 (pdftex.def)             Requested size: 338.0pt x 135.20287pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22] [23]
 File: images//30_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//30_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 1018.
+Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 995.
 (pdftex.def)             Requested size: 287.30206pt x 108.86101pt.
 <images//40_Re_100/surface/pos3_Surface_plot.png, id=412, 984.7992pt x 348.3414pt>
 File: images//40_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//40_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//40_Re_100/surface/pos3_Surface_plot.png  used on input line 1019.
+Package pdftex.def Info: images//40_Re_100/surface/pos3_Surface_plot.png  used on input line 996.
 (pdftex.def)             Requested size: 287.30206pt x 101.62234pt.
 <images//irregular_Re_100/surface/pos3_Surface_plot.png, id=413, 984.7992pt x 334.1283pt>
 File: images//irregular_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//irregular_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//irregular_Re_100/surface/pos3_Surface_plot.png  used on input line 1020.
+Package pdftex.def Info: images//irregular_Re_100/surface/pos3_Surface_plot.png  used on input line 997.
 (pdftex.def)             Requested size: 287.30206pt x 97.47594pt.
 
 
@@ -822,30 +827,30 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24]
-Underfull \hbox (badness 1092) in paragraph at lines 1081--1082
+Underfull \hbox (badness 1092) in paragraph at lines 1058--1059
 []\OT1/cmr/m/n/10 Dong, Y., Ko-rup, O., Gerdts, J., Rold^^San Cuenya, B., & Horn, R.
  []
 
-[25]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26] [27] [28 <./images//30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png> <./images//30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png>] [29 <./images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png> <./images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>] [30 <./images//fig7a_Ln_30.png> <./images//fig7a_Ln_40.png> <./images//fig7a_Ln_irregular.png>] [31 <./images//fig_tke_perlayer.png> <./images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png> <./images//fig_tke_field.png>] [32 <./images//40_Re_100/surface/pos3_Surface_plot.png> <./images//irregular_Re_100/surface/pos3_Surface_plot.png>] [33] (./template.aux)
+ [25] [26] [27 <./images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//30_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png> <./images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//irregular_Re_100/layers/Line_Profiles_from_Bottom_Pos3_Re100.png>] [28 <./images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png> <./images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>] [29 <./images//fig7a_Ln_30.png> <./images//fig7a_Ln_40.png> <./images//fig7a_Ln_irregular.png>] [30 <./images//fig_tke_perlayer.png> <./images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png> <./images//fig_tke_field.png>] [31 <./images//40_Re_100/surface/pos3_Surface_plot.png> <./images//irregular_Re_100/surface/pos3_Surface_plot.png>] [32] (./template.aux)
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: 9D456F2040E8A1A8165EAE818D707A19;1096.
  ) 
 Here is how much of TeX's memory you used:
- 23292 strings out of 480247
- 439906 string characters out of 5896152
- 712053 words of memory out of 5000000
- 40636 multiletter control sequences out of 15000+600000
+ 23306 strings out of 480247
+ 440957 string characters out of 5896152
+ 712899 words of memory out of 5000000
+ 40649 multiletter control sequences out of 15000+600000
  478561 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,11n,94p,1067b,950s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy5.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmex10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmti10.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmti8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbsy10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.650pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk>
-Output written on template.pdf (33 pages, 22403628 bytes).
+Output written on template.pdf (32 pages, 28867222 bytes).
 PDF statistics:
- 1186 PDF objects out of 1200 (max. 8388607)
- 535 compressed objects within 6 object streams
+ 1182 PDF objects out of 1200 (max. 8388607)
+ 531 compressed objects within 6 object streams
  191 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

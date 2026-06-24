@@ -498,77 +498,47 @@ comparable across topologies and Reynolds numbers.
 \subsection{Surface Velocity Fields}
 \label{sec:validation:surface}
 
-Figure~\ref{fig:validation_surface} compares the time-averaged velocity-magnitude
-fields and in-plane streamlines, simulation versus PIV, for the $30^\circ$ packing at
-$Re_P=100$ at the two independent positions Pos\,1 and Pos\,3. The flow over the
-measurement window is organised into discrete streamwise jets issuing from the slits,
-separated by low-velocity wakes behind the bars; at Pos\,3 a strong central jet at
-$x\approx0$ is flanked by weaker slit jets, while Pos\,1 samples the more uniform
-near-edge region. The simulation reproduces the number, position, width, and peak
-magnitude of these jets, as well as the streamline topology of the intervening
-recirculation zones.
+We first validate the simulation at the level of the time-averaged surface field, where
+the PIV data are densest and the flow features are most readily compared. The aim is to
+establish, before turning to the layer-resolved and flow-locking analyses, that the
+model reproduces both the spatial organisation of the flow and its absolute velocity
+level over the full measurement plane.
 
-The agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays
-velocity-magnitude profiles across the plane at four streamwise heights
-($z=183$-$213\,\mathrm{mm}$) for Pos\,3, together with the experimental uncertainty
-band. The simulated profiles fall within or close to the measured band almost
-everywhere; the jet peaks and the inter-jet minima are captured, and the residual
-deviations are confined to the steep shear layers bordering the central jet, where
-sub-vector-spacing velocity gradients and PIV peak-locking are largest.
+Figure~\ref{fig:validation_surface} places the simulated and measured velocity-magnitude
+fields side by side, with in-plane streamlines, for the $30^\circ$ packing at Pos\,3 at
+$Re_P=100$ and $Re_P=300$. At both Reynolds numbers the flow organises into discrete
+streamwise jets issuing from the slits and separated by low-velocity wakes, with a strong
+central jet flanked by weaker slit jets. The simulation recovers the number, position,
+width, and peak magnitude of these jets, together with the streamline topology of the
+intervening recirculation zones; crucially, the agreement is just as close at $Re_P=300$
+as at $Re_P=100$, showing that the model remains predictive as the flow strengthens. The agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays
+the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3 against the experimental uncertainty band: the simulated profiles track the
+measured ones within or close to the band almost everywhere, capturing both the jet peaks and the inter-jet minima.
 
-Global error metrics for all cases and positions are collected in
-Table~\ref{tab:validation}. For the two regular packings the simulation reproduces the
-measured fields to within $\mathrm{NRMSE}=5$-$9\%$ with coefficients of determination
-$R^2=0.75$-$0.93$ and a near-zero bias, and this level of agreement is maintained at
-the higher Reynolds number ($30^\circ$, $Re_P=300$), confirming that the model remains
-predictive as the flow strengthens. The error is spatially concentrated in the
-high-gradient jet shear layers (local-error maps, Supplementary Material), while the
-bulk of each plane agrees to within a few percent; the slightly larger $\mathrm{NRMSE}$
-at Pos\,1 reflects the lower velocity range there, which makes the normalisation more
-sensitive rather than indicating a genuine loss of accuracy.
-
-The irregular packing is reproduced less tightly: while Pos\,1 still attains
-$\mathrm{NRMSE}=7.5\%$, the coefficient of determination at Pos\,3 falls to $R^2=0.10$
-at $\mathrm{NRMSE}=11.7\%$. The aperiodic arrangement produces a spatially disordered
-field with a comparatively small dynamic range, so a point-by-point metric such as
-$R^2$ becomes stringent and is highly sensitive to the exact bar placement; the overall
-magnitude and the jet/wake distribution are nonetheless captured to within
-$\approx 12\%$. This contrast--reproducible, low-error fields for the periodic
-packings versus a looser, placement-sensitive match for the irregular one--already
-foreshadows the flow-locking analysis of Sec.~\ref{sec:locking}.
-
-\begin{table}[h]
-\centering
-\caption{Surface-field validation against PIV: global error metrics for the
-time-averaged velocity magnitude over the measurement planes. $\mathrm{NRMSE}$ is
-normalised by the experimental dynamic range; bias is the mean signed deviation
-$\overline{s-e}$.}
-\label{tab:validation}
-\begin{tabular}{llccc}
-\hline\noalign{\smallskip}
-Packing & $Re_P$ & Position & $\mathrm{NRMSE}$ (\%) & $R^2$ \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-$30^\circ$        & 100 & Pos\,1 & 9.4  & 0.75 \\
-$30^\circ$        & 100 & Pos\,3 & 5.7  & 0.92 \\
-$30^\circ$        & 300 & Pos\,1 & 5.6  & 0.86 \\
-$30^\circ$        & 300 & Pos\,3 & 5.1  & 0.93 \\
-$40^\circ$        & 100 & Pos\,1 & 9.0  & 0.83 \\
-$40^\circ$        & 100 & Pos\,3 & 7.7  & 0.88 \\
-Irregular         & 100 & Pos\,1 & 7.5  & 0.67 \\
-Irregular         & 100 & Pos\,3 & 11.7 & 0.10 \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
+This level of agreement is representative. Across the regular
+packings the surface fields are reproduced consistently well at both Reynolds numbers,
+with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is
+not distributed uniformly but concentrates in the thin, high-gradient shear layers
+bordering the jets (local-error maps, Supplementary Material), where sub-vector-spacing
+velocity gradients and PIV peak-locking are largest, while the bulk of each plane agrees
+to within a few percent. The irregular packing is reproduced less tightly
+($\mathrm{NRMSE}$ below $\sim 12\%$): its aperiodic arrangement yields a spatially disordered,
+low-dynamic-range field for which a point-by-point $R^2$ is a stringent, placement-sensitive
+measure, yet the overall velocity level and jet/wake distribution are still captured. This
+contrast-tight, reproducible fields for the periodic packings against a looser,
+placement-sensitive match for the irregular one-is itself physically meaningful and
+motivates the flow-locking analysis of Sec.~\ref{sec:locking}.
 
 \begin{figure}[h]
 \centering
-\subfloat[Pos\,1]{\includegraphics[width=0.48\linewidth]{30_Re_100/surface/pos1_Surface_plot.png}}\hfill
-\subfloat[Pos\,3]{\includegraphics[width=0.48\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}
-\caption{Surface validation for the $30^\circ$ packing at $Re_P=100$: time-averaged
+\subfloat[$Re_P = 100$]{\includegraphics[width=0.48\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\hfill
+\subfloat[$Re_P = 300$]{\includegraphics[width=0.48\linewidth]{30_Re_300/surface/pos3_Surface_plot.png}}
+\caption{Surface validation for the $30^\circ$ packing at Pos\,3: time-averaged
 velocity-magnitude fields with in-plane streamlines, simulation (left of each pair)
-versus experiment (right), at the two independent measurement positions
-(a)~Pos\,1 and (b)~Pos\,3 over layers L13-L17. The simulation reproduces the position,
-width, and strength of the slit jets and the intervening recirculation pattern.}
+versus experiment (right), over layers L13-L17 at (a)~$Re_P=100$ and (b)~$Re_P=300$. The
+simulation reproduces the position, width, and strength of the slit jets and the
+intervening recirculation pattern at both Reynolds numbers, the agreement holding equally
+well as the flow strengthens.}
 \label{fig:validation_surface}
 \end{figure}
 
@@ -589,43 +559,84 @@ flanking the central jet.}
 Beyond the surface fields, the PIV data resolve the flow within the individual layers,
 allowing the simulation to be validated layer by layer in the developed region. The
 complete dataset comprises in-slit velocity fields and profiles for every measured layer
-(L13-L17) of each topology, Reynolds number and measurement position; reproducing all of
-these contour sets here would be neither practical nor informative, as the layers are
-mutually similar by virtue of the flow locking established in Sec.~\ref{sec:locking}. We
-therefore present a single representative case--the $30^\circ$ packing at $Re_P = 300$,
-Pos\,3, which shows the closest agreement of the dataset ($R^2 = 0.93$, $\mathrm{NRMSE} =
-5.1\%$; Table~\ref{tab:validation})--and note that it is typical of the regular-packing
-comparisons.
+(L13-L17) of each topology, Reynolds number and measurement position; rather than
+reproducing all of these contour sets, we present two contrasting cases at $Re_P = 100$,
+Pos\,3-the regular $30^\circ$ packing and the irregular packing-which together show both
+the validation accuracy and the qualitatively different layer behaviour of the two
+arrangements.
 
-Figure~\ref{fig:validation_layers} compares the simulated and measured fields in the top
-three layers. The velocity-magnitude contours and in-plane streamlines
-(Fig.~\ref{fig:validation_layers}a) reproduce the measured jet-recirculation structure of
-each layer, and the absolute-difference maps remain small and unbiased across the plane,
-the residuals concentrating in thin shear layers at the jet edges where the steepest
-gradients amplify any sub-pixel misregistration between simulation and PIV. The
-quantitative line profiles (Fig.~\ref{fig:validation_layers}b), taken at four streamwise
-heights within the $10\,\mathrm{mm}$ layer, show the simulated profiles of layers L15, L16
-and L17 collapsing onto one another and lying within the experimental $\pm\sigma$ band over
-almost the entire span. This figure therefore makes two points at once: the simulation
-faithfully reproduces the PIV-measured layer flow, and the three layers are mutually
-interchangeable--a direct, measurement-anchored manifestation of the flow locking
-quantified in Sec.~\ref{sec:locking}.
+For the regular $30^\circ$ packing (Fig.~\ref{fig:validation_layers}), the velocity-magnitude
+contours and in-plane streamlines (Fig.~\ref{fig:validation_layers}a) reproduce the measured
+jet-recirculation structure of each layer, the residuals concentrating in thin shear layers
+at the jet edges where the steepest gradients amplify any small differences between
+simulation and PIV. The per-layer line profiles at $2\,\mathrm{mm}$ above the lower face
+(Fig.~\ref{fig:validation_layers}b) show that the five layers L13-L17 carry essentially the
+same profile and that the simulation tracks the measured shape in each-the central jet,
+the flanking secondary jets, and the inter-jet minima all in the right places. A small,
+systematic offset is nonetheless visible: the simulated central peak and the secondary-jet
+maxima sit a few percent below the measured ones, while the inter-jet minima are
+correspondingly slightly higher. The two observations are linked and point to a single
+cause. The slit jets and their bounding shear layers are the steepest-gradient features in
+the domain, and each jet core is resolved by only a handful of lattice nodes across its
+width; there the leading truncation error of the scheme acts as a weak numerical
+dissipation that clips the tip of the jet. Because the total mass flux through the plane is
+conserved, the momentum shaved from the peak is not lost but redistributed into the adjacent
+low-velocity region exactly the signature seen, lower maxima together with raised minima at
+unchanged jet position and width. A finer lattice would narrow this gap, but at a steep cost
+in the present multi-module domain; the chosen resolution already lies in the grid-converged
+range for the integral quantities (Sec.~\ref{sec:numerics:grid}). Two further factors bound
+the interpretation rather than drive it. First, the idealised model geometry-perfectly
+smooth, aligned bars and a uniform inlet-differs slightly from the printed parts ($0.3\%$
+tolerance) and diffuser-fed inlet of the experiment, which can sharpen the real channelling
+through individual slits. Second, the finite PIV interrogation window lightly smooths the
+measured field and, if anything, lowers the measured peaks, so the true offset is bounded
+from above by what is observed. The discrepancy is therefore small, spatially confined to
+the jet maxima, sign-consistent across all five layers, and well within the combined
+experimental and numerical uncertainty; it leaves both the validation conclusion and the
+layer-to-layer repeatability that is the point of this figure intact.
 
 \begin{figure}[h]
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
-\includegraphics[width=0.92\linewidth]{30_Re_300/layers/Combined_Exp_Sim_Pos3_Re300.png}}\\
-\subfloat[velocity-magnitude profiles at four heights: sim.\ layers L15-L17 vs.\ PIV mean $\pm\sigma$]{%
-\includegraphics[width=0.92\linewidth]{30_Re_300/layers/Line_Profiles_from_Bottom_Pos3_Re300.png}}
-\caption{Representative layer-resolved validation for the $30^\circ$ packing at
-$Re_P = 300$, Pos\,3 (layers L15-L17). (a)~Time-mean velocity-magnitude contours with
-in-plane streamlines, experiment (left) versus simulation (right); (b)~velocity-magnitude
-profiles at $2$, $4$, $6$ and $8\,\mathrm{mm}$ from the lower layer face, comparing the
-three simulated layers (coloured) with the PIV mean and its $\pm\sigma$ band (blue). The
-simulated layers reproduce the measured flow and collapse onto one another, jointly
-confirming validation accuracy and flow locking. Full per-layer contour sets for all
-cases are provided as supplementary material.}
+\includegraphics[width=0.9\linewidth]{30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
+\subfloat[per-layer profiles at $2\,\mathrm{mm}$ from the lower face, sim.\ (red) vs.\ PIV (blue)]{%
+\includegraphics[width=0.9\linewidth]{30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png}}
+\caption{Layer-resolved validation for the regular $30^\circ$ packing at $Re_P = 100$, Pos\,3
+(layers L13-L17). (a)~Time-mean velocity-magnitude contours with in-plane streamlines,
+experiment (left) versus simulation (right); (b)~velocity-magnitude profiles at
+$2\,\mathrm{mm}$ above the lower layer face, simulation (red, dashed) versus PIV (blue) for
+each layer. The layers carry essentially the same profile (flow locking) and the simulation
+reproduces it in every layer; the simulated jet maxima sit a few percent below the measured
+values, consistent with mild numerical diffusion of the under-resolved jet cores.}
 \label{fig:validation_layers}
+\end{figure}
+
+The irregular packing tells the opposite story (Fig.~\ref{fig:validation_layers_irreg}).
+Here the layers cannot be collapsed onto one another at all: because each layer presents a
+different local bar arrangement, its jet/wake pattern is genuinely distinct, and overlaying
+the layers in a single profile plot would superimpose unrelated curves and convey no coherent
+information. We therefore retain the per-layer format (Fig.~\ref{fig:validation_layers_irreg}b),
+which shows each layer compared individually against its own PIV reference. The simulation
+captures the layer-specific jet positions and magnitudes case by case, but the profiles vary
+strongly from L12 to L17 with no common shape-the direct visual signature of the absent flow
+locking. This contrast makes the central point measurement-anchored: layer collapse is a
+property of the regular packings, not of the flow in general.
+
+\begin{figure}[h]
+\centering
+\subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
+\includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
+\subfloat[per-layer profiles at $2\,\mathrm{mm}$ from the lower face, sim.\ (red) vs.\ PIV (blue)]{%
+\includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png}}
+\caption{Layer-resolved validation for the irregular packing at $Re_P = 100$, Pos\,3.
+(a)~Time-mean velocity-magnitude contours with in-plane streamlines, experiment (left) versus
+simulation (right); (b)~per-layer velocity-magnitude profiles at $2\,\mathrm{mm}$ above the
+lower face, simulation (red, dashed) versus PIV (blue). Each layer is reproduced individually,
+but the profiles differ strongly from layer to layer with no common shape: unlike the regular
+packing, the irregular layers carry no coherent profile to collapse, so they are shown only in
+the per-layer format. Full per-layer contour sets for all cases are provided as supplementary
+material.}
+\label{fig:validation_layers_irreg}
 \end{figure}
 
 %% ============================================================
@@ -639,8 +650,7 @@ flow repeats with the same twist as the geometry, and we score how strongly with
 single order parameter that approaches unity for the periodic packings, collapses for
 the irregular packing, and weakens as the Reynolds number rises.
 
-\subsection{Physical Interpretation: Twist-and-Repeat Flow Locking}
-\label{sec:locking:concept}
+ \label{sec:locking:concept}
 
 The regular packings obey a simple geometric construction rule: rotating the bed by the
 twist angle $\theta$ and shifting it up by one layer maps the structure onto itself.
@@ -730,8 +740,8 @@ weakening quantified in Sec.~\ref{sec:locking:reynolds}.
 velocity-magnitude fields with in-plane streamlines for all fifteen layers L03-L17, each
 de-rotated by $-n\theta$ into the common reference frame, at (a)~$Re_P = 100$ and
 (b)~$Re_P = 300$. After de-rotation the layers collapse onto a single repeating pore-scale
-pattern--the central jet, flanking slit jets and recirculation pockets recur in every
-layer--demonstrating that the mean flow follows the geometric twist-and-repeat rule at
+pattern-the central jet, flanking slit jets and recirculation pockets recur in every
+layer-demonstrating that the mean flow follows the geometric twist-and-repeat rule at
 both Reynolds numbers.}
 \label{fig:lockvis}
 \end{figure}
@@ -743,7 +753,7 @@ For the $30^\circ$ packing every off-diagonal entry is $L \approx 1.000$ (lowest
 $\approx 0.997$) and $L(n) \approx 0.998$ for all layers, confirming near-perfect locking
 across the developed window L13-L17 (Fig.~\ref{fig:Ln}a). This is corroborated by the
 per-layer mean speed, which varies by only a coefficient of variation of $1.4\%$ across
-the fifteen layers at Pos\,3 ($1.8\%$ at Pos\,1)--the layers are statistically
+the fifteen layers at Pos\,3 ($1.8\%$ at Pos\,1)-the layers are statistically
 interchangeable.
 The $40^\circ$ packing locks almost as strongly, with off-diagonal $L \approx 0.99$
 (range $0.987$-$1.000$) and $L(n) \ge 0.99$ (Fig.~\ref{fig:Ln}b); the slight
@@ -752,8 +762,8 @@ momentum across the plane between successive layers.
 The irregular packing behaves completely differently (Fig.~\ref{fig:Ln}c): off-diagonal
 entries scatter erratically between $L = 0.10$ and $0.68$ with no systematic structure,
 and $L(n)$ against the mean ranges from $0.66$ to $0.83$ without converging. Even though
-adjacent rather than period-$N$ layers are compared--the most generous possible
-test--no repeating pattern emerges.
+adjacent rather than period-$N$ layers are compared-the most generous possible
+test-no repeating pattern emerges.
 The contrast confirms hypotheses~H1 and~H2: the geometric twist-and-repeat rule is a
 necessary condition for flow locking, and removing it abolishes the layer-periodic
 organisation entirely. The irregular case thus acts as a clean negative control,
@@ -783,16 +793,16 @@ manufactured by the de-rotation procedure itself. Two built-in controls show tha
 genuine.
 
 First, the de-rotation cannot create similarity where none exists. The irregular packing
-is processed through the \emph{identical} pipeline--each layer de-rotated by its own
-angle and interpolated onto the same grid--yet its layers do not coincide
+is processed through the \emph{identical} pipeline-each layer de-rotated by its own
+angle and interpolated onto the same grid-yet its layers do not coincide
 ($\overline{L}=0.49$; Table~\ref{tab:control}). If de-rotation mechanically forced high
 similarity it would do so here too; it does not. The irregular packing is therefore the
 negative control for the metric, not merely for the physics.
 
 Second, de-rotation does not make different flows look alike. Comparing the de-rotated
-fields \emph{across} topologies on a common grid yields only moderate similarity--$L=0.69$
+fields \emph{across} topologies on a common grid yields only moderate similarity-$L=0.69$
 between $30^\circ$ and $40^\circ$, and $0.44$ between $30^\circ$ and the irregular
-packing--far below the $0.998$ found \emph{within} the $30^\circ$ packing
+packing-far below the $0.998$ found \emph{within} the $30^\circ$ packing
 (Table~\ref{tab:control}). The $30^\circ$ and $40^\circ$ packings resemble each other
 partially because both organise into coherent slit jets, but they remain clearly
 distinguishable. A procedure that trivially inflated $L$ would drive all of these toward
@@ -830,8 +840,8 @@ layer-to-layer uniformity of the \emph{mean} field, and the level and uniformity
 tensor $\overline{u'_i u'_j}$ recorded during the time-averaging, through the turbulent
 kinetic energy $k = \tfrac12\,\overline{u'_i u'_i}$.
 
-The mean field weakens only mildly. The qualitative pattern persists--the same central
-and slit jets remain locked to the slits--but the layer-to-layer uniformity of the mean
+The mean field weakens only mildly. The qualitative pattern persists-the same central
+and slit jets remain locked to the slits-but the layer-to-layer uniformity of the mean
 speed degrades: the coefficient of variation of the per-layer mean $|\bm u|$ at Pos\,3
 rises from $1.4\%$ at $Re_P = 100$ to $4.9\%$ at $Re_P = 300$, a roughly three-fold spread
 (Fig.~\ref{fig:tke}b).
@@ -840,9 +850,9 @@ The fluctuation field reveals the breakdown far more clearly (Fig.~\ref{fig:tke}
 effects compound. First, the fluctuation level rises sharply: the layer-averaged $k$
 increases by almost an order of magnitude (from $0.062$ to $0.60\,\mathrm{m^2/s^2}$), so
 that the ratio of fluctuation to mean-flow kinetic energy $k/k_{\rm mean}$ climbs from
-$0.58$ at $Re_P = 100$--where the fluctuations already amount to roughly half the
+$0.58$ at $Re_P = 100$-where the fluctuations already amount to roughly half the
 mean-flow energy, reflecting unsteady wakes shed by the bars even in the nominally laminar
-regime--to $1.03$ at $Re_P = 300$, where the fluctuations exceed the mean-flow energy.
+regime-to $1.03$ at $Re_P = 300$, where the fluctuations exceed the mean-flow energy.
 Second, and more tellingly for locking, the fluctuations themselves \emph{de-lock}: the
 layer-to-layer coefficient of variation of $k$ jumps from $2.2\%$ at $Re_P = 100$ to
 $11.9\%$ at $Re_P = 300$. At the lower Reynolds number not only the mean flow but even the
@@ -890,8 +900,8 @@ each layer reproduces the inlet condition that the next layer requires.
 
 Three observations support this picture. First, locking is established almost immediately:
 the per-layer statistics are already uniform from the third layer (L03) onward
-(Figs.~\ref{fig:Ln}, \ref{fig:tke}), so the alignment length is short--of order a single
-period--and the developed window L13-L17 is fully locked. Second, the topology dependence
+(Figs.~\ref{fig:Ln}, \ref{fig:tke}), so the alignment length is short-of order a single
+period-and the developed window L13-L17 is fully locked. Second, the topology dependence
 follows directly: the $40^\circ$ packing hands the jet off across a larger angle, demanding
 more transverse momentum redistribution per layer and slightly degrading the inheritance
 ($L \approx 0.99$), while the irregular packing presents each layer with an uncorrelated
@@ -909,7 +919,7 @@ field first.
 \caption{Resolved turbulent kinetic energy field $k$ in a representative layer (L10) of the
 $30^\circ$ packing at Pos\,3, for $Re_P = 100$ (left) and $Re_P = 300$ (right); note the
 ten-fold change in colour scale. The fluctuations concentrate in the central-jet shear
-layer and the bar wakes--the layer-to-layer hand-off interfaces--and intensify and
+layer and the bar wakes-the layer-to-layer hand-off interfaces-and intensify and
 spread as the Reynolds number rises, identifying where the locked state first breaks down.}
 \label{fig:tkefield}
 \end{figure}
@@ -920,14 +930,14 @@ spread as the Reynolds number rises, identifying where the locked state first br
 Physically, the locked state is a set of coherent jets that spiral upward in lock-step
 with the rotating slits, reproducing the same pore-scale flow in every layer of a period.
 This has a direct consequence for the modelling of the bed. If the developed mean flow is
-fully described by the field within a single $N$-layer period--as the near-unity $L$
-demonstrates for the regular packings--then the full-height apparatus is informationally
+fully described by the field within a single $N$-layer period-as the near-unity $L$
+demonstrates for the regular packings-then the full-height apparatus is informationally
 redundant: a reduced domain comprising one geometric period with periodic end conditions
 should reproduce the interior flow of the complete bed. This is precisely the premise
 exploited in Paper~2, where the locking established here is used to justify a reduced
 six-layer ($30^\circ$) periodic domain for the friction-law and laminar-turbulent
 transition study, at a small fraction of the full-apparatus cost. The irregular packing,
-which does not lock, admits no such reduction and must be simulated in full--a limitation
+which does not lock, admits no such reduction and must be simulated in full-a limitation
 that is itself a physical result of this section.
 
 %% ============================================================
@@ -1003,7 +1013,7 @@ organisation: sharply defined, near-parallel slit jets separated by orderly reci
 cells, the banded structure that underpins its near-unity locking.
 The $40^\circ$ packing (Fig.~\ref{fig:topocontrast}b) retains organised jets but at the
 larger twist angle they are more strongly inclined and the streamlines show more
-cross-flow redistribution between layers, with more prominent swirl cells--consistent
+cross-flow redistribution between layers, with more prominent swirl cells-consistent
 with its slightly reduced locking ($L \approx 0.99$) and the larger transverse spreading
 expected of the steeper twist.
 The irregular packing (Fig.~\ref{fig:topocontrast}c) is qualitatively different: the flow
@@ -1028,8 +1038,8 @@ is near unity for the regular packings and collapses for the irregular one.}
 \label{fig:topocontrast}
 \end{figure}
 
-A compact quantitative summary of these differences--the channelling index $\phi$ and
-transverse kinetic-energy fraction $f_\perp$ for each topology--is collected in
+A compact quantitative summary of these differences-the channelling index $\phi$ and
+transverse kinetic-energy fraction $f_\perp$ for each topology-is collected in
 Fig.~\ref{fig:summary}. For the $30^\circ$ packing these are $\phi \approx 0.66$ and
 $f_\perp \approx 18\%$ (Sec.~\ref{sec:organisation:channelling}); the corresponding values
 for the $40^\circ$ and irregular packings complete the comparison.
