@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.4)  24 JUN 2026 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.4)  28 JUN 2026 23:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,24 +552,24 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
@@ -605,9 +605,9 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 29.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 35.
 
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 35.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -617,9 +617,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count345
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
  (./template.out) (./template.out)
 \@outlinefile=\write4
 \openout4 = `template.out'.
@@ -629,241 +629,270 @@ SVJour3 warning: Missing \journalname
 
 SVJour3 Warning: Title too long for running head.
 Please supply a shorter form with \titlerunning prior to \maketitle
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 69.
+
+Package natbib Warning: Citation `Larsson.2018' on page 1 undefined on input line 81.
+
+
+Package natbib Warning: Citation `li2022visualization' on page 1 undefined on input line 81.
+
 [1
 
 pdfTeX warning: pdflatex (file pdftex.map): cannot open font map file
-] [2]
-Overfull \hbox (11.65077pt too wide) in paragraph at lines 122--125
+]
+
+Package natbib Warning: Citation `Martins.2018' on page 2 undefined on input line 92.
+
+
+Package natbib Warning: Citation `hassan2008flow' on page 2 undefined on input line 92.
+
+
+Package natbib Warning: Citation `sadowski2025mean' on page 2 undefined on input line 96.
+
+
+Package natbib Warning: Citation `demir2026pressure' on page 2 undefined on input line 98.
+
+
+Package natbib Warning: Citation `sadowski2025mean' on page 2 undefined on input line 133.
+
+
+Package natbib Warning: Citation `demir2026pressure' on page 2 undefined on input line 133.
+
+[2]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 3769) has occurred while \output is active []
+
+ [3] [4]
+Overfull \hbox (11.65077pt too wide) in paragraph at lines 194--197
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 v[]$ \OT1/cmr/m/n/10 is the su-per-fi-cial ve-loc-ity, $\OML/cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 204 []$ and $\OML/cmm/m/it/10 ^^V \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 822 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] []$
  []
 
-[3] [4]
-Overfull \hbox (3.80614pt too wide) in paragraph at lines 199--200
+[5]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (3.80614pt too wide) in paragraph at lines 271--272
 \OT1/cmr/m/n/10 The present flow sim-u-la-tions are car-ried out with the lat-tice Boltz-mann method,
  []
 
-[5] [6] [7] [8] [9] [10]
-<images//grid_coarse.png, id=230, 646.5756pt x 415.0707pt>
-File: images//grid_coarse.png Graphic file (type png)
-<use images//grid_coarse.png>
-Package pdftex.def Info: images//grid_coarse.png  used on input line 411.
-(pdftex.def)             Requested size: 108.16248pt x 69.43372pt.
-<images//grid_medium.png, id=232, 646.8165pt x 415.0707pt>
-File: images//grid_medium.png Graphic file (type png)
-<use images//grid_medium.png>
-Package pdftex.def Info: images//grid_medium.png  used on input line 412.
-(pdftex.def)             Requested size: 108.16248pt x 69.40839pt.
-<images//grid_fine.png, id=233, 646.8165pt x 415.0707pt>
-File: images//grid_fine.png Graphic file (type png)
-<use images//grid_fine.png>
-Package pdftex.def Info: images//grid_fine.png  used on input line 413.
-(pdftex.def)             Requested size: 108.16248pt x 69.40839pt.
+[6] [7] [8] [9] [10]
+Overfull \hbox (0.93906pt too wide) in paragraph at lines 402--414
+[][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11]
-<images//Symmetry_Contour_Pos3_Re_100.png, id=247, 973.4769pt x 377.7312pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images//grid_coarse.png, id=255, 646.5756pt x 415.0707pt>
+File: images//grid_coarse.png Graphic file (type png)
+<use images//grid_coarse.png>
+Package pdftex.def Info: images//grid_coarse.png  used on input line 479.
+(pdftex.def)             Requested size: 108.16248pt x 69.43372pt.
+<images//grid_medium.png, id=257, 646.8165pt x 415.0707pt>
+File: images//grid_medium.png Graphic file (type png)
+<use images//grid_medium.png>
+Package pdftex.def Info: images//grid_medium.png  used on input line 480.
+(pdftex.def)             Requested size: 108.16248pt x 69.40839pt.
+<images//grid_fine.png, id=258, 646.8165pt x 415.0707pt>
+File: images//grid_fine.png Graphic file (type png)
+<use images//grid_fine.png>
+Package pdftex.def Info: images//grid_fine.png  used on input line 481.
+(pdftex.def)             Requested size: 108.16248pt x 69.40839pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
+<images//Symmetry_Contour_Pos3_Re_100.png, id=272, 973.4769pt x 377.7312pt>
 File: images//Symmetry_Contour_Pos3_Re_100.png Graphic file (type png)
 <use images//Symmetry_Contour_Pos3_Re_100.png>
-Package pdftex.def Info: images//Symmetry_Contour_Pos3_Re_100.png  used on input line 435.
+Package pdftex.def Info: images//Symmetry_Contour_Pos3_Re_100.png  used on input line 503.
 (pdftex.def)             Requested size: 304.19794pt x 118.03494pt.
-<images//Symmetry_Contour_Pos3_Re_300.png, id=248, 963.1182pt x 377.0085pt>
+<images//Symmetry_Contour_Pos3_Re_300.png, id=273, 963.1182pt x 377.0085pt>
 File: images//Symmetry_Contour_Pos3_Re_300.png Graphic file (type png)
 <use images//Symmetry_Contour_Pos3_Re_300.png>
-Package pdftex.def Info: images//Symmetry_Contour_Pos3_Re_300.png  used on input line 436.
+Package pdftex.def Info: images//Symmetry_Contour_Pos3_Re_300.png  used on input line 504.
 (pdftex.def)             Requested size: 304.19794pt x 119.07469pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//Combined_Line_Profiles_Pos3_Re_100.png, id=249, 821.2281pt x 427.3566pt>
+<images//Combined_Line_Profiles_Pos3_Re_100.png, id=274, 821.2281pt x 427.3566pt>
 File: images//Combined_Line_Profiles_Pos3_Re_100.png Graphic file (type png)
 <use images//Combined_Line_Profiles_Pos3_Re_100.png>
-Package pdftex.def Info: images//Combined_Line_Profiles_Pos3_Re_100.png  used on input line 447.
+Package pdftex.def Info: images//Combined_Line_Profiles_Pos3_Re_100.png  used on input line 515.
 (pdftex.def)             Requested size: 304.19794pt x 158.30205pt.
-<images//Combined_Line_Profiles_Pos3_Re_300.png, id=250, 821.2281pt x 427.3566pt>
+<images//Combined_Line_Profiles_Pos3_Re_300.png, id=275, 821.2281pt x 427.3566pt>
 File: images//Combined_Line_Profiles_Pos3_Re_300.png Graphic file (type png)
 <use images//Combined_Line_Profiles_Pos3_Re_300.png>
-Package pdftex.def Info: images//Combined_Line_Profiles_Pos3_Re_300.png  used on input line 448.
+Package pdftex.def Info: images//Combined_Line_Profiles_Pos3_Re_300.png  used on input line 516.
 (pdftex.def)             Requested size: 304.19794pt x 158.30205pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 5460) has occurred while \output is active []
-
- [12 <./images//grid_coarse.png> <./images//grid_medium.png> <./images//grid_fine.png>] [13 <./images//Symmetry_Contour_Pos3_Re_100.png> <./images//Symmetry_Contour_Pos3_Re_300.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./images//Combined_Line_Profiles_Pos3_Re_100.png> <./images//Combined_Line_Profiles_Pos3_Re_300.png>]
-<images//30_Re_100/surface/pos3_Surface_plot.png, id=290, 984.7992pt x 373.1541pt>
+[13 <./images//grid_coarse.png> <./images//grid_medium.png> <./images//grid_fine.png>] [14 <./images//Symmetry_Contour_Pos3_Re_100.png> <./images//Symmetry_Contour_Pos3_Re_300.png>] [15 <./images//Combined_Line_Profiles_Pos3_Re_100.png> <./images//Combined_Line_Profiles_Pos3_Re_300.png>] [16]
+<images//30_Re_100/surface/pos3_Surface_plot.png, id=324, 984.7992pt x 373.1541pt>
 File: images//30_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//30_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 534.
+Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 605.
 (pdftex.def)             Requested size: 162.23856pt x 61.47096pt.
-<images//30_Re_300/surface/pos3_Surface_plot.png, id=291, 973.4769pt x 340.3917pt>
+<images//30_Re_300/surface/pos3_Surface_plot.png, id=325, 973.4769pt x 340.3917pt>
 File: images//30_Re_300/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//30_Re_300/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_300/surface/pos3_Surface_plot.png  used on input line 535.
+Package pdftex.def Info: images//30_Re_300/surface/pos3_Surface_plot.png  used on input line 606.
 (pdftex.def)             Requested size: 162.23856pt x 56.72833pt.
- [15]
-<images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png, id=301, 860.7357pt x 508.5399pt>
+<images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png, id=326, 860.7357pt x 508.5399pt>
 File: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png Graphic file (type png)
 <use images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>
-Package pdftex.def Info: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png  used on input line 547.
+Package pdftex.def Info: images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png  used on input line 618.
 (pdftex.def)             Requested size: 321.09897pt x 189.70874pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16 <./images//30_Re_100/surface/pos3_Surface_plot.png> <./images//30_Re_300/surface/pos3_Surface_plot.png> <./images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>]
-<images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=315, 1360.8441pt x 676.4472pt>
+ [17 <./images//30_Re_100/surface/pos3_Surface_plot.png> <./images//30_Re_300/surface/pos3_Surface_plot.png> <./images//30_Re_100/surface/Summary_Line_Profiles_Pos3.png>]
+<images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=340, 1360.8441pt x 676.4472pt>
 File: images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png Graphic file (type png)
 <use images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png>
-Package pdftex.def Info: images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 601.
+Package pdftex.def Info: images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 672.
 (pdftex.def)             Requested size: 304.19794pt x 151.21349pt.
-<images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png, id=316, 1512.852pt x 723.1818pt>
+<images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png, id=341, 1512.852pt x 723.1818pt>
 File: images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png Graphic file (type png)
 <use images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>
-Package pdftex.def Info: images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png  used on input line 603.
+Package pdftex.def Info: images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png  used on input line 674.
 (pdftex.def)             Requested size: 304.19794pt x 145.40623pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[17]
-<images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=326, 1360.8441pt x 799.0653pt>
-File: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png Graphic file (type png)
-<use images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png>
-Package pdftex.def Info: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 628.
-(pdftex.def)             Requested size: 304.19794pt x 178.62363pt.
-<images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png, id=327, 1513.5747pt x 723.1818pt>
-File: images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png Graphic file (type png)
-<use images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>
-Package pdftex.def Info: images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png  used on input line 630.
-(pdftex.def)             Requested size: 304.19794pt x 145.34003pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18 <./images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>] [19]
-<images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png, id=352, 1855.4118pt x 710.655pt>
+ [18]
+<images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png, id=350, 1360.8441pt x 799.0653pt>
+File: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png Graphic file (type png)
+<use images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png>
+Package pdftex.def Info: images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png  used on input line 699.
+(pdftex.def)             Requested size: 304.19794pt x 178.62363pt.
+<images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png, id=351, 1513.5747pt x 723.1818pt>
+File: images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png Graphic file (type png)
+<use images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>
+Package pdftex.def Info: images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png  used on input line 701.
+(pdftex.def)             Requested size: 304.19794pt x 145.34003pt.
+ [19 <./images//30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>] [21]
+<images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png, id=384, 1855.4118pt x 710.655pt>
 File: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png Graphic file (type png)
 <use images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png>
-Package pdftex.def Info: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png  used on input line 738.
+Package pdftex.def Info: images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png  used on input line 807.
 (pdftex.def)             Requested size: 338.0pt x 129.45218pt.
-<images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png, id=353, 1843.8486pt x 710.655pt>
+<images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png, id=385, 1843.8486pt x 710.655pt>
 File: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png Graphic file (type png)
 <use images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>
-Package pdftex.def Info: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png  used on input line 739.
+Package pdftex.def Info: images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png  used on input line 808.
 (pdftex.def)             Requested size: 338.0pt x 130.26546pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20]
-<images//fig7a_Ln_30.png, id=367, 650.43pt x 245.718pt>
+[22]
+<images//fig7a_Ln_30.png, id=399, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_30.png Graphic file (type png)
 <use images//fig7a_Ln_30.png>
-Package pdftex.def Info: images//fig7a_Ln_30.png  used on input line 776.
+Package pdftex.def Info: images//fig7a_Ln_30.png  used on input line 845.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
-<images//fig7a_Ln_40.png, id=368, 650.43pt x 245.718pt>
+<images//fig7a_Ln_40.png, id=400, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_40.png Graphic file (type png)
 <use images//fig7a_Ln_40.png>
-Package pdftex.def Info: images//fig7a_Ln_40.png  used on input line 777.
+Package pdftex.def Info: images//fig7a_Ln_40.png  used on input line 846.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
-<images//fig7a_Ln_irregular.png, id=369, 650.43pt x 245.718pt>
+<images//fig7a_Ln_irregular.png, id=401, 650.43pt x 245.718pt>
 File: images//fig7a_Ln_irregular.png Graphic file (type png)
 <use images//fig7a_Ln_irregular.png>
-Package pdftex.def Info: images//fig7a_Ln_irregular.png  used on input line 778.
+Package pdftex.def Info: images//fig7a_Ln_irregular.png  used on input line 847.
 (pdftex.def)             Requested size: 287.30206pt x 108.53992pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ [23 <./images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png> <./images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21]
-<images//fig_tke_perlayer.png, id=385, 375.804pt x 245.718pt>
+ [24 <./images//fig7a_Ln_30.png> <./images//fig7a_Ln_40.png> <./images//fig7a_Ln_irregular.png>] [25]
+<images//fig_tke_perlayer.png, id=437, 375.804pt x 245.718pt>
 File: images//fig_tke_perlayer.png Graphic file (type png)
 <use images//fig_tke_perlayer.png>
-Package pdftex.def Info: images//fig_tke_perlayer.png  used on input line 876.
+Package pdftex.def Info: images//fig_tke_perlayer.png  used on input line 945.
 (pdftex.def)             Requested size: 165.62186pt x 108.29247pt.
-<images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png, id=386, 715.2321pt x 424.9476pt>
+<images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png, id=438, 715.2321pt x 424.9476pt>
 File: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png Graphic file (type png)
 <use images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png>
-Package pdftex.def Info: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png  used on input line 877.
+Package pdftex.def Info: images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png  used on input line 946.
 (pdftex.def)             Requested size: 165.62186pt x 98.40375pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images//fig_tke_field.png, id=396, 650.43pt x 260.172pt>
+ [26 <./images//fig_tke_perlayer.png> <./images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png>]
+<images//fig_tke_field.png, id=452, 650.43pt x 260.172pt>
 File: images//fig_tke_field.png Graphic file (type png)
 <use images//fig_tke_field.png>
-Package pdftex.def Info: images//fig_tke_field.png  used on input line 919.
+Package pdftex.def Info: images//fig_tke_field.png  used on input line 988.
 (pdftex.def)             Requested size: 338.0pt x 135.20287pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23]
-Underfull \vbox (badness 1590) has occurred while \output is active []
-
- [24]
+ [27 <./images//fig_tke_field.png>] [28]
 File: images//30_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//30_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 1029.
+Package pdftex.def Info: images//30_Re_100/surface/pos3_Surface_plot.png  used on input line 1098.
 (pdftex.def)             Requested size: 287.30206pt x 108.86101pt.
-<images//40_Re_100/surface/pos3_Surface_plot.png, id=421, 984.7992pt x 348.3414pt>
+<images//40_Re_100/surface/pos3_Surface_plot.png, id=478, 984.7992pt x 348.3414pt>
 File: images//40_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//40_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//40_Re_100/surface/pos3_Surface_plot.png  used on input line 1030.
+Package pdftex.def Info: images//40_Re_100/surface/pos3_Surface_plot.png  used on input line 1099.
 (pdftex.def)             Requested size: 287.30206pt x 101.62234pt.
-<images//irregular_Re_100/surface/pos3_Surface_plot.png, id=422, 984.7992pt x 334.1283pt>
+<images//irregular_Re_100/surface/pos3_Surface_plot.png, id=479, 984.7992pt x 334.1283pt>
 File: images//irregular_Re_100/surface/pos3_Surface_plot.png Graphic file (type png)
 <use images//irregular_Re_100/surface/pos3_Surface_plot.png>
-Package pdftex.def Info: images//irregular_Re_100/surface/pos3_Surface_plot.png  used on input line 1031.
+Package pdftex.def Info: images//irregular_Re_100/surface/pos3_Surface_plot.png  used on input line 1100.
 (pdftex.def)             Requested size: 287.30206pt x 97.47594pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25]
-Underfull \hbox (badness 1092) in paragraph at lines 1092--1093
-[]\OT1/cmr/m/n/10 Dong, Y., Ko-rup, O., Gerdts, J., Rold^^San Cuenya, B., & Horn, R.
- []
-
-[26]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 1119.
+[29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27] [28] [29 <./images//irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png> <./images//irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png>] [30 <./images//30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png> <./images//30_Re_300/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re300_2col.png>] [31 <./images//fig7a_Ln_30.png> <./images//fig7a_Ln_40.png> <./images//fig7a_Ln_irregular.png>] [32 <./images//fig_tke_perlayer.png> <./images//30_Re_300/all_layers/Mean_Velocity_vs_Height_Pos3_Re300.png> <./images//fig_tke_field.png>] [33 <./images//40_Re_100/surface/pos3_Surface_plot.png> <./images//irregular_Re_100/surface/pos3_Surface_plot.png>] [34] (./template.aux)
+ [30 <./images//40_Re_100/surface/pos3_Surface_plot.png> <./images//irregular_Re_100/surface/pos3_Surface_plot.png>] [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+
+Package natbib Warning: There were undefined citations.
+
+[34] (./template.aux)
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: 9D456F2040E8A1A8165EAE818D707A19;1096.
  ) 
 Here is how much of TeX's memory you used:
- 23310 strings out of 480247
- 440944 string characters out of 5896152
- 712481 words of memory out of 5000000
- 40650 multiletter control sequences out of 15000+600000
+ 23282 strings out of 480247
+ 440335 string characters out of 5896152
+ 709273 words of memory out of 5000000
+ 40619 multiletter control sequences out of 15000+600000
  478561 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,11n,94p,1067b,950s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy5.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmex10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmti10.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmti8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbsy10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.650pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk>
-Output written on template.pdf (34 pages, 27949131 bytes).
+ 99i,11n,94p,1067b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy5.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmtt8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmib10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmex10.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmti8.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmti10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbsy10.600pk> </home/tneeraj/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.650pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk>
+Output written on template.pdf (34 pages, 27954374 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
- 540 compressed objects within 6 object streams
- 194 named destinations out of 1000 (max. 500000)
+ 1207 PDF objects out of 1440 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 197 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,6 +17,12 @@
 \usepackage[numbers]{natbib}
 \bibliographystyle{spphys}
 
+% --- tighten vertical space around figures ---
+\setlength{\intextsep}{4pt plus 2pt minus 2pt}     % space above/below in-text ([H]/here) floats
+\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}  % space between top/bottom floats and text
+\setlength{\abovecaptionskip}{4pt}                 % image-to-caption gap
+\setlength{\belowcaptionskip}{0pt}
+
 % Placeholder box for figures whose final artwork is not yet inserted.
 % Renders a framed grey panel with a short description, so the document
 % compiles without the missing-file error and the layout is preview-able.
@@ -58,18 +64,84 @@
 \section{Introduction}
 \label{sec:intro}
 
-% Transport in structured/rotational porous media; importance of pore-scale flow
-% organisation for mixing, transport, reactor performance.
-% Limits of Darcy/volume-averaged models.
-% Deterministic rotational topology as a design knob.
-% Prior work: PIV \cite{velten2026}; FVM (Sadowski et al.) noted qualitative
-% layer-repeatability and antisymmetry  never quantified.
-% Gap = a quantitative, validated, multi-topology description of locking.
-% Objectives and contributions.
-\todo[inline]{Write Introduction}
+Packed beds are among the most widely used contacting devices in chemical, energy and
+environmental process engineering, where they serve as catalytic reactors, adsorbers and
+heat- and mass-exchange units~\citep{Dixon}. Their performance--conversion,
+selectivity, pressure drop and the avoidance of hot spots--is set not by the bed-averaged
+porosity alone but by the organisation of the flow at the pore scale, which governs the local residence-time distribution and the rates of interphase heat and mass
+transfer~\citep{Augier,freund2003numerical}. Macroscopic descriptions of the Darcy or volume-averaged type collapse this pore-scale structure into effective coefficients and, by
+construction, cannot represent the channelling, jetting and recirculation that control
+mixing in the interstitial space. Resolving the flow at the scale of the individual pores is
+therefore a prerequisite for understanding, and ultimately designing, how such beds perform.
+
+Conventional beds of randomly poured particles offer little control over this pore-scale
+flow: the void network is statistically reproducible but geometrically uncontrolled, so the
+flow organisation cannot be tuned deliberately. Structured and additively manufactured
+packings change this premise by fixing the pore geometry by design, turning the internal
+topology into an engineering variable~\citep{Larsson.2018,li2022visualization}. The rotationally
+stacked, modular bed studied here is a deliberate instance of this idea: identical bar modules are stacked
+and each successive layer is rotated by a fixed angle relative to the one below, so that a
+single rotation increment acts as a design knob that reshapes the entire interstitial
+pore network. When the rotation angle is commensurate with the $180^\circ$ symmetry of the
+bar pattern, the stack becomes geometrically periodic over a finite number of layers
+(six layers at $30^\circ$, nine at $40^\circ$) and the pores trace a spiral path through the
+bed; an aperiodic, irregularly rotated stack provides a geometrically disordered counterpart.
+
+This configuration has been characterised experimentally by means of optically corrected,
+refractive-index-matched particle image velocimetry, which resolves the time-averaged
+velocity field within the slits of the upper layers~\citep{velten2026,Martins.2018,hassan2008flow,velten2022a};
+related PIV and tomographic studies have established such measurements as a reliable
+pore-scale reference in both random and ordered packings~\citep{Patil.2013,Khayamyan.2017,wood.2015,Poelma.2020}.
+On the numerical side, the same packing has recently been simulated. Using particle-resolved
+finite-volume simulations (OpenFOAM), \citet{sadowski2025mean} computed the mean
+interstitial flow of the $30^\circ$ stack in a periodic six-layer domain at $Re_P=100$ and
+$150$, and \citet{demir2026pressure} extended this to a range of rotation angles and
+Reynolds numbers up to $200$, classifying the geometries as channel- or lattice-like and
+modelling the resulting pressure drop and friction factor, with selected cases compared
+against the PIV data. These studies establish the macroscopic flow resistance of the
+packing and report, in passing, that successive layers carry a similar interstitial flow
+pattern, rotated together with the geometry. To date, however, this layer-to-layer
+repeatability has only been described qualitatively: it has not been given a precise
+definition or a quantitative measure, compared against a disordered control, or examined
+across more than one rotation topology.
+
+Three gaps follow. First, the existing simulations are finite-volume and largely confined to
+reduced periodic domains and the macroscopic pressure-drop response; a pore-scale lattice
+Boltzmann description of the full bounded apparatus, validated layer by layer against the PIV
+fields across several topologies, is still missing. Second, the apparent layer
+repeatability--here termed \emph{flow locking}--has remained a qualitative observation rather
+than a measurable property. Third, whether locking is genuinely a consequence of the periodic
+rotation, as opposed to a generic feature of the flow, can only be settled by contrasting
+periodic and aperiodic packings under identical conditions, which has not yet been done.
+
+The present work addresses these gaps with pore-scale lattice Boltzmann
+simulations~\citep{kruger2017lattice,Sullivan} of the full bounded apparatus for three
+topologies--the $30^\circ$ and $40^\circ$ periodic stacks and an irregular stack--at pore
+Reynolds numbers spanning the experimentally investigated range. Its contributions are:
+(i)~a pore-scale lattice Boltzmann model of the complete Reference Configuration~IIa
+apparatus, validated against PIV through point-by-point comparison of the time-averaged
+surface and layer-resolved velocity fields for all three topologies (Sec.~\ref{sec:validation});
+(ii)~a quantitative framework for flow locking, in which a locking order parameter
+$L(n)$--obtained by de-rotating each layer's mean field into a common frame and correlating
+layers a full geometric period apart--turns the qualitative repeatability into a single
+measurable number, complemented by an antisymmetry index that probes the point symmetry of
+the slit pattern (Sec.~\ref{sec:locking}); and (iii)~the use of the irregular packing as a
+clean control that, by construction, cannot lock, isolating periodic rotation as the cause
+of the effect. Together these establish flow locking as a real, quantifiable property of
+the rotationally stacked bed, and in doing so provide the physical justification for the
+reduced periodic domains already adopted in the finite-volume
+studies~\citep{sadowski2025mean,demir2026pressure}.
+
+The remainder of the paper is organised as follows. Section~\ref{sec:geometry} describes the
+packing geometry and the three topologies, and Sec.~\ref{sec:numerics} the lattice Boltzmann
+methodology, computational domain and verification. Section~\ref{sec:validation} validates
+the simulations against PIV at the surface and within the layers. Section~\ref{sec:locking}
+introduces the flow-locking framework and applies it across topologies and Reynolds numbers,
+and the final section summarises the findings.
 
 %% ============================================================
 \section{Experimental Setup}
+\label{sec:geometry}
 The experimental reference configuration is described in detail by~\citet{velten2026}. The packing consists of polyhedral bar modules, each containing five parallel bars of height $l_\mathrm{ch} = 10\,\mathrm{mm}$ separated by slits of width $l_P = 5\,\mathrm{mm}$, housed within a circular cross-section of diameter $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$ (Fig.~\ref{fig:geometry}. The volume fraction of the void (porosity), defined as the volume of the void relative to the volume of the overall module, is $\varphi = 0.332$. Modules are 3D-printed from PA \,12 by laser sintering (tolerance $0.3\%$) and can rotate against each other in increments of $5^\circ$ by $37$ indexing slits on the rim, spanning $0$-$180^\circ$~\citep{velten2026}.
 The parallel-bar geometry is what enables direct optical access: in the experiment three of the five  bars in the measurement module are replaced by transparent fused-silica glass bars, so that a laser light sheet can be introduced through the void spaces and the camera can view the interior pores without refractive-index matching~\citep{velten2026}. 
 
@@ -331,12 +403,12 @@ topologies sharing a given $Re_P$.}
 \hline\noalign{\smallskip}
  & $Re_P = 100$ & $Re_P = 300$ & $Re_P = 500$ \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Grid $N_x\times N_y\times N_z$      & $273\times273\times1195$ & $539\times539\times2870$ & TBD \\
-Total nodes                          & $8.91\times10^{7}$       & $8.34\times10^{8}$       & TBD \\
-$\delta x$ (mm)                      & $0.30$                   & $0.15$                   & TBD \\
-$\delta t$ (s)                       & $5.967\times10^{-5}$     & $1.492\times10^{-5}$     & TBD \\
-$\tau$                               & $0.5301$                 & $0.5301$                 & TBD \\
-Nodes per slit ($l_P = 5\,$mm)       & $\approx17$              & $33$                     & TBD \\
+Grid $N_x\times N_y\times N_z$      & $273\times273\times1195$ & $539\times539\times2870$ & $406\times406\times1789$ \\
+Total nodes                          & $8.91\times10^{7}$       & $8.34\times10^{8}$       & $2.95\times10^{8}$ \\
+$\delta x$ (mm)                      & $0.30$                   & $0.15$                   & $0.20$ \\
+$\delta t$ (s)                       & $5.967\times10^{-5}$     & $1.492\times10^{-5}$     & $2.116\times10^{-5}$ \\
+$\tau$                               & $0.5301$                 & $0.5301$                 & $0.5240$ \\
+Nodes per slit ($l_P = 5\,$mm)       & $\approx17$              & $33$                     & $25$ \\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
@@ -353,15 +425,11 @@ through the $L_2$ norm of the velocity field between successive time steps; the 
 considered converged once this residual has dropped below $10^{-5}$. Mean fields are
 then accumulated at every time step (sampling interval $\delta t$) starting from
 $t = 10\,\mathrm{s}$ of physical time, by which point the initial start-up transient
-has fully decayed, and continued over a window of \todo{total averaging duration};
-all velocity fields reported here are these time-averaged fields. The computations are
+has fully decayed, and continued over a window of 100 seconds. All velocity fields reported here are these time-averaged fields. The computations are
 carried out on the \emph{Sofja} cluster of the Otto-von-Guericke University
 Magdeburg\footnote{\url{https://www.lss.ovgu.de/Forschung/Numerische+Ausstattung.html}}
 using a Cartesian domain decomposition of $5\times1\times83 = 415$ subdomains in the
 $(x,y,z)$ directions, one MPI rank per subdomain.
-
-\todo[inline]{§3.3 fill Re=500 grid column (Table~\ref{tab:simparams}); add total
-averaging duration; optionally add convergence-history plot and wall-clock per case}
 
 \subsection{Grid Independence Study}
 \label{sec:numerics:grid}
@@ -488,8 +556,8 @@ $s_i$ and $e_i$, we report the root-mean-square error
     \mathrm{NRMSE} = \frac{\mathrm{RMSE}}{e_\mathrm{max}-e_\mathrm{min}},
     \label{eq:rmse}
 \end{equation}
-its value normalised by the experimental dynamic range ($\mathrm{NRMSE}$), the mean
-signed deviation, or bias, $\overline{s-e}$, and the coefficient of determination
+its value normalised by the experimental dynamic range ($\mathrm{NRMSE}$), and the
+coefficient of determination
 $R^2 = 1-\sum_i(s_i-e_i)^2/\sum_i(e_i-\bar{e})^2$, which measures how much of the
 spatial variance of the measured field is reproduced. $\mathrm{NRMSE}$ is the primary
 headline metric, as it is insensitive to the absolute velocity level and is therefore
@@ -511,15 +579,18 @@ streamwise jets issuing from the slits and separated by low-velocity wakes, with
 central jet flanked by weaker slit jets. The simulation recovers the number, position,
 width, and peak magnitude of these jets, together with the streamline topology of the
 intervening recirculation zones; crucially, the agreement is just as close at $Re_P=300$
-as at $Re_P=100$, showing that the model remains predictive as the flow strengthens. The agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays
-the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3 against the experimental uncertainty band: the simulated profiles track the
-measured ones within or close to the band almost everywhere, capturing both the jet peaks and the inter-jet minima.
+as at $Re_P=100$, showing that the model remains predictive as the flow strengthens. The
+agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays the
+simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3
+against the experimental uncertainty band: the simulated profiles track the measured ones
+within or close to the band almost everywhere, capturing both the jet peaks and the
+inter-jet minima.
 
-This level of agreement is representative. Across the regular
-packings the surface fields are reproduced consistently well at both Reynolds numbers,
-with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is
+This level of agreement is representative. Across the regular packings the surface fields
+are reproduced consistently well at both Reynolds numbers and both measurement positions
+(Pos\,1 and Pos\,3), with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is
 not distributed uniformly but concentrates in the thin, high-gradient shear layers
-bordering the jets (local-error maps, Supplementary Material), where sub-vector-spacing
+bordering the jets, where sub-vector-spacing
 velocity gradients and PIV peak-locking are largest, while the bulk of each plane agrees
 to within a few percent. The irregular packing is reproduced less tightly
 ($\mathrm{NRMSE}$ below $\sim 12\%$): its aperiodic arrangement yields a spatially disordered,
@@ -529,7 +600,7 @@ contrast-tight, reproducible fields for the periodic packings against a looser,
 placement-sensitive match for the irregular one-is itself physically meaningful and
 motivates the flow-locking analysis of Sec.~\ref{sec:locking}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.48\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\hfill
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.48\linewidth]{30_Re_300/surface/pos3_Surface_plot.png}}
@@ -542,7 +613,7 @@ well as the flow strengthens.}
 \label{fig:validation_surface}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.95\linewidth]{30_Re_100/surface/Summary_Line_Profiles_Pos3.png}
 \caption{Quantitative surface validation for the $30^\circ$ packing at $Re_P=100$,
@@ -581,7 +652,7 @@ the domain, and each jet core is resolved by only a handful of lattice nodes acr
 width; there the leading truncation error of the scheme acts as a weak numerical
 dissipation that clips the tip of the jet. Because the total mass flux through the plane is
 conserved, the momentum shaved from the peak is not lost but redistributed into the adjacent
-low-velocity region exactly the signature seen, lower maxima together with raised minima at
+low-velocity region---exactly the signature seen: lower maxima together with raised minima at
 unchanged jet position and width. A finer lattice would narrow this gap, but at a steep cost
 in the present multi-module domain; the chosen resolution already lies in the grid-converged
 range for the integral quantities (Sec.~\ref{sec:numerics:grid}). Two further factors bound
@@ -595,7 +666,7 @@ the jet maxima, sign-consistent across all five layers, and well within the comb
 experimental and numerical uncertainty; it leaves both the validation conclusion and the
 layer-to-layer repeatability that is the point of this figure intact.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
 \includegraphics[width=0.9\linewidth]{30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
@@ -622,7 +693,7 @@ strongly from L12 to L17 with no common shape-the direct visual signature of the
 locking. This contrast makes the central point measurement-anchored: layer collapse is a
 property of the regular packings, not of the flow in general.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
 \includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
@@ -634,8 +705,7 @@ simulation (right); (b)~per-layer velocity-magnitude profiles at $2\,\mathrm{mm}
 lower face, simulation (red, dashed) versus PIV (blue). Each layer is reproduced individually,
 but the profiles differ strongly from layer to layer with no common shape: unlike the regular
 packing, the irregular layers carry no coherent profile to collapse, so they are shown only in
-the per-layer format. Full per-layer contour sets for all cases are provided as supplementary
-material.}
+the per-layer format.}
 \label{fig:validation_layers_irreg}
 \end{figure}
 
@@ -1072,95 +1142,89 @@ topologies. To be populated with computed $\phi$ and $f_\perp$ values.}
 %% ============================================================
 \begin{thebibliography}{}
 
-\bibitem{Bao}
-Bao, Y. (2019). Recent advances in the lattice Boltzmann method: A review. Journal of Engineering Thermophysics, 28(4), 711-722.
-
-\bibitem{Rahman}
-Rahman, M.~M., \& Bao, Y. (2017). Numerical simulation of flow through porous media using the lattice Boltzmann method. Journal of Petroleum Science and Engineering, 158, 411-425.
-
-\bibitem{Kruger}
-Kr\"{u}ger, T., Varnik, F., \& Raabe, D. Efficient and accurate simulations of deformable particles immersed in a fluid using a combined immersed boundary lattice Boltzmann finite element method. Computers \& Mathematics with Applications, 61, 3485-3505. (2011)
-
-\bibitem{Young}
-Young-Il Lim. Computational Fluid Dynamics (CFD) of Chemical Processes. (2006).
-
-\bibitem{Aglave}
-Aglave, R., Eppinger, T., \& Jurtz, N. Automated workflow for spatially resolved fixed bed reactors with spherical and non-spherical particles. (2014).
-
-\bibitem{Ying}
-Dong, Y., Korup, O., Gerdts, J., Rold\'{a}n Cuenya, B., \& Horn, R. Microtomography-based CFD modeling of a fixed-bed reactor with an open-cell foam monolith and experimental verification by reactor profile measurements. Chemical Engineering Journal, 353, 176-188. (2018)
-
-\bibitem{Fattahi}
-Fattahi, E., Waluga, C., Wohlmuth, B., R\"{u}de, U., Manhart, M., \& Helmig, R. Lattice Boltzmann methods in porous media simulations: From laminar to turbulent flow. Computers \& Fluids, 140. (2016).
-
-\bibitem{Sullivan}
-Sullivan, S.~P., Sani, F.~M., Johns, M.~L., \& Gladden, L.~F. Simulation of packed bed reactors using lattice Boltzmann methods. Chemical Engineering Science, 60(12), 3405-3418. (2005).
-
-\bibitem{Sukop}
-Sukop, M., \& Or, D. Lattice Boltzmann method for modeling liquid-vapor interface configurations in porous media. Water Resources Research, 40. (2004).
-
-\bibitem{Shi}
-Shi, L., Yu, Z., \& Jaworski, A.~J. Investigation into the Strouhal numbers associated with vortex shedding from parallel-plate thermoacoustic stacks in oscillatory flow conditions. European Journal of Mechanics, B/Fluids, 30(2), 206-217. (2011)
-
-\bibitem{Yoshida}
-Yoshida, H., \& Nagaoka, M. Multiple-relaxation-time lattice Boltzmann model for the convection and anisotropic diffusion equation. Journal of Computational Physics, 229, 7774-7795. (2010).
-
 \bibitem{Dixon}
-Dixon, A.~G., \& Partopour, B. Computational fluid dynamics for fixed bed reactor design. Annual Review of Chemical and Biomolecular Engineering, 11, 109-130. (2020)
+Dixon, A.~G., \& Partopour, B. Computational fluid dynamics for fixed bed reactor design. Annual Review of Chemical and Biomolecular Engineering, 11, 109--130. (2020)
 
-\bibitem{Hosseini}
-S.~A. Hosseini. Development of a lattice Boltzmann-based numerical method for the simulation of reacting flows. PhD thesis, Universit\'{e} Paris-Saclay \& Otto-von-Guericke university. (2020)
+\bibitem{Augier}
+Augier, F., Idoux, F., \& Delenne, J.-Y. Numerical simulations of transfer and transport properties inside packed beds of spherical particles. Chemical Engineering Science, 65(3), 1055--1064. (2010)
 
-\bibitem{Xiaoyi}
-He, X., \& Luo, L.-S. Theory of the lattice Boltzmann method: From the Boltzmann equation to the lattice Boltzmann equation. Physical Review E, 56, 6811-6817. (1997).
+\bibitem{freund2003numerical}
+Freund, H., Zeiser, T., Huber, F., Klemm, E., Brenner, G., Durst, F., \& Emig, G. Numerical simulations of single phase reacting flows in randomly packed fixed-bed reactors and experimental validation. Chemical Engineering Science, 58(3--6), 903--910. (2003)
 
-\bibitem{Shu}
-Xiaoyi, G., \& Shu, C. Lattice Boltzmann Method and Its Applications in Engineering. World Scientific Publishing Company. (2012).
+\bibitem{Martins.2018}
+Martins, F., {Da Silva}, C.~C., Lessig, C., \& Z{\"a}hringer, K. Ray-Tracing Based Image Correction of Optical Distortion for {PIV} Measurements in Packed Beds. Journal of Advanced Optics and Photonics, 1(2), 71--94. (2018)
 
-\bibitem{hosseini2020compressibility}
-Hosseini, S.~A., Darabiha, N., \& Th\'{e}venin, D. Compressibility in lattice {Boltzmann} on standard stencils: effects of deviation from reference temperature. Philosophical Transactions of the Royal Society A, 378, 20190399. (2020)
+\bibitem{Patil.2013}
+Patil, V.~A., \& Liburdy, J.~A. Flow characterization using {PIV} measurements in a low aspect ratio randomly packed porous bed. Experiments in Fluids, 54(4). (2013)
 
-\bibitem{feng2015three}
-Feng, Y., Sagaut, P., \& Tao, W. A three-dimensional lattice model for thermal compressible flow on standard lattices. Journal of Computational Physics, 303, 514-529. (2015).
+\bibitem{Khayamyan.2017}
+Khayamyan, S., Lundstr{\"o}m, T.~S., Hellstr{\"o}m, J.~G.~I., Gren, P., \& Lycksam, H. Measurements of Transitional and Turbulent Flow in a Randomly Packed Bed of Spheres with Particle Image Velocimetry. Transport in Porous Media, 116(1), 413--431. (2017)
 
-\bibitem{hosseini2022lattice}
-Hosseini, S.~A., Huang, F., \& Thevenin, D. Lattice Boltzmann model for simulation of flow in intracranial aneurysms considering non-Newtonian effects. Physics of Fluids, 34(7), 073105. (2022).
+\bibitem{Larsson.2018}
+Larsson, I.~A.~S., Lundstr{\"o}m, T.~S., \& Lycksam, H. Tomographic {PIV} of flow through ordered thin porous media. Experiments in Fluids, 59(6). (2018)
 
-\bibitem{huang2022simulation}
-Huang, F., Noel, R., Berg, P., \& Hosseini, S.~A. Simulation of the FDA nozzle benchmark: A lattice Boltzmann study. Computer Methods and Programs in Biomedicine, 221, 106863. (2022).
+\bibitem{wood.2015}
+Wood, B.~D., Apte, S.~V., Liburdy, J.~A., Ziazi, R.~M., He, X., Finn, J.~R., \& Patil, V.~A. A comparison of measured and modeled velocity fields for a laminar flow in a porous medium. Advances in Water Resources, 85, 45--63. (2015)
 
-\bibitem{neeraj2023}
-Neeraj, T., Velten, C., Janiga, G., et al. Modeling gas flows in packed beds with the lattice {Boltzmann} method: validation against experiments. Flow, Turbulence and Combustion, 111, 463-491. (2023). \url{https://doi.org/10.1007/s10494-023-00444-z}
+\bibitem{Poelma.2020}
+Poelma, C. Measurement in opaque flows: a review of measurement techniques for dispersed multiphase flows. Acta Mechanica, 231(6), 2089--2111. (2020)
 
-\bibitem{hosseini2021central}
-Hosseini, S.~A., Berg, P., Huang, F., Roloff, C., Janiga, G., \& Thevenin, D. Central moments multiple relaxation time LBM for hemodynamic simulations in intracranial aneurysms: An in-vitro validation study using PIV and PC-MRI. Computers in Biology and Medicine, 131, 104251. (2021).
+\bibitem{li2022visualization}
+Li, L., \& Iskander, M. Visualization of Interstitial Pore Fluid Flow. Journal of Imaging, 8(2), 32. (2022)
 
-\bibitem{Bhadauria}
-Bhadauria, B.~S. Lattice Boltzmann Method Fundamentals and Engineering Applications with Computer Codes. Springer Science \& Business Media. (2009).
+\bibitem{hassan2008flow}
+Hassan, Y., \& Dominguez-Ontiveros, E.~E. Flow visualization in a pebble bed reactor experiment using {PIV} and refractive index matching techniques. Nuclear Engineering and Design, 238(11), 3080--3085. (2008)
 
-\bibitem{Boutt}
-Boutt, D.~F., et al. Direct simulation of fluid-solid mechanics in porous media using the discrete element and lattice-Boltzmann methods. Journal of Geophysical Research: Solid Earth, 112, B10. (2007).
+\bibitem{sadowski2025mean}
+Sadowski, W., Demir, H., \& {di Mare}, F. Mean flow properties in a packed bed with varying geometry. 2nd International Workshop on Reacting Particle-Gas Systems, Magdeburg, Germany, 16--18. (2025)
 
-\bibitem{Kawamura}
-Kawamura, H., Abe, H., \& Shingai, K. DNS of turbulence and heat transport in a channel flow with different Reynolds and Prandtl numbers and boundary conditions. Proceedings of the 3rd International Symposium on Turbulence, Heat and Mass Transfer. (2000).
+\bibitem{demir2026pressure}
+Demir, H., Sadowski, W., \& {di Mare}, F. Modelling of pressure drop in periodic square-bar packed beds. arXiv preprint arXiv:2601.04023. (2026)
 
-\bibitem{kruger2017lattice}
-Krueger, T., Kusumaatmaja, H., Kuzmin, A., Shardt, O., Silva, G., \& Viggen, E.~M. The Lattice Boltzmann Method: Principles and Practice. Springer. (2016).
-
-\bibitem{bouzidi2001momentum}
-Bouzidi, M., Firdaouss, M., \& Lallemand, P. Momentum transfer of a {Boltzmann}-lattice fluid with boundaries. Physics of Fluids, 13(11), 3452-3459. (2001).
-
-\bibitem{zhao2002non}
-Zhao-Li, G., Chu-Guang, Z., \& Bao-Chang, S. Non-equilibrium extrapolation method for velocity and pressure boundary conditions in the lattice {Boltzmann} method. Chinese Physics, 11(4), 366. (2002).
-
-\bibitem[Velten et al.(2026)]{velten2026}
-Velten, C., H\"{u}lz, K., \& Z\"{a}hringer, K. Allowing optical measurements in a {3D} packed bed with gas flow: {A} novel reactor concept. \textit{Particuology}, 108, 293-306. (2026). \url{https://doi.org/10.1016/j.partic.2025.11.018} (Open Access, CC~BY~4.0)
+\bibitem{velten2026}
+Velten, C., H\"{u}lz, K., \& Z\"{a}hringer, K. Allowing optical measurements in a {3D} packed bed with gas flow: {A} novel reactor concept. Particuology, 108, 293--306. (2026). \url{https://doi.org/10.1016/j.partic.2025.11.018}
 
 \bibitem{velten2022a}
-Velten, C., Ebert, M., Lessig, C., \& Z\"{a}hringer, K. Ray tracing based reconstruction of PIV measurements in the outlet zone of gaseous flow in packed beds. 20th International Symposium on the Application of Laser and Imaging Techniques to Fluid Mechanics, Lisbon, Portugal. (2022a).
+Velten, C., Ebert, M., Lessig, C., \& Z\"{a}hringer, K. Ray tracing based reconstruction of {PIV} measurements in the outlet zone of gaseous flow in packed beds. 20th International Symposium on the Application of Laser and Imaging Techniques to Fluid Mechanics, Lisbon, Portugal, 51/1--11. (2022)
 
-\bibitem{velten2022b}
-Velten, C., Ebert, M., Lessig, C., \& Z\"{a}hringer, K. Ray tracing particle image velocimetry challenges in the application to a packed bed. (2022b).
+\bibitem{neeraj2023}
+Neeraj, T., Velten, C., Janiga, G., et al. Modeling gas flows in packed beds with the lattice {Boltzmann} method: validation against experiments. Flow, Turbulence and Combustion, 111, 463--491. (2023). \url{https://doi.org/10.1007/s10494-023-00444-z}
+
+\bibitem{Sullivan}
+Sullivan, S.~P., Sani, F.~M., Johns, M.~L., \& Gladden, L.~F. Simulation of packed bed reactors using lattice {Boltzmann} methods. Chemical Engineering Science, 60, 3405--3418. (2005)
+
+\bibitem{kruger2017lattice}
+Kr\"{u}ger, T., Kusumaatmaja, H., Kuzmin, A., Shardt, O., Silva, G., \& Viggen, E.~M. The Lattice Boltzmann Method: Principles and Practice. Springer. (2017)
+
+\bibitem{Bhadauria}
+Bhadauria, B.~S. Lattice Boltzmann Method Fundamentals and Engineering Applications with Computer Codes. Springer Science \& Business Media. (2009)
+
+\bibitem{Xiaoyi}
+He, X., \& Luo, L.-S. Theory of the lattice {Boltzmann} method: From the {Boltzmann} equation to the lattice {Boltzmann} equation. Physical Review E, 56(6), 6811--6817. (1997)
+
+\bibitem{Shu}
+Xiaoyi, G., \& Shu, C. Lattice Boltzmann Method and Its Applications in Engineering. World Scientific Publishing Company. (2012)
+
+\bibitem{bouzidi2001momentum}
+Bouzidi, M., Firdaouss, M., \& Lallemand, P. Momentum transfer of a {Boltzmann}-lattice fluid with boundaries. Physics of Fluids, 13(11), 3452--3459. (2001)
+
+\bibitem{zhao2002non}
+Zhao-Li, G., Chu-Guang, Z., \& Bao-Chang, S. Non-equilibrium extrapolation method for velocity and pressure boundary conditions in the lattice {Boltzmann} method. Chinese Physics, 11(4), 366. (2002)
+
+\bibitem{feng2015three}
+Feng, Y., Sagaut, P., \& Tao, W. A three-dimensional lattice model for thermal compressible flow on standard lattices. Journal of Computational Physics, 303, 514--529. (2015)
+
+\bibitem{hosseini2020compressibility}
+Hosseini, S.~A., Darabiha, N., \& Th\'{e}venin, D. Compressibility in lattice {Boltzmann} on standard stencils: effects of deviation from reference temperature. Philosophical Transactions of the Royal Society A, 378(2175), 20190399. (2020)
+
+\bibitem{hosseini2021central}
+Hosseini, S.~A., Berg, P., Huang, F., Roloff, C., Janiga, G., \& Th\'{e}venin, D. Central moments multiple relaxation time {LBM} for hemodynamic simulations in intracranial aneurysms: An in-vitro validation study using {PIV} and {PC-MRI}. Computers in Biology and Medicine, 131, 104251. (2021)
+
+\bibitem{hosseini2022lattice}
+Hosseini, S.~A., Huang, F., \& Th\'{e}venin, D. Lattice {Boltzmann} model for simulation of flow in intracranial aneurysms considering non-Newtonian effects. Physics of Fluids, 34(7), 073105. (2022)
+
+\bibitem{huang2022simulation}
+Huang, F., Noel, R., Berg, P., \& Hosseini, S.~A. Simulation of the {FDA} nozzle benchmark: A lattice {Boltzmann} study. Computer Methods and Programs in Biomedicine, 221, 106863. (2022)
 
 \end{thebibliography}
 
