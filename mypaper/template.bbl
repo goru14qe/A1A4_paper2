@@ -1,9 +1,151 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{26}
+\providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
-  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Augier et~al(2010)Augier, Idoux, and Delenne}]{Augier}
+Augier F, Idoux F, Delenne JY (2010) Numerical simulations of transfer and
+  transport properties inside packed beds of spherical particles. Chem Eng Sci
+  65(3):1055--1064, \doi{https://doi.org/10.1016/j.ces.2009.09.059}
+
+\bibitem[{Bhadauria(2009)}]{Bhadauria}
+Bhadauria B (2009) Lattice {B}oltzmann Method Fundamentals and Engineering
+  Applications with Computer Codes. Springer Science \& Business Media
+
+\bibitem[{Bouzidi et~al(2001)Bouzidi, Firdaouss, and
+  Lallemand}]{bouzidi2001momentum}
+Bouzidi M, Firdaouss M, Lallemand P (2001) Momentum transfer of a
+  {B}oltzmann-lattice fluid with boundaries. Phys Fluids 13(11):3452--3459
+
+\bibitem[{Demir et~al(2026)Demir, Sadowski, and {di Mare}}]{demir2026pressure}
+Demir H, Sadowski W, {di Mare} F (2026) Modelling of pressure drop in periodic
+  square-bar packed beds. arXiv preprint arXiv:260104023
+
+\bibitem[{Dixon and Partopour(2020)}]{Dixon}
+Dixon A, Partopour B (2020) Computational fluid dynamics for fixed bed reactor
+  design. Ann Rev Chem Biomol Eng 11:109--130
+
+\bibitem[{Feng et~al(2015)Feng, Sagaut, and Tao}]{feng2015three}
+Feng Y, Sagaut P, Tao W (2015) A three dimensional lattice model for thermal
+  compressible flow on standard lattices. J Comput Phys 303:514--529
+
+\bibitem[{Freund et~al(2003)Freund, Zeiser, Huber, Klemm, Brenner, Durst, and
+  Emig}]{freund2003numerical}
+Freund H, Zeiser T, Huber F, Klemm E, Brenner G, Durst F, Emig G (2003)
+  Numerical simulations of single phase reacting flows in randomly packed
+  fixed-bed reactors and experimental validation. Chem Eng Sci
+  58(3--6):903--910, \doi{https://doi.org/10.1016/S0009-2509(02)00622-X}
+
+\bibitem[{He and Luo(1997)}]{Xiaoyi}
+He X, Luo L (1997) Theory of the lattice {B}oltzmann method: {F}rom the
+  {B}oltzmann equation to the lattice {B}oltzmann equation. Phys Rev E
+  56(6):6811--6817, \doi{https://doi.org/10.1103/PhysRevE.56.6811}
+
+\bibitem[{Hosseini et~al(2020)Hosseini, Darabiha, and
+  Th{\'e}venin}]{hosseini2020compressibility}
+Hosseini S, Darabiha N, Th{\'e}venin D (2020) Compressibility in lattice
+  {B}oltzmann on standard stencils: effects of deviation from reference
+  temperature. Phil Trans Royal Soc A 378(2175):20190399,
+  \doi{https://doi.org/10.1098/rsta.2019.0399}
+
+\bibitem[{Hosseini et~al(2021)Hosseini, Berg, Huang, Roloff, Janiga, and
+  Thevenin}]{hosseini2021central}
+Hosseini S, Berg P, Huang F, Roloff C, Janiga G, Thevenin D (2021) Central
+  moments multiple relaxation time {LBM} for hemodynamic simulations in
+  intracranial aneurysms: An in-vitro validation study using {PIV} and
+  {PC-MRI}. Comput Biol Med 131:104251
+
+\bibitem[{Hosseini et~al(2022)Hosseini, Huang, and
+  Thevenin}]{hosseini2022lattice}
+Hosseini S, Huang F, Thevenin D (2022) Lattice {B}oltzmann model for simulation
+  of flow in intracranial aneurysms considering non-newtonian effects. Phys
+  Fluids 34(7):073105
+
+\bibitem[{Huang et~al(2022)Huang, Noel, Berg, and
+  Hosseini}]{huang2022simulation}
+Huang F, Noel R, Berg P, Hosseini S (2022) Simulation of the {FDA} nozzle
+  benchmark: {A} lattice {B}oltzmann study. Comput Meth Prog Biomed 221:106863
+
+\bibitem[{Khayamyan et~al(2017)Khayamyan, Lundstr{\"o}m, Hellstr{\"o}m, Gren,
+  and Lycksam}]{Khayamyan.2017}
+Khayamyan S, Lundstr{\"o}m T, Hellstr{\"o}m J, Gren P, Lycksam H (2017)
+  Measurements of transitional and turbulent flow in a randomly packed bed of
+  spheres with particle image velocimetry. Transp Porous Med 116(1):413--431,
+  \doi{https://doi.org/10.1007/s11242-016-0781-0}
+
+\bibitem[{Krueger et~al(2017)Krueger, Kusumaatmaja, Kuzmin, Shardt, Silva, and
+  Viggen}]{kruger2017lattice}
+Krueger T, Kusumaatmaja H, Kuzmin A, Shardt O, Silva G, Viggen E (2017) The
+  Lattice {B}oltzmann Method: Principles and Practice. Springer
+
+\bibitem[{Larsson et~al(2018)Larsson, Lundstr{\"o}m, and
+  Lycksam}]{Larsson.2018}
+Larsson I, Lundstr{\"o}m T, Lycksam H (2018) Tomographic {PIV} of flow through
+  ordered thin porous media. Exp Fluids 59(6),
+  \doi{https://doi.org/10.1007/s00348-018-2548-6}
+
+\bibitem[{Li and Iskander(2022)}]{li2022visualization}
+Li L, Iskander M (2022) Visualization of interstitial pore fluid flow. J
+  Imaging 8(2):32, \doi{https://doi.org/10.3390/jimaging8020032}
+
+\bibitem[{Martins et~al(2018)Martins, {Da Silva}, Lessig, and
+  Z{\"a}hringer}]{Martins.2018}
+Martins F, {Da Silva} C, Lessig C, Z{\"a}hringer K (2018) Ray-tracing based
+  image correction of optical distortion for {PIV} measurements in packed beds.
+  J Adv Opt Photon 1(2):71--94, \doi{https://doi.org/10.32604/jaop.2018.03870}
+
+\bibitem[{Neeraj et~al(2023)Neeraj, Velten, Janiga, Z{\"a}hringer,
+  Th{\'e}venin, Hosseini, and Varnik}]{neeraj2023}
+Neeraj T, Velten C, Janiga G, Z{\"a}hringer K, Th{\'e}venin D, Hosseini S,
+  Varnik F (2023) Modeling gas flows in packed beds with the lattice
+  {B}oltzmann method: Validation against experiments. Flow Turbul Combust
+  111:463--491, \doi{10.1007/s10494-023-00444-z}
+
+\bibitem[{Patil and Liburdy(2013)}]{Patil.2013}
+Patil V, Liburdy J (2013) Flow characterization using piv measurements in a low
+  aspect ratio randomly packed porous bed. Exp Fluids 54(4),
+  \doi{https://doi.org/10.1007/s00348-013-1497-3}
+
+\bibitem[{Poelma(2020)}]{Poelma.2020}
+Poelma C (2020) Measurement in opaque flows: a review of measurement techniques
+  for dispersed multiphase flows. Acta Mech 231(6):2089--2111,
+  \doi{https://doi.org/10.1007/s00707-020-02683-x}
+
+\bibitem[{Sadowski et~al(2025)Sadowski, Demir, and {di
+  Mare}}]{sadowski2025mean}
+Sadowski W, Demir H, {di Mare} F (2025) Mean flow properties in a packed bed
+  with varying geometry. In: 2nd International Workshop on Reacting
+  Particle-Gas Systems, Magdeburg, Germany, pp 16--18
+
+\bibitem[{Sullivan et~al(2005)Sullivan, Sani, Johns, and Gladden}]{Sullivan}
+Sullivan S, Sani F, Johns M, Gladden L (2005) Simulation of packed bed reactors
+  using lattice {B}oltzmann methods. Chem Eng Sci 60:3405--3418,
+  \doi{https://doi.org/10.1016/j.ces.2005.01.038}
+
+\bibitem[{Velten et~al(2022)Velten, Ebert, Lessig, and
+  Z{\"a}hringer}]{velten2022a}
+Velten C, Ebert M, Lessig C, Z{\"a}hringer K (2022) Ray tracing based
+  reconstruction of {PIV} measurements in the outlet zone of gaseous flow in
+  packed beds. In: 20th International Symposium on the Application of Laser and
+  Imaging Techniques to Fluid Mechanics, Lisbon, Portugal, pp 51/1--11
+
+\bibitem[{Velten et~al(2026)Velten, H{\"u}lz, and Z{\"a}hringer}]{velten2026}
+Velten C, H{\"u}lz K, Z{\"a}hringer K (2026) Allowing optical measurements in a
+  {3D} packed bed with gas flow: A novel reactor concept. Particuology
+  108:293--306, \doi{10.1016/j.partic.2025.11.018}
+
+\bibitem[{Xiaoyi and Shu(2012)}]{Shu}
+Xiaoyi G, Shu C (2012) Lattice {B}oltzmann Method and Its Applications in
+  Engineering. World Scientific Publishing Company
+
+\bibitem[{Zhao-Li et~al(2002)Zhao-Li, Chu-Guang, and Bao-Chang}]{zhao2002non}
+Zhao-Li G, Chu-Guang Z, Bao-Chang S (2002) Non-equilibrium extrapolation method
+  for velocity and pressure boundary conditions in the lattice {B}oltzmann
+  method. Chin Phys 11(4):366
 
 \end{thebibliography}

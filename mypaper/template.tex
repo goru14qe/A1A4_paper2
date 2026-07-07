@@ -15,7 +15,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage[numbers]{natbib}
-\bibliographystyle{spphys}
+\bibliographystyle{spbasic}
 
 % --- tighten vertical space around figures ---
 \setlength{\intextsep}{4pt plus 2pt minus 2pt}     % space above/below in-text ([H]/here) floats
@@ -64,104 +64,30 @@
 \section{Introduction}
 \label{sec:intro}
 
-Packed beds are among the most widely used contacting devices in chemical, energy and
-environmental process engineering, where they serve as catalytic reactors, adsorbers and
-heat- and mass-exchange units~\citep{Dixon}. Their performance--conversion,
-selectivity, pressure drop and the avoidance of hot spots--is set not by the bed-averaged
-porosity alone but by the organisation of the flow at the pore scale, which governs the local residence-time distribution and the rates of interphase heat and mass
-transfer~\citep{Augier,freund2003numerical}. Macroscopic descriptions of the Darcy or volume-averaged type collapse this pore-scale structure into effective coefficients and, by
-construction, cannot represent the channelling, jetting and recirculation that control
-mixing in the interstitial space. Resolving the flow at the scale of the individual pores is
-therefore a prerequisite for understanding, and ultimately designing, how such beds perform.
+Packed beds are widely used as catalytic reactors, adsorbers, and heat and mass-transfer devices in chemical, energy, and environmental process engineering~\citep{Dixon,Aglave}. Their performance including conversion, selectivity, pressure drop, and thermal management is governed not only by the bulk porosity but also by the organization of the pore-scale flow, which determines local residence times and interphase heat and mass transfer~\citep{Augier,freund2003numerical}. Conventional continuum models based on Darcy's law or volume averaging replace the complex pore structure with effective transport coefficients and therefore are unable to capture key pore-scale flow phenomena, including jetting, channeling, and recirculation, which dominate interstitial mixing. Resolving the flow at the scale of the individual pores is therefore a prerequisite for understanding, and ultimately designing, how such beds perform.\\
+Conventional beds of randomly poured particles offer little control over this pore-scale flow: the void network is statistically reproducible but geometrically uncontrolled, so the flow organisation cannot be tuned deliberately. Structured and additively manufactured packings change this premise by fixing the pore geometry by design, turning the internal topology into an engineering variable~\citep{Larsson.2018,li2022visualization}. The rotationally stacked, modular bed studied here is a deliberate instance of this idea: identical bar modules are stacked and each successive layer is rotated by a fixed angle relative to the one below, so that a single rotation increment acts as a design knob that reshapes the entire interstitial pore network. When the rotation angle is commensurate with the $180^\circ$ symmetry of the bar pattern, the stack becomes geometrically periodic over a finite number of layers (six layers at $30^\circ$, nine at $40^\circ$) and the pores trace a spiral path through the bed; an aperiodic, irregularly rotated stack provides a geometrically disordered counterpart.
 
-Conventional beds of randomly poured particles offer little control over this pore-scale
-flow: the void network is statistically reproducible but geometrically uncontrolled, so the
-flow organisation cannot be tuned deliberately. Structured and additively manufactured
-packings change this premise by fixing the pore geometry by design, turning the internal
-topology into an engineering variable~\citep{Larsson.2018,li2022visualization}. The rotationally
-stacked, modular bed studied here is a deliberate instance of this idea: identical bar modules are stacked
-and each successive layer is rotated by a fixed angle relative to the one below, so that a
-single rotation increment acts as a design knob that reshapes the entire interstitial
-pore network. When the rotation angle is commensurate with the $180^\circ$ symmetry of the
-bar pattern, the stack becomes geometrically periodic over a finite number of layers
-(six layers at $30^\circ$, nine at $40^\circ$) and the pores trace a spiral path through the
-bed; an aperiodic, irregularly rotated stack provides a geometrically disordered counterpart.
+This configuration has been experimentally characterized by means of optically corrected, refractive-index-matched particle image velocimetry, which resolves the time-averaged velocity field within the slits of the upper layers~\citep{velten2026,Martins.2018,velten2022a}; related PIV and tomographic studies have established such measurements as a reliable pore-scale reference in both random and ordered packings~\citep{Patil.2013,Khayamyan.2017,Poelma.2020}. A recurring qualitative observation across this and earlier computational work is that, in the periodically rotated beds, the flow appears to repeat from one geometric period to the next: successive layers seem to carry the same interstitial flow pattern, merely rotated with the geometry\citep{demir2026pressure}. This layer-to-layer repeatability has been noted in passing but never defined, quantified, or tested against a disordered control, and it has not been examined across more than one rotation\citep{sadowski2025mean}.
 
-This configuration has been characterised experimentally by means of optically corrected,
-refractive-index-matched particle image velocimetry, which resolves the time-averaged
-velocity field within the slits of the upper layers~\citep{velten2026,Martins.2018,hassan2008flow,velten2022a};
-related PIV and tomographic studies have established such measurements as a reliable
-pore-scale reference in both random and ordered packings~\citep{Patil.2013,Khayamyan.2017,wood.2015,Poelma.2020}.
-On the numerical side, the same packing has recently been simulated. Using particle-resolved
-finite-volume simulations (OpenFOAM), \citet{sadowski2025mean} computed the mean
-interstitial flow of the $30^\circ$ stack in a periodic six-layer domain at $Re_P=100$ and
-$150$, and \citet{demir2026pressure} extended this to a range of rotation angles and
-Reynolds numbers up to $200$, classifying the geometries as channel- or lattice-like and
-modelling the resulting pressure drop and friction factor, with selected cases compared
-against the PIV data. These studies establish the macroscopic flow resistance of the
-packing and report, in passing, that successive layers carry a similar interstitial flow
-pattern, rotated together with the geometry. To date, however, this layer-to-layer
-repeatability has only been described qualitatively: it has not been given a precise
-definition or a quantitative measure, compared against a disordered control, or examined
-across more than one rotation topology.
+Beyond these macroscopic observations, however, the underlying organisation of the pore-scale flow remains largely unexplored. Although successive layers were observed to exhibit similar velocity fields rotated with the packing geometry, this behaviour has only been noted qualitatively. Its physical origin, robustness across different rotational topologies, and distinction from the behaviour of non-periodic packings have not yet been investigated systematically.
+Despite recent progress, the influence of rotational topology on pore-scale flow organisation remains poorly understood. Although recurring velocity patterns have been observed in successive packing layers, they have not been quantitatively characterised, nor has it been established whether they arise from the periodic geometry itself. In this work, we investigate this phenomenon using an experimentally validated lattice Boltzmann model, introduce the concept of flow locking to describe the recurrence of pore-scale flow structures, and quantify its dependence on packing topology through comparisons with an irregular configuration.
 
-Three gaps follow. First, the existing simulations are finite-volume and largely confined to
-reduced periodic domains and the macroscopic pressure-drop response; a pore-scale lattice
-Boltzmann description of the full bounded apparatus, validated layer by layer against the PIV
-fields across several topologies, is still missing. Second, the apparent layer
-repeatability--here termed \emph{flow locking}--has remained a qualitative observation rather
-than a measurable property. Third, whether locking is genuinely a consequence of the periodic
-rotation, as opposed to a generic feature of the flow, can only be settled by contrasting
-periodic and aperiodic packings under identical conditions, which has not yet been done.
+To address these questions, the present work combines pore-scale lattice Boltzmann simulations~\citep{kruger2017lattice,Sullivan} with particle image velocimetry measurements for three packing topologies: the periodic $30^\circ$ and $40^\circ$ stacks and an irregular configuration. The simulations reproduce the complete bounded experimental apparatus and are validated against layer-resolved velocity measurements. Building on this validated framework, we introduce the concept of flow locking to describe the topology-induced recurrence of pore-scale flow structures, quantify it using objective similarity metrics, and investigate its dependence on packing topology and Reynolds number. By comparing periodic and irregular packings, the study establishes the role of rotational periodicity in governing the pore-scale flow organization and provides a physical basis for the use of reduced periodic computational domains.
 
-The present work addresses these gaps with pore-scale lattice Boltzmann
-simulations~\citep{kruger2017lattice,Sullivan} of the full bounded apparatus for three
-topologies--the $30^\circ$ and $40^\circ$ periodic stacks and an irregular stack--at pore
-Reynolds numbers spanning the experimentally investigated range. Its contributions are:
-(i)~a pore-scale lattice Boltzmann model of the complete Reference Configuration~IIa
-apparatus, validated against PIV through point-by-point comparison of the time-averaged
-surface and layer-resolved velocity fields for all three topologies (Sec.~\ref{sec:validation});
-(ii)~a quantitative framework for flow locking, in which a locking order parameter
-$L(n)$--obtained by de-rotating each layer's mean field into a common frame and correlating
-layers a full geometric period apart--turns the qualitative repeatability into a single
-measurable number, complemented by an antisymmetry index that probes the point symmetry of
-the slit pattern (Sec.~\ref{sec:locking}); and (iii)~the use of the irregular packing as a
-clean control that, by construction, cannot lock, isolating periodic rotation as the cause
-of the effect. Together these establish flow locking as a real, quantifiable property of
-the rotationally stacked bed, and in doing so provide the physical justification for the
-reduced periodic domains already adopted in the finite-volume
-studies~\citep{sadowski2025mean,demir2026pressure}.
-
-The remainder of the paper is organised as follows. Section~\ref{sec:geometry} describes the
-packing geometry and the three topologies, and Sec.~\ref{sec:numerics} the lattice Boltzmann
-methodology, computational domain and verification. Section~\ref{sec:validation} validates
-the simulations against PIV at the surface and within the layers. Section~\ref{sec:locking}
-introduces the flow-locking framework and applies it across topologies and Reynolds numbers,
-and the final section summarises the findings.
+The remainder of the paper is organised as follows. Section~\ref{sec:geometry} describes the packing geometry and experimental configurations, and Section~\ref{sec:numerics} presents the lattice Boltzmann methodology and numerical verification. Section~\ref{sec:validation} validates the simulations against PIV measurements. Section~\ref{sec:locking} introduces the flow-locking framework and examines its behaviour across packing topologies and Reynolds numbers. Finally, the main findings and their implications are summarised in the 
 
 %% ============================================================
-\section{Experimental Setup}
+\section{Geometry Description}
 \label{sec:geometry}
-The experimental reference configuration is described in detail by~\citet{velten2026}. The packing consists of polyhedral bar modules, each containing five parallel bars of height $l_\mathrm{ch} = 10\,\mathrm{mm}$ separated by slits of width $l_P = 5\,\mathrm{mm}$, housed within a circular cross-section of diameter $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$ (Fig.~\ref{fig:geometry}. The volume fraction of the void (porosity), defined as the volume of the void relative to the volume of the overall module, is $\varphi = 0.332$. Modules are 3D-printed from PA \,12 by laser sintering (tolerance $0.3\%$) and can rotate against each other in increments of $5^\circ$ by $37$ indexing slits on the rim, spanning $0$-$180^\circ$~\citep{velten2026}.
-The parallel-bar geometry is what enables direct optical access: in the experiment three of the five  bars in the measurement module are replaced by transparent fused-silica glass bars, so that a laser light sheet can be introduced through the void spaces and the camera can view the interior pores without refractive-index matching~\citep{velten2026}. 
+The reference configuration in this work is a packing system consisting of polyhedral bar modules, based on the experimental setup described in detail by~\citet{velten2026}. Within the packing, each module containing five parallel bars of height $l_\mathrm{ch} = 10\,\mathrm{mm}$ separated by slits of width $l_P = 5\,\mathrm{mm}$, housed within a circular cross-section of diameter $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$, as shown in Figure (Fig to be added.~\ref{tba fig:geometry}. The porosity of packing, defined as the volume of the void relative to the volume of the overall module, is $\varphi = 0.332$. Modules are 3D-printed from PA \,12 by laser sintering (tolerance $0.3\%$) and can rotate against each other in increments of $5^\circ$ by $37$ indexing slits on the rim, spanning $0$-$180^\circ$~\citep{velten2026}.
 
-In the experiment the bed is bounded by a gas inlet zone - a diffuser filled with $3\,\mathrm{mm}$ glass beads followed by a tranquilisation zone that distributes the flow homogeneously over the circular cross-section $A = 3031\,\mathrm{mm^2}$ - and, on top of the $18$th layer, a rectangular optical outlet box ($70\times70\,\mathrm{mm^2}$
-windows, height $200\,\mathrm{mm}$) that minimises the influence of the surroundings on the bed-surface flow~\citep{velten2026}. The present simulations do not resolve this inlet with so many extra diffusor parts. Instead, the diffuser and tranquilisation zone are replaced by a uniform inlet of the same circular cross-section as the bed, extended upstream by a short straight section ($60\,\mathrm{mm}$) sufficient for the velocity profile to homogenise before it reaches the first module. This reproduces the experimentally intended uniform feed while avoiding the grid cost of meshing the bead-packed diffuser, substantially reducing the geometric complexity and node count of the computational domain.
+\todo[inline]{Only the geometry considered in the present work is shown; components not included in the computational domain are omitted. Based on the geometry shown here, describe the geometry in more detail. Please check the following text for correctness.}
 
-\begin{figure}[h]
-\centering
-\figplaceholder{apparatus and packing: optical-access reactor with five parallel
-bars per module, the spiral inner pore network of the $30^\circ$ stack, and the
-transparent glass bars enabling laser light-sheet access (after Fig.~2 of
-\citealt{velten2026})}
-\caption{Geometry of the rotationally-stacked packed bed. Each module contains five
-parallel bars (height $l_\mathrm{ch} = 10\,\mathrm{mm}$, slit width
-$l_P = 5\,\mathrm{mm}$) housed in a circular cross-section of diameter
-$d_\mathrm{inlet} = 62.12\,\mathrm{mm}$; successive modules are twisted by a fixed
-angle $\theta$, producing the spiral inner pore structure. Adapted
-from~\citet{velten2026} (CC~BY~4.0).}
-\label{fig:geometry}
-\end{figure}
+In the present work, the inlet section of the experimental setup, which was designed to ensure a homogeneous inlet flow, was not included in the computational domain. Instead, a uniform inlet of the same circular cross-section as the bed was used, extended upstream by a short straight section ($60\,\mathrm{mm}$) sufficient for the velocity profile to homogenize before it reaches the first module.
+%The bed is bounded by a gas inlet zone - a diffuser filled with $3\,\mathrm{mm}$ glass beads followed by a tranquilisation zone that distributes the flow homogeneously over the circular cross-section $A = 3031\,\mathrm{mm^2}$ - and, on top of the $18$th layer, a rectangular optical outlet box ($70\times70\,\mathrm{mm^2}$
+%windows, height $200\,\mathrm{mm}$) that minimises the influence of the surroundings on the bed-surface flow~\citep{velten2026}.
+%In the present work do not resolve this inlet with so many extra diffusor parts. Instead, the diffuser and tranquilisation zone are replaced by a uniform inlet of the same circular cross-section as the bed, extended upstream by a short straight section ($60\,\mathrm{mm}$) sufficient for the velocity profile to homogenise before it reaches the first module.
+This reproduces the experimentally intended uniform feed while avoiding the grid cost of meshing the bead-packed diffuser, substantially reducing the geometric complexity and node count of the computational domain.
 
 \subsection{Twist-and-Repeat Topology}
 \label{sec:geometry:topology}
@@ -171,104 +97,32 @@ Because the modules are identical and only their angular offset changes, the bed
     N = \frac{180^\circ}{\theta}
     \label{eq:period}
 \end{equation}
-layers. For the regular $30^\circ$ configuration $\theta = 30^\circ$ gives $N = 6$, so six successive modules span $6\times30^\circ = 180^\circ$ and the seventh module repeats the orientation of the first~\citep{velten2026}. The $40^\circ$ configuration gives the longer period $N = 9$. The full bed of $18$ stacked modules (bed height $18\,l_\mathrm{ch} = 180\,\mathrm{mm}$) thus contains exactly three complete geometric periods of the $30^\circ$ packing, producing the spiral inner pore structure illustrated in Fig.~\ref{fig:geometry}. All optical measurements~\citep{velten2026}, and the simulation planes used for validation here, are taken in layers L13-L17, i.e.\ within the third (fully developed) period counted from the gas inlet at the bottom of the bed.
+layers. For the regular $30^\circ$ configuration ($\theta = 30^\circ$) gives $N = 6$, so six successive modules span and the seventh module repeats the orientation of the first~\citep{velten2026}. The $40^\circ$ configuration gives the longer period $N = 9$. The full bed of $18$ stacked modules (bed height $18\,l_\mathrm{ch} = 180\,\mathrm{mm}$) thus contains exactly three complete geometric periods of the $30^\circ$ packing, producing the spiral inner pore structure illustrated in Fig(to be added).~\ref{fig:geometry}. All optical measurements~\citep{velten2026}, and \hl{the simulation planes (really??) }used for validation here, are taken in layers L13-L17, i.e.\ within the third (fully developed) period counted from the gas inlet at the bottom of the bed.
 
 A consequence of the $180^\circ$ symmetry of the bar pattern is that the inner pore
 network is point-symmetric between two layers: when two modules are rotated against each other, the first and fourth voids carry the same number of inlets as the second and third, and depending on $\theta$ between one and four through-passages connect a lower module to the one above it~\citep{velten2026}. The $30^\circ$ configuration realises a $2/3$ inlet pattern.
 
-\subsection{Three Topologies Studied}
+\subsection{Topology Configurations}
 \label{sec:geometry:topologies}
 
 The modularity of the reactor allows a continuum of pore structures to be assembled
 from the same hardware simply by choosing the inter-layer rotation angle~\citep{velten2026}. We study three representative topologies here:
 \begin{itemize}
-    \item \textbf{$30^\circ$ (regular, period $N = 6$):} the experimentally measured benchmark configuration, with the shortest period and the longest jet-alignment length of the cases considered.
-    \item \textbf{$40^\circ$ (regular, period $N = 9$):} a second periodic packing whose larger per-layer twist shortens the alignment length and lengthens the geometric period.
+    \item \textbf{$\theta = 30^\circ$ (regular, period $N = 6$):} the experimentally measured benchmark configuration, with the shortest period and the longest jet-alignment length of the cases considered.
+    \item \textbf{$\theta = 40^\circ$ (regular, period $N = 9$):} a second periodic packing whose larger per-layer twist shortens the alignment length and lengthens the geometric period.
     \item \textbf{Irregular (aperiodic control):} successive layers are rotated by a non-repeating sequence of angles, so there is no twist-and-repeat rule and no
     superlattice period. This packing serves as a clean control: it shares the same bars, slits, porosity and bounding apparatus as the regular cases but lacks the geometric periodicity, and therefore cannot exhibit flow locking (Sec.~\ref{sec:locking}).
 \end{itemize}
 
-The particle Reynolds number is defined following~\citet{velten2026} as \begin{equation}
-    Re_P = \frac{v_s\,\rho\,l_\mathrm{ch}}{\varphi\,\mu},
-    \label{eq:rep}
-\end{equation}
-where $v_s$ is the superficial velocity, $\rho = 1.204\,\mathrm{kg/m^3}$ and $\mu = 1.822\times10^{-5}\,\mathrm{kg/(m\,s)}$ are the density and dynamic viscosity of air at $T = 20\,^\circ\mathrm{C}$ and $p = 1\,\mathrm{atm}$, and $l_\mathrm{ch} = 10\,\mathrm{mm}$ is the bar width~\citep{velten2026}. The superficial velocity follows from the volume flow rate $Q$ through $Q = A\,v_s$, with $A = 3031\,\mathrm{mm^2}$ the reactor cross-section.
-In our study we have simulated $Re_P 100, 300, 500$. In the reference experiment $Re_P = 100$ correspond to $Q = 9.14$$\mathrm{L/min}$, $Re_P = 300$ correspond to $Q = 13.71$$\mathrm{L/min}$ and $Re_P = 500$ correspond to $Q = 45.72$$\mathrm{L/min}$~\citep{velten2026}.
-
-The laminar $Re_P = 100$ case is run for all three topologies and provides the validation baseline; the $30^\circ$ and $40^\circ$ packing are additionally driven to $Re_P = 300$ and $500$ to probe how flow locking degrades as the flow approaches the unsteady regime (Sec.~\ref{sec:locking:reynolds}).
-
-\subsection{Measurement Positions and Coordinate System}
-\label{sec:geometry:coords}
-A right-handed global Cartesian system $(x,y,z)$ is fixed to the apparatus: $x$ is horizontal, the depth axis $y$ originates at the centre of the module, and the streamwise axis $z$ points upward with its origin at the bottom of the lowest module (Fig.~\ref{fig:coords}\citealt{velten2026}). Since each measurement (or extraction) plane lies in a void at a different rotation angle, an in-plane coordinate system is used in addition: it keeps the same vertical axis $z$ but replaces $x$ with the horizontal in-plane coordinate $\xi$, aligned with the open slit and zero at the void centre. The two directly reported velocity components are the horizontal in-plane velocity $v_\xi$ and the vertical (streamwise) velocity $v_z$.\\
-A measurement plane is located in the global frame by its offset $a_{\mathrm{Pos},n}$ from the reactor centre, measured along $y$ for the $0^\circ$ orientation of the module; this offset is independent of the rotation angle. Four positions are defined (Table~\ref{tab:pos}). Because the bed is point-symmetric about the column axis (Sec.~\ref{sec:geometry:topology}), Pos\,1/Pos\,7 and Pos\,3/Pos\,5 form point-symmetric pairs; the experiment exploits this symmetry, measuring only at Pos\,1 and Pos\,3 to recover the full set of flow fields~\citep{velten2026}. The present validation correspondingly extracts simulation planes at Pos\,1 and Pos\,3.
-
-Because the void in which each plane lies has been twisted by the per-layer rule (Sec.~\ref{sec:geometry:topology}), the raw simulation fields are first de-rotated into the common in-plane frame before any comparison or layer-to-layer analysis. Each layer $L$ is rotated about the vertical axis by
-\begin{equation}
-    \alpha = -\,(18 - L)\,\theta,
-    \label{eq:derotation}
-\end{equation}
-so that the open slit of every layer is aligned with the in-plane axis $\xi$ (e.g.\ for the $30^\circ$ packing $\alpha = 0,\,-30^\circ,\,-60^\circ,\dots$ for $L = 18, 17, 16,\dots$; for the $40^\circ$ packing the step is $40^\circ$). The position coordinates $(x,y,z)$ are transformed by the planar rotation
-\begin{subequations}
-\label{eq:transform}
-\begin{align}
-    x' &= \phantom{-}x\cos\alpha + y\sin\alpha, \\
-    y' &= -x\sin\alpha + y\cos\alpha, \\
-    z' &= z,
-\end{align}
-\end{subequations}
-and the velocity components $(v_x, v_y, v_z)$ are rotated consistently,
-\begin{subequations}
-\label{eq:transform_vel}
-\begin{align}
-    v_x' &= v_x\cos\alpha + v_y\sin\alpha, \\
-    v_y' &= v_x\sin\alpha + v_y\cos\alpha, \\
-    v_z' &= v_z,
-\end{align}
-\end{subequations}
-with the vertical coordinate and the streamwise velocity left unchanged. The reported in-plane velocity magnitude combines the horizontal in-plane and streamwise components within the plane,
-\begin{equation}
-    v_\mathrm{mag} = \sqrt{ {v_x'}^2 + {v_z'}^2 }.
-    \label{eq:velmag}
-\end{equation}
-After this transformation the horizontal in-plane component $v_x'$ corresponds to $v_\xi$ and $v_z'$ to $v_z$ of the in-plane frame.
-
-\begin{table}[h]
-\caption{Distance $a_{\mathrm{Pos},n}$ from the reactor centre to each measurement
-position (after~\citealt{velten2026}).}
-\label{tab:pos}
-\begin{tabular}{lcccc}
-\hline\noalign{\smallskip}
-Pos. & 1 & 3 & 5 & 7 \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-$a_{\mathrm{Pos},n}$ (mm) & $-22.5$ & $-7.5$ & $7.5$ & $22.5$ \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
-
-\begin{figure}[h]
-\centering
-\figplaceholder{global Cartesian frame $(x,y,z)$ fixed to the apparatus and the
-in-plane frame $(\xi,z)$ aligned with the open slit; the four measurement positions
-Pos\,1, 3, 5, 7 and their offsets $a_{\mathrm{Pos},n}$ from the column axis (after
-Fig.~6 of \citealt{velten2026})}
-\caption{Coordinate systems and measurement positions. The global frame $(x,y,z)$ is
-fixed to the apparatus with $z$ streamwise; each extraction plane is additionally
-expressed in the in-plane frame $(\xi,z)$ whose horizontal axis $\xi$ is aligned with
-the open slit and zero at the void centre. Measurement positions Pos\,1-7 are offset
-from the column axis by $a_{\mathrm{Pos},n}$ (Table~\ref{tab:pos}). Adapted
-from~\citet{velten2026} (CC~BY~4.0).}
-\label{fig:coords}
-\end{figure}
-
+The laminar $Re_P = 100$ case is run for all three topologies and provides the validation baseline; the $30^\circ$ and $40^\circ$ packings are additionally driven to $Re_P = 300$ and $500$, and the irregular control to $Re_P = 300$, to probe how flow locking degrades as the flow approaches the unsteady regime. Each of these higher-Reynolds-number cases is likewise validated against the corresponding PIV measurements (Sec.~\ref{sec:validation}).
 
 %% ============================================================
-\section{Numerical Methodology and Verification}
+\section{Numerical solver: the lattice Boltzmann method}
 \label{sec:numerics}
-
 \subsection{Lattice Boltzmann Formulation (ALBORZ)}
 \label{sec:numerics:lbm}
 
-The present flow simulations are carried out with the lattice Boltzmann method, which can be viewed as a kinetic-scale discretisation of the Boltzmann equation valid in the hydrodynamic limit~\cite{Xiaoyi}. The solver and the formulation summarised in this section are those previously employed and validated against packed-bed experiments by the present authors~\cite{neeraj2023}, to which the reader is referred for a more detailed account. The starting point is a projection of the Boltzmann equation onto velocity space: the particle distribution is represented through a truncated spectral series, with the Hermite polynomials serving as the basis functions. Integrating the resulting set of coupled hyperbolic equations along their characteristic curves~\cite{Bhadauria} leads to the familiar two-step ``stream-and-collide'' update:
+The flow simulations presented here are performed using the lattice Boltzmann method (LBM), which may be regarded as a discretization on the kinetic-scale of the Boltzmann equation that recovers the Navier-Stokes equations in the hydrodynamic limit~\cite{Xiaoyi}. The numerical solver and formulation adopted here are identical to those previously developed and validated against packed-bed experiments by the present author~\cite{neeraj2023}; readers are referred to that work for a comprehensive description. Briefly, the method begins with a projection of the Boltzmann equation onto a discrete velocity space, whereby the particle distribution function is approximated through a truncated Hermite polynomial expansion. Integration of the resulting system of coupled hyperbolic equations along their characteristic trajectories~\cite{Bhadauria} yields the well-known two-step stream-and-collide algorithm:
 \begin{equation}
     f_i\left(\bm{r}+\bm{c}_i\delta t, t+\delta t\right) - f_i\left(\bm{r}, t\right) = \Omega_i,
 \end{equation}
@@ -280,7 +134,7 @@ in which $\omega$ sets the rate of relaxation towards equilibrium and $f^{\rm eq
 \begin{equation}
     f^{\rm eq}_i = w_i \sum_{n=0}^{N}\frac{1}{n!c_s^{2n}} \mathcal{H}_n(\bm{c}_i):a_n^{\rm eq}(\rho,\bm{u},p/\rho),
 \end{equation}
-where $\mathcal{H}_n$ denotes the rank-$n$ Hermite polynomial tensor, $a_n^{\rm eq}$ its associated equilibrium coefficient, $w_i$ the quadrature weights and $c_s$ the lattice sound speed fixed by the quadrature; $\rho$, $\bm{u}$ and $p$ are the density, velocity and pressure, and $N$ the truncation order. Throughout this work we employ the D2Q9 and D3Q27 lattices ($D$ the spatial dimension, $Q$ the number of links), both of which correspond to a third-order quadrature; the expansion is therefore truncated at $N=4$ in two dimensions and $N=6$ in three, these being the highest orders the respective stencils can support. A virtue of this higher-order construction, in contrast with the conventional second-order equilibrium, is that the shear-mode dissipation rate retains Galilean invariance at the Navier-Stokes level. The complementary correction $\Xi_i$ extends this invariance to the dissipation of the normal modes and is given by~\cite{hosseini2020compressibility,feng2015three}:
+where $\mathcal{H}_n$ denotes the rank-$n$ Hermite polynomial tensor, $a_n^{\rm eq}$ its associated equilibrium coefficient, $w_i$ the quadrature weights and $c_s$ the lattice sound speed fixed by the quadrature; $\rho$, $\bm{u}$ and $p$ are the density, velocity and pressure, and $N$ the truncation order. Throughout this work we employ the D3Q27 lattices ($D$ the spatial dimension, $Q$ the number of links), both of which correspond to a third-order quadrature; the expansion is therefore truncated at $N=4$ in two dimensions and $N=6$ in three, these being the highest orders the respective stencils can support. A virtue of this higher-order construction, in contrast with the conventional second-order equilibrium, is that the shear-mode dissipation rate retains Galilean invariance at the Navier-Stokes level. The complementary correction $\Xi_i$ extends this invariance to the dissipation of the normal modes and is given by~\cite{hosseini2020compressibility,feng2015three}:
 \begin{equation}\label{eq:correction}
     \Xi_i = \left(1-\frac{\omega}{2}\right)\frac{w_i}{2c_s^4}\left(\bm{\nabla}\mathcal{H}_2\right):\Delta^{\rm eq}_3,
 \end{equation}
@@ -367,89 +221,104 @@ Other boundary conditions applied at the inlets and outlets, i.e.\ constant velo
 \end{equation}
 where $\bm{x}_w$ is the position of the boundary node and $f^{(neq)}$ the non-equilibrium part of the distribution function. One of the two variables (density or velocity) is known via the boundary condition and the other is computed by interpolation from neighboring nodes. The non-equilibrium part of the distribution function is also computed via an interpolation in space.
 
-\subsection{Simulation Parameters and Case Matrix}
+%% ============================================================
+
+\section{Simulation Parameters}
 \label{sec:numerics:params}
 
-All production runs use the three-dimensional D3Q27 stencil together with the
-central-Hermite multiple-relaxation-time collision model described in
-Sec.~\ref{sec:numerics:lbm}. The working fluid is air at $T = 20\,^\circ\mathrm{C}$
-and $p = 1\,\mathrm{atm}$ ($\rho = 1.204\,\mathrm{kg/m^3}$,
-$\mu = 1.822\times10^{-5}\,\mathrm{kg/(m\,s)}$), and the flow is treated as
-incompressible: at $Re_P = 100$ the intrinsic-mean velocity corresponds to a Mach
-number of $Ma \approx 0.05$, well within the weakly compressible regime where
-acoustic effects are negligible.
+In this study, the working fluid is air at the temperature of $T = 20\,^\circ\mathrm{C}$ and the pressure of $p = 1\,\mathrm{atm}$ with a density of $\rho = 1.204\,\mathrm{kg/m^3}$, and a dynamic viscosity of $\mu = 1.822\times10^{-5}\,\mathrm{kg/(m\,s)}$. The operating conditions are characterized by the particle Reynolds number, defined as
+\begin{equation}
+    Re_P = \frac{\rho\,v_s\,l_\mathrm{ch}}{\varphi\,\mu},
+    \label{eq:rep}
+\end{equation}
+where $l_\mathrm{ch}=10\,\mathrm{mm}$ is the characteristic bar width and $v_s$ is the superficial velocity \citep{velten2026}. The superficial velocity is obtained from the volumetric flow rate $Q$ via $Q = A\,v_s$, where $A = 3031\,\mathrm{mm^2}$ denotes the reactor cross-sectional area.
+In this study three differen particle Reynolds number of $Re_P=100, 300, 500$ is considered. In the reference experiment $Re_P = 100$ correspond to $Q = 9.14$$\mathrm{L/min}$, $Re_P = 300$ correspond to $Q = 13.71$$\mathrm{L/min}$ and $Re_P = 500$ correspond to $Q = 45.72$$\mathrm{L/min}$~\citep{velten2026}.
 
-The lattice is uniform and Cartesian. The decisive geometric length scale for the
-grid is the $5\,\mathrm{mm}$ slit width $l_P$, which is common to all three
-topologies; the production resolution places about $17$ nodes across each slit (and
-correspondingly $33$ across each $10\,\mathrm{mm}$ bar) at $Re_P = 100$, the medium
-resolution justified by the grid-independence study of Sec.~\ref{sec:numerics:grid}.
-The lattice spacing and time step are refined as the Reynolds number increases, both to
-keep the near-wall shear layers resolved and to maintain a low lattice Mach number, so
-that the slit is resolved by $33$ nodes at $Re_P = 300$. The transverse extent of the domain
-($\approx 81\,\mathrm{mm}$) comfortably encloses the $d_\mathrm{inlet} =
-62.12\,\mathrm{mm}$ bed cross-section, and the streamwise extent spans the $18$-module
-stack plus the upstream inlet section (Sec.~\ref{sec:numerics:domain}). The relaxation
-time $\tau$ is set from the target kinematic viscosity at each operating point; the
-resulting per-case discretisation parameters are collected in
+
+
+The lattice is uniform and Cartesian. The decisive geometric length scale for the grid is the $5\,\mathrm{mm}$ slit width $l_P$, which is common to all three topologies; the production resolution places about $17$ nodes across each slit (and correspondingly $33$ across each $10\,\mathrm{mm}$ bar) at $Re_P = 100$, the medium resolution justified by the grid-independence study of Sec.~\ref{sec:numerics:grid}. The lattice spacing and time step are refined as the Reynolds number increases, both to keep the near-wall shear layers resolved and to maintain a low lattice Mach number, so that the slit is resolved by $33$ nodes at $Re_P = 300$. The transverse extent of the domain ($\approx 81\,\mathrm{mm}$) comfortably encloses the $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$ bed cross-section, and the streamwise extent spans the $18$-module stack plus the upstream inlet section (Sec.~\ref{sec:numerics:domain}). The relaxation time $\tau$ is set from the target kinematic viscosity at each operating point; the resulting per-case discretisation parameters are collected in 
 Table~\ref{tab:simparams}.
-
 \begin{table}[h]
-\caption{Production discretisation parameters for the three Reynolds numbers. The grid
-is set by the resolution required at each $Re_P$; the same grid is used for all
-topologies sharing a given $Re_P$.}
+\caption{Production discretisation parameters for the three Reynolds numbers. The grid is set by the resolution required at each $Re_P$; the same grid is used for all topologies sharing a given $Re_P$.}
 \label{tab:simparams}
 \begin{tabular}{lccc}
 \hline\noalign{\smallskip}
  & $Re_P = 100$ & $Re_P = 300$ & $Re_P = 500$ \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Grid $N_x\times N_y\times N_z$      & $273\times273\times1195$ & $539\times539\times2870$ & $406\times406\times1789$ \\
-Total nodes                          & $8.91\times10^{7}$       & $8.34\times10^{8}$       & $2.95\times10^{8}$ \\
-$\delta x$ (mm)                      & $0.30$                   & $0.15$                   & $0.20$ \\
-$\delta t$ (s)                       & $5.967\times10^{-5}$     & $1.492\times10^{-5}$     & $2.116\times10^{-5}$ \\
-$\tau$                               & $0.5301$                 & $0.5301$                 & $0.5240$ \\
-Nodes per slit ($l_P = 5\,$mm)       & $\approx17$              & $33$                     & $25$ \\
+Grid $N_x\times N_y\times N_z$      & $273\times273\times1195$ & $539\times539\times2870$ & TBD \\
+Total nodes                          & $8.91\times10^{7}$       & $8.34\times10^{8}$       & TBD \\
+$\delta x$ (mm)                      & $0.30$                   & $0.15$                   & TBD \\
+$\delta t$ (s)                       & $5.967\times10^{-5}$     & $1.492\times10^{-5}$     & TBD \\
+$\tau$                               & $0.5301$                 & $0.5301$                 & TBD \\
+Nodes per slit ($l_P = 5\,$mm)       & $\approx17$              & $33$                     & TBD \\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
 
-The case matrix combines these operating points with the three topologies of
-Sec.~\ref{sec:geometry:topologies}. The laminar $Re_P = 100$ point is computed for all
-three packings ($30^\circ$, $40^\circ$ and irregular) and serves as the validation
-baseline; the regular $30^\circ$ and $40^\circ$ packings are additionally driven to
-$Re_P = 300$ and $Re_P = 500$ to probe how flow locking degrades as the flow
-approaches the unsteady regime (Sec.~\ref{sec:locking:reynolds}).
+Each case is advanced until it reaches a statistically stationary state, monitored through the $L_2$ norm of the velocity field between successive time steps; the run is
+considered converged once this residual has dropped below $10^{-5}$. Mean fields are then accumulated at every time step (sampling interval $\delta t$) starting from $t = 10\,\mathrm{s}$ of physical time, by which point the initial start-up transient has fully decayed, and continued over a window of 100 seconds. All velocity fields reported here are these time-averaged fields. The computations are carried out on the \emph{Sofja} cluster of the Otto-von-Guericke University Magdeburg\footnote{\url{https://www.lss.ovgu.de/Forschung/Numerische+Ausstattung.html}}
+using a Cartesian domain decomposition of $416$ nodes.
 
-Each case is advanced until it reaches a statistically stationary state, monitored
-through the $L_2$ norm of the velocity field between successive time steps; the run is
-considered converged once this residual has dropped below $10^{-5}$. Mean fields are
-then accumulated at every time step (sampling interval $\delta t$) starting from
-$t = 10\,\mathrm{s}$ of physical time, by which point the initial start-up transient
-has fully decayed, and continued over a window of 100 seconds. All velocity fields reported here are these time-averaged fields. The computations are
-carried out on the \emph{Sofja} cluster of the Otto-von-Guericke University
-Magdeburg\footnote{\url{https://www.lss.ovgu.de/Forschung/Numerische+Ausstattung.html}}
-using a Cartesian domain decomposition of $5\times1\times83 = 415$ subdomains in the
-$(x,y,z)$ directions, one MPI rank per subdomain.
+The case matrix combines these operating points with the three topologies of Sec.~\ref{sec:geometry:topologies}.
+
+\subsection{Measurement Positions and Coordinate System}
+\label{sec:geometry:coords}
+A right-handed global Cartesian system $(x,y,z)$ is fixed to the apparatus: $x$ is horizontal, the depth axis $y$ originates at the centre of the module, and the streamwise axis $z$ points upward with its origin at the bottom of the lowest module (Fig.~\ref{fig:coords}\citealt{velten2026}). Since each measurement (or extraction) plane lies in a void at a different rotation angle, an in-plane coordinate system is used in addition: it keeps the same vertical axis $z$ but replaces $x$ with the horizontal in-plane coordinate $\xi$, aligned with the open slit and zero at the void centre. The two directly reported velocity components are the horizontal in-plane velocity $v_\xi$ and the vertical (streamwise) velocity $v_z$.\\
+A measurement plane is located in the global frame by its offset $a_{\mathrm{Pos},n}$ from the reactor centre, measured along $y$ for the $0^\circ$ orientation of the module; this offset is independent of the rotation angle. Four positions are defined (Table~\ref{tab:pos}). Because the bed is point-symmetric about the column axis (Sec.~\ref{sec:geometry:topology}), Pos\,1/Pos\,7 and Pos\,3/Pos\,5 form point-symmetric pairs; the experiment exploits this symmetry, measuring only at Pos\,1 and Pos\,3 to recover the full set of flow fields~\citep{velten2026}. The present validation correspondingly extracts simulation planes at Pos\,1 and Pos\,3.
+
+Because the void in which each plane lies has been twisted by the per-layer rule (Sec.~\ref{sec:geometry:topology}), the raw simulation fields are first de-rotated into the common in-plane frame before any comparison or layer-to-layer analysis. Each layer $L$ is rotated about the vertical axis by
+\begin{equation}
+    \alpha = -\,(18 - L)\,\theta,
+    \label{eq:derotation}
+\end{equation}
+so that the open slit of every layer is aligned with the in-plane axis $\xi$ (e.g.\ for the $30^\circ$ packing $\alpha = 0,\,-30^\circ,\,-60^\circ,\dots$ for $L = 18, 17, 16,\dots$; for the $40^\circ$ packing the step is $40^\circ$). The position coordinates $(x,y,z)$ are transformed by the planar rotation
+\begin{subequations}
+\label{eq:transform}
+\begin{align}
+    x' &= \phantom{-}x\cos\alpha + y\sin\alpha, \\
+    y' &= -x\sin\alpha + y\cos\alpha, \\
+    z' &= z,
+\end{align}
+\end{subequations}
+and the velocity components $(v_x, v_y, v_z)$ are rotated consistently,
+\begin{subequations}
+\label{eq:transform_vel}
+\begin{align}
+    v_x' &= v_x\cos\alpha + v_y\sin\alpha, \\
+    v_y' &= v_x\sin\alpha + v_y\cos\alpha, \\
+    v_z' &= v_z,
+\end{align}
+\end{subequations}
+with the vertical coordinate and the streamwise velocity left unchanged. The reported in-plane velocity magnitude combines the horizontal in-plane and streamwise components within the plane,
+\begin{equation}
+    v_\mathrm{mag} = \sqrt{ {v_x'}^2 + {v_z'}^2 }.
+    \label{eq:velmag}
+\end{equation}
+After this transformation the horizontal in-plane component $v_x'$ corresponds to $v_\xi$ and $v_z'$ to $v_z$ of the in-plane frame.
+
+\begin{table}[H]
+\caption{Distance $a_{\mathrm{Pos},n}$ from the reactor centre to each measurement
+position (after~\citealt{velten2026}).}
+\label{tab:pos}
+\begin{tabular}{lcccc}
+\hline\noalign{\smallskip}
+Pos. & 1 & 3 & 5 & 7 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+$a_{\mathrm{Pos},n}$ (mm) & $-22.5$ & $-7.5$ & $7.5$ & $22.5$ \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+\section{Results and Discussion}
+\label{sec:results}
 
 \subsection{Grid Independence Study}
 \label{sec:numerics:grid}
+Spatial convergence was assessed at $Re_P = 100$ on a representative subdomain of the $40^\circ$ packing rather than on the full bed, so that several resolutions could be compared at moderate cost. The decisive geometric length scale is the $5\,\mathrm{mm}$ slit width $l_P$, which is common to all three topologies and is the smallest feature the grid must resolve; resolution is therefore reported as the number of lattice nodes spanning one slit. Three uniform grids were considered - coarse, medium and fine - whose spacings $\delta x$, time steps $\delta t$ and node counts are listed in Table~\ref{tab:grid}. The relaxation time is held at $\tau \approx 0.530$ across all three levels, so that the kinematic viscosity, and hence the Reynolds number, is
+matched while only the resolution changes. The finest grid resolves each slit with $33$ nodes, the coarsest with $12.5$.
 
-Spatial convergence was assessed at $Re_P = 100$ on a representative subdomain of the
-$40^\circ$ packing rather than on the full bed, so that several resolutions could be
-compared at moderate cost. The decisive geometric length scale is the $5\,\mathrm{mm}$ slit width $l_P$,
-which is common to all three topologies and is the smallest feature the grid must
-resolve; resolution is therefore reported as the number of lattice nodes spanning one
-slit. Three uniform grids were considered - coarse, medium and fine - whose spacings
-$\delta x$, time steps $\delta t$ and node counts are listed in
-Table~\ref{tab:grid}. The relaxation time is held at $\tau \approx 0.530$ across all
-three levels, so that the kinematic viscosity, and hence the Reynolds number, is
-matched while only the resolution changes. The finest grid resolves each slit with
-$33$ nodes, the coarsest with $12.5$.
-
-\begin{table}[h]
-\caption{Grid levels used in the spatial-convergence study, performed on a
-representative subdomain of the $40^\circ$ packing. Resolution is quoted as lattice
-nodes per $5\,\mathrm{mm}$ slit.}
+\begin{table}[H]
+\caption{Grid levels used in the spatial-convergence study, performed on a representative subdomain of the $40^\circ$ packing. Resolution is quoted as lattice nodes per $5\,\mathrm{mm}$ slit.}
 \label{tab:grid}
 \begin{tabular}{lccc}
 \hline\noalign{\smallskip}
@@ -464,248 +333,118 @@ $\tau$                           & $0.5301$             & $0.5301$             &
 \end{tabular}
 \end{table}
 
-Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on an
-identical extraction surface for the three grids. The characteristic pattern of three
-inclined jets emerging from the slits is reproduced at every resolution; the coarse
-grid renders the jets noticeably more diffuse and over-predicts the peak magnitude,
-whereas the medium and fine fields are visually almost indistinguishable. Quantitatively,
-the peak jet velocity changes by $11\%$ between the coarse and medium grids but by only
-$0.5\%$ between the medium and fine grids, and the surface-mean velocity is converged to
-within $3\%$, confirming that grid independence is effectively reached at the medium
-resolution.
+Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the same extraction surface for the three grid resolutions. All grids reproduce the characteristic three-jet structure emerging from the slits, although the coarse grid yields more diffuse jets and a higher peak velocity. In contrast, the medium and fine grids are nearly indistinguishable. The peak jet velocity differs by $11\%$ between the coarse and medium grids but by only $0.5\%$ between the medium and fine grids, while the mean velocity of the surface varies by less than $3\%$. Therefore, grid independence is considered achieved at medium resolution, which was adopted for the $Re_P=100$ simulations. This grid requires roughly one third of the nodes of the fine grid and, owing to its larger time step, reduces computational cost by approximately an order of magnitude while maintaining agreement in both peak and mean velocities. The cases with a higher-Reynolds-number ($Re_P=300$ and $500$) were simulated on correspondingly finer grids (Table~\ref{tab:simparams}) to adequately resolve the thinner shear layers.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subfloat[Coarse]{\includegraphics[width=0.32\textwidth]{grid_coarse.png}}\hfill
 \subfloat[Medium]{\includegraphics[width=0.32\textwidth]{grid_medium.png}}\hfill
 \subfloat[Fine]{\includegraphics[width=0.32\textwidth]{grid_fine.png}}
-\caption{Time-averaged velocity-magnitude field on a common extraction surface of the
-$40^\circ$ subdomain for the three grid levels of Table~\ref{tab:grid}. The jet
-structure is preserved across all resolutions; the medium and fine fields are nearly
-identical.}
+\caption{Time-averaged velocity-magnitude field on a common extraction surface of the $40^\circ$ subdomain for the three grid levels of Table~\ref{tab:grid}. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical.}
 \label{fig:grid}
 \end{figure}
-
-The medium resolution was therefore adopted for the $Re_P = 100$ production runs as the
-most efficient level meeting the convergence criterion. Relative to the fine grid it
-carries roughly one third of the nodes and, through its four-times larger time step,
-advances a given physical time at about an order of magnitude lower cost, while
-reproducing the peak and integral flow quantities to better than a percent. The
-higher-Reynolds-number cases ($Re_P = 300$ and $500$) are run on correspondingly finer
-grids (Table~\ref{tab:simparams}) to keep the thinner shear layers resolved.
 
 \subsection{Symmetry and Consistency Verification}
 \label{sec:numerics:symmetry}
 
-As an internal consistency check, the simulated flow should reproduce the point symmetry inherent to the slit arrangement. The measurement planes Pos,3 and Pos,5 are located at $a_\mathrm{Pos}=\mp7.5,\mathrm{mm}$ and form a point-symmetric pair about the column axis (Sec.~\ref{sec:geometry:coords}); consequently, their mean flow fields are expected to be mirror images of one another. Figure~\ref{fig:symmetry} compares the time-averaged velocity-magnitude contours and in-plane streamlines at these locations for the $30^\circ$ packing at $Re_P=100$ and $Re_P=300$. In both cases, the dominant flow features—including the central high-velocity jet, the adjacent slit jets, and the recirculation regions—are reproduced as near-perfect reflections across the two planes.
-\begin{figure}[h]
+Each layer contains four slits, resulting in four measurement planes that could, in principle, be analysed independently. However, presenting all planes for every Reynolds number would lead to a substantial amount of redundant data. Owing to the geometric arrangement of the slits, the measurement locations form two point-symmetric pairs about the column axis: Pos,1 and Pos,7, and Pos,3 and Pos,5 (Sec.~\ref{sec:geometry:coords}). As an internal consistency check, the simulations should therefore reproduce identical flow structures within each symmetric pair.
+Figure~\ref{fig:symmetry} compares the time-averaged velocity-magnitude contours and in-plane streamlines at Pos,3 and Pos,5 for the $30^\circ$ packing at $Re_P=100$ and $Re_P=300$. The two planes exhibit near-perfect mirror symmetry, with the central high-velocity jet, the neighbouring slit jets, and the recirculation regions mapping directly onto their reflected counterparts. The preservation of this symmetry at both Reynolds numbers confirms that each symmetric pair contains equivalent flow information. Consequently, only one representative plane from each pair is retained for the detailed analysis presented in the following sections, substantially reducing the amount of data without loss of physical insight.
+
+\begin{figure}[H]
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.9\linewidth]{Symmetry_Contour_Pos3_Re_100.png}}\\
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.9\linewidth]{Symmetry_Contour_Pos3_Re_300.png}}
-\caption{Symmetry verification for the $30^\circ$ packing: time-averaged
-velocity-magnitude contours with in-plane streamlines at the point-symmetric pair
-Pos\,3 and Pos\,5, for (a)~$Re_P = 100$ and (b)~$Re_P = 300$. The Pos\,5 field is the
-mirror image of Pos\,3 at both Reynolds numbers, verifying the $180^\circ$ symmetry of
-the slit pattern.}
+\caption{Symmetry verification for the $30^\circ$ packing: time-averaged velocity-magnitude contours with in-plane streamlines at the point-symmetric pair Pos\,3 and Pos\,5, for (a)~$Re_P = 100$ and (b)~$Re_P = 300$. The Pos\,5 field is the mirror image of Pos\,3 at both Reynolds numbers, verifying the $180^\circ$ symmetry of the slit pattern.}
 \label{fig:symmetry}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.9\linewidth]{Combined_Line_Profiles_Pos3_Re_100.png}}\\
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.9\linewidth]{Combined_Line_Profiles_Pos3_Re_300.png}}
-\caption{Quantitative symmetry check: velocity-magnitude line profiles across the
-plane at four streamwise heights, comparing Pos\,3 (solid) with its point-symmetric
-partner Pos\,5 (dashed), for (a)~$Re_P = 100$ and (b)~$Re_P = 300$. The Pos\,3 and
-Pos\,5 profiles coincide to within line width, confirming the $180^\circ$ symmetry of
-the simulated mean flow.}
+\caption{Quantitative symmetry check: velocity-magnitude line profiles across the plane at four streamwise heights, comparing Pos\,3 (solid) with its point-symmetric partner Pos\,5 (dashed), for (a)~$Re_P = 100$ and (b)~$Re_P = 300$. The Pos\,3 and Pos\,5 profiles coincide to within line width, confirming the $180^\circ$ symmetry of the simulated mean flow.}
 \label{fig:symmetry_profiles}
-\end{figure}
-The excellent agreement demonstrates that the numerical model preserves the geometric symmetry of the packing and, importantly, that the flow organisation remains point-symmetric over the investigated Reynolds-number range. This observation has a practical consequence for the validation procedure: because Pos,3 and Pos,5 contain equivalent flow information, detailed comparisons at one plane are representative of its symmetric counterpart. The symmetry therefore reduces the number of experimental measurement locations required from four to two without loss of information. To quantify this behaviour, Fig.~\ref{fig:symmetry_profiles} compares velocity-magnitude profiles at four streamwise heights. The profiles at Pos,3 and Pos,5 are virtually indistinguishable at both Reynolds numbers, confirming that the symmetry remains robust from $Re_P=100$ to $Re_P=300$.
+\end{figure} To quantify this behaviour, Fig.~\ref{fig:symmetry_profiles} compares velocity-magnitude profiles at four streamwise heights. The profiles at Pos,3 and Pos,5 are virtually indistinguishable at both Reynolds numbers, confirming that the symmetry remains robust.
 
-%% ============================================================
-\section{Validation against PIV Measurements}
-\label{sec:validation}
-
-The simulations are validated against the published PIV data
-of~\citet{velten2026} for all three topologies. This section first defines the
-comparison procedure and the error metrics, then assesses the time-averaged
-velocity-magnitude fields over the measurement planes (surface validation); the
-layer-resolved development of the flow within the slits is examined subsequently.
+\section{Validation against PIV Measurements}\label{sec:validation}
+The simulations are validated against the published PIV data of~\citet{velten2026} for all three topologies. This section first defines the comparison procedure and the error metrics, then assesses the time-averaged velocity-magnitude fields over the measurement planes (surface validation); the layer-resolved development of the flow within the slits is examined subsequently.
 
 \subsection{Comparison Procedure and Error Metrics}
 \label{sec:validation:procedure}
 
-Velocity data are reported in the in-plane coordinate system of~\citet{velten2026}:
-the horizontal in-plane axis $\xi$ and the vertical streamwise axis $z$.
-Simulation planes are extracted at the physical positions corresponding to Pos\,1 and
-Pos\,3 ($a_\mathrm{Pos} = -22.5$ and $-7.5\,\mathrm{mm}$ from the reactor centre);
-the two remaining measurement positions, Pos\,5 and Pos\,7, are point-symmetric
-partners of Pos\,3 and Pos\,1 (Sec.~\ref{sec:numerics:symmetry}) and therefore carry
-no additional information.
-Each extracted plane is masked to the fluid region, interpolated onto the experimental
-PIV grid (vector resolution $3.40$-$3.44\,\mathrm{vec/mm}$, Table~2 of
-\citealt{velten2026}), and compared with the measured field point by point.
+Velocity data are reported in the in-plane coordinate system of~\citet{velten2026}: the horizontal in-plane axis $\xi$ and the vertical streamwise axis $z$. Simulation planes are extracted at the physical positions corresponding to Pos\,1 and Pos\,3 ($a_\mathrm{Pos} = -22.5$ and $-7.5\,\mathrm{mm}$ from the reactor centre). Each extracted plane is masked to the fluid region, interpolated onto the experimental PIV grid (vector resolution $3.40$-$3.44\,\mathrm{vec/mm}$, Table~2 of \citealt{velten2026}), and compared with the measured field point by point.
 
-Agreement is quantified on the velocity magnitude $|\bm{v}|$ over all $M$ fluid grid
-points of a plane. Denoting the simulated and experimental values at point $i$ by
-$s_i$ and $e_i$, we report the root-mean-square error
+Agreement is quantified on the velocity magnitude $|\bm{v}|$ over all $M$ fluid grid points of a plane. Denoting the simulated and experimental values at point $i$ by $s_i$ and $e_i$, we report the root-mean-square error
 \begin{equation}
     \mathrm{RMSE} = \sqrt{\frac{1}{M}\sum_{i=1}^{M}\left(s_i-e_i\right)^2},
     \qquad
     \mathrm{NRMSE} = \frac{\mathrm{RMSE}}{e_\mathrm{max}-e_\mathrm{min}},
     \label{eq:rmse}
 \end{equation}
-its value normalised by the experimental dynamic range ($\mathrm{NRMSE}$), and the
-coefficient of determination
-$R^2 = 1-\sum_i(s_i-e_i)^2/\sum_i(e_i-\bar{e})^2$, which measures how much of the
-spatial variance of the measured field is reproduced. $\mathrm{NRMSE}$ is the primary
-headline metric, as it is insensitive to the absolute velocity level and is therefore
-comparable across topologies and Reynolds numbers.
+its value normalised by the experimental dynamic range ($\mathrm{NRMSE}$), and the coefficient of determination $R^2 = 1-\sum_i(s_i-e_i)^2/\sum_i(e_i-\bar{e})^2$, which measures how much of the spatial variance of the measured field is reproduced. $\mathrm{NRMSE}$ is the primary headline metric, as it is insensitive to the absolute velocity level and is therefore comparable across topologies and Reynolds numbers.
 
 \subsection{Surface Velocity Fields}
 \label{sec:validation:surface}
 
-We first validate the simulation at the level of the time-averaged surface field, where
-the PIV data are densest and the flow features are most readily compared. The aim is to
-establish, before turning to the layer-resolved and flow-locking analyses, that the
-model reproduces both the spatial organisation of the flow and its absolute velocity
-level over the full measurement plane.
+We first validate the simulation at the level of the time-averaged surface field, where the PIV data are densest and the flow features are most readily compared. The aim is to establish, that the model reproduces both the spatial organisation of the flow and its absolute velocity level over the full measurement plane.
 
-Figure~\ref{fig:validation_surface} places the simulated and measured velocity-magnitude
-fields side by side, with in-plane streamlines, for the $30^\circ$ packing at Pos\,3 at
-$Re_P=100$ and $Re_P=300$. At both Reynolds numbers the flow organises into discrete
-streamwise jets issuing from the slits and separated by low-velocity wakes, with a strong
-central jet flanked by weaker slit jets. The simulation recovers the number, position,
-width, and peak magnitude of these jets, together with the streamline topology of the
-intervening recirculation zones; crucially, the agreement is just as close at $Re_P=300$
-as at $Re_P=100$, showing that the model remains predictive as the flow strengthens. The
-agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays the
-simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3
-against the experimental uncertainty band: the simulated profiles track the measured ones
-within or close to the band almost everywhere, capturing both the jet peaks and the
-inter-jet minima.
+Figure~\ref{fig:validation_surface} compares the simulated and measured velocity-magnitude fields, with in-plane streamlines, for the $30^\circ$ packing at Pos\,3 at $Re_P=100$ and $Re_P=300$. At both Reynolds numbers the flow organises into discrete streamwise jets issuing from the slits and separated by low-velocity wakes, with a strong central jet flanked by weaker slit jets. The simulation recovers the number, position, width, and peak magnitude of these jets, together with the streamline topology of the
+intervening recirculation zones; crucially, the agreement is just as close at $Re_P=300$ as at $Re_P=100$, showing that the model remains predictive as the flow strengthens. The agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3
+against the experimental uncertainty band: the simulated profiles track the measured ones within or close to the band almost everywhere, capturing both the jet peaks and the inter-jet minima.
+The agreement is quantified in Fig.~\ref{fig:validation_profiles}, which overlays the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3 against the experimental uncertainty band: the simulated profiles track the measured ones within or close to the band almost everywhere, capturing both the jet peaks and the inter-jet minima.
+This level of agreement is representative: across both regular packings, the $30^\circ$ and the $40^\circ$, the surface fields are reproduced consistently well at both $Re_P = 100$ and $Re_P = 300$, with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. In particular the $40^\circ$ packing at $Re_P = 300$ is validated to the same standard as the $30^\circ$ case shown here. The residual error is not distributed uniformly but concentrates in the thin, high-gradient shear layers bordering the jets, where sub-vector-spacing velocity gradients and PIV peak-locking are largest.
 
-This level of agreement is representative. Across the regular packings the surface fields
-are reproduced consistently well at both Reynolds numbers and both measurement positions
-(Pos\,1 and Pos\,3), with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is
-not distributed uniformly but concentrates in the thin, high-gradient shear layers
-bordering the jets, where sub-vector-spacing
-velocity gradients and PIV peak-locking are largest, while the bulk of each plane agrees
-to within a few percent. The irregular packing is reproduced less tightly
-($\mathrm{NRMSE}$ below $\sim 12\%$): its aperiodic arrangement yields a spatially disordered,
-low-dynamic-range field for which a point-by-point $R^2$ is a stringent, placement-sensitive
-measure, yet the overall velocity level and jet/wake distribution are still captured. This
-contrast-tight, reproducible fields for the periodic packings against a looser,
-placement-sensitive match for the irregular one-is itself physically meaningful and
-motivates the flow-locking analysis of Sec.~\ref{sec:locking}.
-
-\begin{figure}[H]
+\begin{figure}
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.48\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\hfill
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.48\linewidth]{30_Re_300/surface/pos3_Surface_plot.png}}
 \caption{Surface validation for the $30^\circ$ packing at Pos\,3: time-averaged
-velocity-magnitude fields with in-plane streamlines, simulation (left of each pair)
-versus experiment (right), over layers L13-L17 at (a)~$Re_P=100$ and (b)~$Re_P=300$. The
-simulation reproduces the position, width, and strength of the slit jets and the
-intervening recirculation pattern at both Reynolds numbers, the agreement holding equally
-well as the flow strengthens.}
+velocity-magnitude fields with in-plane streamlines, simulation (left of each pair) Vs experiment (right), over layers L13-L17 at (a)~$Re_P=100$ and (b)~$Re_P=300$.}
 \label{fig:validation_surface}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=0.95\linewidth]{30_Re_100/surface/Summary_Line_Profiles_Pos3.png}
-\caption{Quantitative surface validation for the $30^\circ$ packing at $Re_P=100$,
-Pos\,3: velocity-magnitude profiles across the plane at four streamwise heights,
-simulation (red) versus PIV (blue) with the shaded experimental uncertainty band. The
-simulated profiles lie within the measured band except in the steep shear layers
-flanking the central jet.}
+\caption{Quantitative surface validation for the $30^\circ$ packing at $Re_P=100$, Pos\,3: velocity-magnitude profiles across the plane at four streamwise heights, simulation (red) Vs PIV (blue) with the shaded experimental uncertainty band.}
 \label{fig:validation_profiles}
 \end{figure}
 
 \subsection{Layer-Resolved Development}
 \label{sec:validation:layers}
 
-Beyond the surface fields, the PIV data resolve the flow within the individual layers,
-allowing the simulation to be validated layer by layer in the developed region. The
-complete dataset comprises in-slit velocity fields and profiles for every measured layer
-(L13-L17) of each topology, Reynolds number and measurement position; rather than
-reproducing all of these contour sets, we present two contrasting cases at $Re_P = 100$,
-Pos\,3-the regular $30^\circ$ packing and the irregular packing-which together show both
-the validation accuracy and the qualitatively different layer behaviour of the two
-arrangements.
+Beyond the surface fields, the PIV data resolve the flow within the individual layers, allowing the simulation to be validated layer by layer in the developed region. The
+complete dataset comprises in-slit velocity fields and profiles for every measured layer (L13-L17) of each topology, Reynolds number and measurement position; rather than reproducing all of these contour sets, we present two contrasting cases at $Re_P = 100$, Pos\,3-the regular $30^\circ$ packing and the irregular packing-which together show both the validation accuracy and the qualitatively different layer behaviour of the two arrangements.
 
 For the regular $30^\circ$ packing (Fig.~\ref{fig:validation_layers}), the velocity-magnitude
 contours and in-plane streamlines (Fig.~\ref{fig:validation_layers}a) reproduce the measured
-jet-recirculation structure of each layer, the residuals concentrating in thin shear layers
-at the jet edges where the steepest gradients amplify any small differences between
-simulation and PIV. The per-layer line profiles at $2\,\mathrm{mm}$ above the lower face
-(Fig.~\ref{fig:validation_layers}b) show that the five layers L13-L17 carry essentially the
-same profile and that the simulation tracks the measured shape in each-the central jet,
-the flanking secondary jets, and the inter-jet minima all in the right places. A small,
-systematic offset is nonetheless visible: the simulated central peak and the secondary-jet
-maxima sit a few percent below the measured ones, while the inter-jet minima are
-correspondingly slightly higher. The two observations are linked and point to a single
-cause. The slit jets and their bounding shear layers are the steepest-gradient features in
-the domain, and each jet core is resolved by only a handful of lattice nodes across its
-width; there the leading truncation error of the scheme acts as a weak numerical
-dissipation that clips the tip of the jet. Because the total mass flux through the plane is
-conserved, the momentum shaved from the peak is not lost but redistributed into the adjacent
-low-velocity region---exactly the signature seen: lower maxima together with raised minima at
-unchanged jet position and width. A finer lattice would narrow this gap, but at a steep cost
-in the present multi-module domain; the chosen resolution already lies in the grid-converged
-range for the integral quantities (Sec.~\ref{sec:numerics:grid}). Two further factors bound
-the interpretation rather than drive it. First, the idealised model geometry-perfectly
-smooth, aligned bars and a uniform inlet-differs slightly from the printed parts ($0.3\%$
-tolerance) and diffuser-fed inlet of the experiment, which can sharpen the real channelling
-through individual slits. Second, the finite PIV interrogation window lightly smooths the
-measured field and, if anything, lowers the measured peaks, so the true offset is bounded
-from above by what is observed. The discrepancy is therefore small, spatially confined to
-the jet maxima, sign-consistent across all five layers, and well within the combined
-experimental and numerical uncertainty; it leaves both the validation conclusion and the
-layer-to-layer repeatability that is the point of this figure intact.
-
-\begin{figure}[H]
+jet-recirculation structure of each layer, the residuals concentrating in thin shear layers at the jet edges where the steepest gradients amplify any small differences between simulation and PIV. The per-layer line profiles at $2\,\mathrm{mm}$ above the lower face
+(Fig.~\ref{fig:validation_layers}b) show that the five layers L13-L17 carry essentially the same profile and that the simulation tracks the measured shape in each-the central jet, the flanking secondary jets, and the inter-jet minima all in the right places. A small, systematic offset is however visible: the simulated central peak and the secondary-jet maxima sit a few percent below the measured ones, while the inter-jet minima are correspondingly slightly higher. The two observations are linked and point to a single cause. The slit jets and their bounding shear layers are the steepest-gradient features in the domain, and each jet core is resolved by only a handful of lattice nodes across its width; there the leading truncation error of the scheme acts as a weak numerical dissipation that clips the tip of the jet. Because the total mass flux through the plane is
+conserved, the momentum shaved from the peak is not lost but redistributed into the adjacent low-velocity region exactly the signature seen, lower maxima together with raised minima at unchanged jet position and width. A finer lattice would narrow this gap, but at a steep cost
+in the present multi-module domain; the chosen resolution already lies in the grid-converged range for the integral quantities (Sec.~\ref{sec:numerics:grid}).
+Another factor is the idealised model geometry-perfectly
+smooth, aligned bars and a uniform inlet-differs slightly from the printed parts ($0.3\%$ tolerance) and diffuser-fed inlet of the experiment, which can sharpen the real channelling through individual slits. Secondly, the finite PIV interrogation window lightly smooths the measured field (measurement error). The discrepancy is therefore small, spatially confined to the jet maxima, sign-consistent across all five layers and hence also resonates the same in the surface data above. It is well within the combined experimental and numerical uncertainty and it leaves both the validation conclusion and the layer-to-layer repeatability that is the point of this figure intact.
+\begin{figure}
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
 \includegraphics[width=0.9\linewidth]{30_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
 \subfloat[per-layer profiles at $2\,\mathrm{mm}$ from the lower face, sim.\ (red) vs.\ PIV (blue)]{%
 \includegraphics[width=0.9\linewidth]{30_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png}}
 \caption{Layer-resolved validation for the regular $30^\circ$ packing at $Re_P = 100$, Pos\,3
-(layers L13-L17). (a)~Time-mean velocity-magnitude contours with in-plane streamlines,
-experiment (left) versus simulation (right); (b)~velocity-magnitude profiles at
-$2\,\mathrm{mm}$ above the lower layer face, simulation (red, dashed) versus PIV (blue) for
-each layer. The layers carry essentially the same profile (flow locking) and the simulation
-reproduces it in every layer; the simulated jet maxima sit a few percent below the measured
-values, consistent with mild numerical diffusion of the under-resolved jet cores.}
+(layers L13-L17). (a)~Time-mean velocity-magnitude contours with in-plane streamlines, experiment (left) Vs simulation (right); (b)~velocity-magnitude profiles at $2\,\mathrm{mm}$ above the lower layer face, simulation (red, dashed) Vs PIV (blue) for each layer.}
 \label{fig:validation_layers}
 \end{figure}
 
-The irregular packing tells the opposite story (Fig.~\ref{fig:validation_layers_irreg}).
-Here the layers cannot be collapsed onto one another at all: because each layer presents a
-different local bar arrangement, its jet/wake pattern is genuinely distinct, and overlaying
-the layers in a single profile plot would superimpose unrelated curves and convey no coherent
-information. We therefore retain the per-layer format (Fig.~\ref{fig:validation_layers_irreg}b),
-which shows each layer compared individually against its own PIV reference. The simulation
-captures the layer-specific jet positions and magnitudes case by case, but the profiles vary
-strongly from L12 to L17 with no common shape-the direct visual signature of the absent flow
-locking. This contrast makes the central point measurement-anchored: layer collapse is a
-property of the regular packings, not of the flow in general.
+The irregular packing tells the opposite story (Fig.~\ref{fig:validation_layers_irreg}). Here the layers cannot be collapsed onto one another at all: because each layer presents a different local bar arrangement, its jet/wake pattern is genuinely distinct, and overlaying
+the layers in a single profile plot would superimpose unrelated curves and convey no coherent information. We therefore retain the per-layer format (Fig.~\ref{fig:validation_layers_irreg}b), which shows each layer compared individually against its own PIV reference. The simulation captures the layer-specific jet positions and magnitudes case by case, but the profiles vary strongly from L12 to L17 with no common shape-the direct visual signature of the absent flow locking. This contrast makes the central point measurement-anchored: layer collapse is a property of the regular packings, not of the flow in general. The same layer-resolved agreement holds for the irregular packing at $Re_P = 300$, which was measured and validated against PIV as well; the simulation reproduces its distinct per-layer jet/wake pattern at the higher Reynolds number to the same accuracy, confirming that the absence of locking is a robust physical feature rather than a low-Reynolds-number artefact.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
 \includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
 \subfloat[per-layer profiles at $2\,\mathrm{mm}$ from the lower face, sim.\ (red) vs.\ PIV (blue)]{%
 \includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Layer_Comparison_2mm_Pos3_Re100.png}}
-\caption{Layer-resolved validation for the irregular packing at $Re_P = 100$, Pos\,3.
-(a)~Time-mean velocity-magnitude contours with in-plane streamlines, experiment (left) versus
-simulation (right); (b)~per-layer velocity-magnitude profiles at $2\,\mathrm{mm}$ above the
-lower face, simulation (red, dashed) versus PIV (blue). Each layer is reproduced individually,
-but the profiles differ strongly from layer to layer with no common shape: unlike the regular
-packing, the irregular layers carry no coherent profile to collapse, so they are shown only in
-the per-layer format.}
+\caption{Layer-resolved validation for the irregular packing at $Re_P = 100$, Pos\,3. (a)~Time-mean velocity-magnitude contours with in-plane streamlines, experiment (left) Vs simulation (right); (b)~per-layer velocity-magnitude profiles at $2\,\mathrm{mm}$ above the lower face, simulation (red, dashed) Vs PIV (blue).}
 \label{fig:validation_layers_irreg}
 \end{figure}
 
@@ -1140,92 +879,6 @@ topologies. To be populated with computed $\phi$ and $f_\perp$ values.}
 \todo[inline]{Write Conclusions}
 
 %% ============================================================
-\begin{thebibliography}{}
-
-\bibitem{Dixon}
-Dixon, A.~G., \& Partopour, B. Computational fluid dynamics for fixed bed reactor design. Annual Review of Chemical and Biomolecular Engineering, 11, 109--130. (2020)
-
-\bibitem{Augier}
-Augier, F., Idoux, F., \& Delenne, J.-Y. Numerical simulations of transfer and transport properties inside packed beds of spherical particles. Chemical Engineering Science, 65(3), 1055--1064. (2010)
-
-\bibitem{freund2003numerical}
-Freund, H., Zeiser, T., Huber, F., Klemm, E., Brenner, G., Durst, F., \& Emig, G. Numerical simulations of single phase reacting flows in randomly packed fixed-bed reactors and experimental validation. Chemical Engineering Science, 58(3--6), 903--910. (2003)
-
-\bibitem{Martins.2018}
-Martins, F., {Da Silva}, C.~C., Lessig, C., \& Z{\"a}hringer, K. Ray-Tracing Based Image Correction of Optical Distortion for {PIV} Measurements in Packed Beds. Journal of Advanced Optics and Photonics, 1(2), 71--94. (2018)
-
-\bibitem{Patil.2013}
-Patil, V.~A., \& Liburdy, J.~A. Flow characterization using {PIV} measurements in a low aspect ratio randomly packed porous bed. Experiments in Fluids, 54(4). (2013)
-
-\bibitem{Khayamyan.2017}
-Khayamyan, S., Lundstr{\"o}m, T.~S., Hellstr{\"o}m, J.~G.~I., Gren, P., \& Lycksam, H. Measurements of Transitional and Turbulent Flow in a Randomly Packed Bed of Spheres with Particle Image Velocimetry. Transport in Porous Media, 116(1), 413--431. (2017)
-
-\bibitem{Larsson.2018}
-Larsson, I.~A.~S., Lundstr{\"o}m, T.~S., \& Lycksam, H. Tomographic {PIV} of flow through ordered thin porous media. Experiments in Fluids, 59(6). (2018)
-
-\bibitem{wood.2015}
-Wood, B.~D., Apte, S.~V., Liburdy, J.~A., Ziazi, R.~M., He, X., Finn, J.~R., \& Patil, V.~A. A comparison of measured and modeled velocity fields for a laminar flow in a porous medium. Advances in Water Resources, 85, 45--63. (2015)
-
-\bibitem{Poelma.2020}
-Poelma, C. Measurement in opaque flows: a review of measurement techniques for dispersed multiphase flows. Acta Mechanica, 231(6), 2089--2111. (2020)
-
-\bibitem{li2022visualization}
-Li, L., \& Iskander, M. Visualization of Interstitial Pore Fluid Flow. Journal of Imaging, 8(2), 32. (2022)
-
-\bibitem{hassan2008flow}
-Hassan, Y., \& Dominguez-Ontiveros, E.~E. Flow visualization in a pebble bed reactor experiment using {PIV} and refractive index matching techniques. Nuclear Engineering and Design, 238(11), 3080--3085. (2008)
-
-\bibitem{sadowski2025mean}
-Sadowski, W., Demir, H., \& {di Mare}, F. Mean flow properties in a packed bed with varying geometry. 2nd International Workshop on Reacting Particle-Gas Systems, Magdeburg, Germany, 16--18. (2025)
-
-\bibitem{demir2026pressure}
-Demir, H., Sadowski, W., \& {di Mare}, F. Modelling of pressure drop in periodic square-bar packed beds. arXiv preprint arXiv:2601.04023. (2026)
-
-\bibitem{velten2026}
-Velten, C., H\"{u}lz, K., \& Z\"{a}hringer, K. Allowing optical measurements in a {3D} packed bed with gas flow: {A} novel reactor concept. Particuology, 108, 293--306. (2026). \url{https://doi.org/10.1016/j.partic.2025.11.018}
-
-\bibitem{velten2022a}
-Velten, C., Ebert, M., Lessig, C., \& Z\"{a}hringer, K. Ray tracing based reconstruction of {PIV} measurements in the outlet zone of gaseous flow in packed beds. 20th International Symposium on the Application of Laser and Imaging Techniques to Fluid Mechanics, Lisbon, Portugal, 51/1--11. (2022)
-
-\bibitem{neeraj2023}
-Neeraj, T., Velten, C., Janiga, G., et al. Modeling gas flows in packed beds with the lattice {Boltzmann} method: validation against experiments. Flow, Turbulence and Combustion, 111, 463--491. (2023). \url{https://doi.org/10.1007/s10494-023-00444-z}
-
-\bibitem{Sullivan}
-Sullivan, S.~P., Sani, F.~M., Johns, M.~L., \& Gladden, L.~F. Simulation of packed bed reactors using lattice {Boltzmann} methods. Chemical Engineering Science, 60, 3405--3418. (2005)
-
-\bibitem{kruger2017lattice}
-Kr\"{u}ger, T., Kusumaatmaja, H., Kuzmin, A., Shardt, O., Silva, G., \& Viggen, E.~M. The Lattice Boltzmann Method: Principles and Practice. Springer. (2017)
-
-\bibitem{Bhadauria}
-Bhadauria, B.~S. Lattice Boltzmann Method Fundamentals and Engineering Applications with Computer Codes. Springer Science \& Business Media. (2009)
-
-\bibitem{Xiaoyi}
-He, X., \& Luo, L.-S. Theory of the lattice {Boltzmann} method: From the {Boltzmann} equation to the lattice {Boltzmann} equation. Physical Review E, 56(6), 6811--6817. (1997)
-
-\bibitem{Shu}
-Xiaoyi, G., \& Shu, C. Lattice Boltzmann Method and Its Applications in Engineering. World Scientific Publishing Company. (2012)
-
-\bibitem{bouzidi2001momentum}
-Bouzidi, M., Firdaouss, M., \& Lallemand, P. Momentum transfer of a {Boltzmann}-lattice fluid with boundaries. Physics of Fluids, 13(11), 3452--3459. (2001)
-
-\bibitem{zhao2002non}
-Zhao-Li, G., Chu-Guang, Z., \& Bao-Chang, S. Non-equilibrium extrapolation method for velocity and pressure boundary conditions in the lattice {Boltzmann} method. Chinese Physics, 11(4), 366. (2002)
-
-\bibitem{feng2015three}
-Feng, Y., Sagaut, P., \& Tao, W. A three-dimensional lattice model for thermal compressible flow on standard lattices. Journal of Computational Physics, 303, 514--529. (2015)
-
-\bibitem{hosseini2020compressibility}
-Hosseini, S.~A., Darabiha, N., \& Th\'{e}venin, D. Compressibility in lattice {Boltzmann} on standard stencils: effects of deviation from reference temperature. Philosophical Transactions of the Royal Society A, 378(2175), 20190399. (2020)
-
-\bibitem{hosseini2021central}
-Hosseini, S.~A., Berg, P., Huang, F., Roloff, C., Janiga, G., \& Th\'{e}venin, D. Central moments multiple relaxation time {LBM} for hemodynamic simulations in intracranial aneurysms: An in-vitro validation study using {PIV} and {PC-MRI}. Computers in Biology and Medicine, 131, 104251. (2021)
-
-\bibitem{hosseini2022lattice}
-Hosseini, S.~A., Huang, F., \& Th\'{e}venin, D. Lattice {Boltzmann} model for simulation of flow in intracranial aneurysms considering non-Newtonian effects. Physics of Fluids, 34(7), 073105. (2022)
-
-\bibitem{huang2022simulation}
-Huang, F., Noel, R., Berg, P., \& Hosseini, S.~A. Simulation of the {FDA} nozzle benchmark: A lattice {Boltzmann} study. Computer Methods and Programs in Biomedicine, 221, 106863. (2022)
-
-\end{thebibliography}
+\bibliography{references}
 
 \end{document}
