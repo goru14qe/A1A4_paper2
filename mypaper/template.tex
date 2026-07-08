@@ -194,7 +194,7 @@ In practice the plain BGK operator is frequently replaced by more elaborate coll
 \begin{equation}
     \Omega_i = \mathcal{T}^{-1}W\mathcal{T}(f^{\rm eq}_i - f_i) + \Xi_i\label{eq:correc1}
 \end{equation}
-where $\mathcal{T}$ maps the populations into moment space, $\mathcal{T}^{-1}$ is its inverse and $W$ collects the relaxation rates on its diagonal. The transform $\mathcal{T}$ is built from the modified central Hermite polynomials $\widetilde{\mathcal{H}}_n(\bm{c}_i)$, which for the D2Q9 lattice take the form:
+where $\mathcal{T}$ maps the populations into moment space, $\mathcal{T}^{-1}$ is its inverse and $W$ collects the relaxation rates on its diagonal. The transform $\mathcal{T}$ is built from the modified central Hermite polynomials $\widetilde{\mathcal{H}}_n(\bm{c}_i)$, which for the D2Q9 lattice take the form:\hl{(Our work is three-dimensional, and a 2D solver was not used in this study!!!)}
 \begin{subequations}
 	\begin{align}
 	\widetilde{\mathcal{H}}_0 &= 1, \\
@@ -277,7 +277,6 @@ To quantify the recurrence of pore-scale flow between successive layers, we intr
 Rather than comparing different realisations of a flow, as is common in spatial correlation or POD analyses, the present metric compares successive layers within the same packing and interprets their similarity as a measure of topology-induced flow organisation.
 
 The similarity between the de-rotated mean velocity fields of layers $m$ and $n$ is defined as
-
 \begin{equation}
 L_{mn}
 =
@@ -289,17 +288,15 @@ L_{mn}
 =
 \sum_{i\in\Omega}
 \left(
-a_{x',i}b_{x',i}
+a_{x',i} b_{x',i}
 +
-a_{z',i}b_{z',i}
+a_{z',i} b_{z',i}
 \right),
 \label{eq:Ln}
 \end{equation}
-
 where $\tilde{\bm{u}}_n=(\tilde u_{x'},\tilde u_{z'})_n$ is the time-averaged velocity field of layer $n$ after de-rotation into the common reference frame (Sec.~\ref{sec:geometry:coords}), $\|\bm a\|_\Omega=\sqrt{\langle\bm a,\bm a\rangle_\Omega}$, and $\Omega_{mn}$ denotes the fluid region common to both layers. The normalisation removes the influence of velocity magnitude, such that $L_{mn}=1$ corresponds to identical de-rotated velocity fields, while progressively smaller values indicate increasing differences in the pore-scale flow organisation. Evaluating Eq.~(\ref{eq:Ln}) for all layer pairs produces the layer-to-layer locking matrix.
 
 Two scalar quantities summarise the locking behaviour. The mean locking strength,
-
 \begin{equation}
 \overline{L}
 =
@@ -308,11 +305,8 @@ Two scalar quantities summarise the locking behaviour. The mean locking strength
 L_{mn},
 \label{eq:Lbar}
 \end{equation}
-
-is the average similarity between all distinct layer pairs and provides a single measure of the overall strength of flow locking. Values of $\overline{L}$ approaching unity indicate that the de-rotated flow structures are nearly identical throughout the packing, whereas lower values correspond to progressively weaker locking.
-
+is the average similarity between all distinct layer pairs and provides a single measure of the overall strength of flow locking. \hl{Here $N_L$ is ... . } Values of $\overline{L}$ approaching unity indicate that the de-rotated flow structures are nearly identical throughout the packing, whereas lower values correspond to progressively weaker locking.
 The second quantity, the per-layer locking,
-
 \begin{equation}
 L(n)
 =
@@ -330,7 +324,7 @@ L(n)
 
 measures the similarity of each individual layer to the mean de-rotated flow field. Unlike $\overline{L}$, which characterises the packing as a whole, $L(n)$ identifies local departures from the locked state and therefore highlights layers that deviate most strongly from the repeating flow pattern.
 
-Each de-rotated field is interpolated onto a common $(x',z')$ grid, and comparisons are performed only over the fluid region shared by the corresponding layer pair. The same procedure is applied to both periodic and irregular packings, ensuring that differences in $\overline{L}$ arise from the underlying flow organisation rather than from the analysis itself. Unless stated otherwise, all locking metrics are evaluated over the fully developed region (layers L13-L17).
+Each de-rotated field is interpolated onto a common $(x',z')$ grid, and comparisons are performed only over the fluid region shared by the corresponding layer pair. 
 
 \section{Simulation Parameters}
 \label{sec:numerics:params}
@@ -446,7 +440,7 @@ $\tau$                           & $0.5301$             & $0.5301$             &
 Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the same extraction surface for the three grid resolutions. All grids reproduce the characteristic three-jet structure emerging from the slits, although the coarse grid yields more diffuse jets and a higher peak velocity. In contrast, the medium and fine grids are nearly indistinguishable. The peak jet velocity differs by $11\%$ between the coarse and medium grids but by only $0.5\%$ between the medium and fine grids, while the mean velocity of the surface varies by less than $3\%$. Therefore, grid independence is considered achieved at medium resolution, which was adopted for the $Re_P=100$ simulations. This grid requires roughly one third of the nodes of the fine grid and, owing to its larger time step, reduces computational cost by approximately an order of magnitude while maintaining agreement in both peak and mean velocities. The cases with a higher-Reynolds-number ($Re_P=300$ and $500$) were simulated on correspondingly finer grids (Table~\ref{tab:simparams}) to adequately resolve the thinner shear layers.
 \todo[inline]{ The font size in the figure should be increased for better readability.}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}[b]{0.45\textwidth}
     \centering
@@ -474,7 +468,7 @@ Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the
 Each layer of packing system contains four slits, resulting in four measurement planes that could, in principle, be analysed independently. However, presenting all planes for every Reynolds number would lead to a substantial amount of redundant data. Owing to the geometric arrangement of the slits, the measurement locations form two point-symmetric pairs about the column axis: Pos,1 and Pos,7, and Pos,3 and Pos,5 (Sec.~\ref{sec:geometry:coords}). As an internal consistency check, the simulations should therefore reproduce identical flow structures within each symmetric pair.
 Figure~\ref{fig:symmetry} compares the time-averaged velocity-magnitude contours and in-plane streamlines at Pos,3 and Pos,5 for the $30^\circ$ packing at $Re_P=100$ and $Re_P=300$. The two planes exhibit near-perfect mirror symmetry, with the central high-velocity jet, the neighbouring slit jets, and the recirculation regions mapping directly onto their reflected counterparts. The preservation of this symmetry at both Reynolds numbers confirms that each symmetric pair contains equivalent flow information. Consequently, only one representative plane from each pair is retained for the detailed analysis presented in the following sections, substantially reducing the amount of data without loss of physical insight.
 To quantify this behaviour, Fig.~\ref{fig:symmetry_profiles} compares velocity-magnitude profiles at four streamwise heights. The profiles at Pos,3 and Pos,5 are virtually indistinguishable at both Reynolds numbers, confirming that the symmetry remains robust.
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.9\linewidth]{Symmetry_Contour_Pos3_Re_100.png}}\\
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.89\linewidth]{Symmetry_Contour_Pos3_Re_300.png}}
@@ -483,7 +477,7 @@ To quantify this behaviour, Fig.~\ref{fig:symmetry_profiles} compares velocity-m
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \subfloat[$Re_P = 100$]{\includegraphics[width=0.9\linewidth]{Combined_Line_Profiles_Pos3_Re_100.png}}\\
 \subfloat[$Re_P = 300$]{\includegraphics[width=0.9\linewidth]{Combined_Line_Profiles_Pos3_Re_300.png}}
@@ -516,27 +510,27 @@ its value normalised by the experimental dynamic range ($\mathrm{NRMSE}$), and t
 
 The simulation results are first validated at the level of the time-averaged surface velocity field, where the PIV measurements provide the highest spatial resolution and the dominant flow features can be directly compared. The aim is to establish that the model reproduces both the spatial organisation of the flow and the corresponding absolute velocity levels over the entire measurement plane.
 
-Figure~\ref{fig:validation_surface} compares the simulated and measured velocity-magnitude fields, with in-plane streamlines, for the $30^\circ$ packing at Pos\,3 under flow conditions of $Re_P=100$ and $Re_P=300$. At both Reynolds numbers the flow organizes into discrete streamwise jets issuing from the slits and separated by low-velocity wakes, with a strong central jet flanked by weaker slit jets. The simulation accurately reproduces the number, location, width, and peak magnitude of these jets, as well as the streamline topology of the
-intervening recirculation zones. Notably, the agreement remains comparably strong at $Re_P=300$ and $Re_P=100$, showing that the model retains its predictive capability as the flow intensity increases. This agreement is further quantified in Fig.~\ref{fig:validation_profiles}, which overlays the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3
+Figures~\ref{fig:validation_surface_re100} and~\ref{fig:validation_surface_re300} compare the simulated and measured velocity-magnitude fields, with in-plane streamlines, for the $30^\circ$ packing at Pos\,3 under flow conditions of $Re_P=100$ and $Re_P=300$, respectively. At both Reynolds numbers the flow organizes into discrete streamwise jets issuing from the slits and separated by low-velocity wakes, with a strong central jet flanked by weaker slit jets. The simulation accurately reproduces the number, location, width, and peak magnitude of these jets, as well as the streamline topology of the
+intervening recirculation zones. Notably, the agreement remains comparably strong at $Re_P=300$ and $Re_P=100$, showing that the model retains its predictive capability as the flow intensity increases. This agreement is further quantified by the line profiles in panel~(b) of each figure, which overlay the simulated and measured velocity-magnitude profiles at four streamwise heights for Pos\,3
 against the experimental uncertainty band. The simulated profiles track the measured ones within or close to the band almost everywhere, accurately capturing both the jet peaks and the inter-jet minima.
 
 This level of agreement is representative, across the regular packings the surface fields are reproduced consistently well at both Reynolds numbers,
 with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is not distributed uniformly but concentrates in the thin, high-gradient shear layers bordering the jets, where sub-vector-spacing velocity gradients and PIV peak-locking are largest.
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
-\subfloat[$Re_P = 100$]{\includegraphics[width=0.45\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\hfill
-\subfloat[$Re_P = 300$]{\includegraphics[width=0.5\linewidth]{30_Re_300/surface/pos3_Surface_plot.png}}
-\caption{Surface validation for the $30^\circ$ packing at Pos\,3: time-averaged
-velocity-magnitude fields with in-plane streamlines, simulation (left of each pair) Vs experiment (right), over layers L13-L17 at (a)~$Re_P=100$ and (b)~$Re_P=300$.\todo[inline]{ The font size in the figure should be increased for better readability.}}
-\label{fig:validation_surface}
+\subfloat[Time-averaged velocity-magnitude field]{\includegraphics[width=0.95\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\\
+\subfloat[Velocity-magnitude line profiles]{\includegraphics[width=0.95\linewidth]{30_Re_100/surface/Summary_Line_Profiles_Pos3.png}}
+\caption{Surface validation for the $30^\circ$ packing at Pos\,3, $Re_P=100$: (a)~time-averaged velocity-magnitude field with in-plane streamlines, experiment (left) Vs simulation (right); (b)~velocity-magnitude profiles across the plane at four streamwise heights, simulation (red) Vs PIV (blue) with the shaded experimental uncertainty band.}\todo[inline]{ The font size in the figure should be increased for better readability. - DONE}
+\label{fig:validation_surface_re100}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\linewidth]{30_Re_100/surface/Summary_Line_Profiles_Pos3.png}
-\caption{Quantitative surface validation for the $30^\circ$ packing at $Re_P=100$, Pos\,3: velocity-magnitude profiles across the plane at four streamwise heights, simulation (red) Vs PIV (blue) with the shaded experimental uncertainty band.}
-\label{fig:validation_profiles}
+\subfloat[Time-averaged velocity-magnitude field]{\includegraphics[width=0.95\linewidth]{30_Re_300/surface/pos3_Surface_plot.png}}\\
+\subfloat[Velocity-magnitude line profiles]{\includegraphics[width=0.95\linewidth]{30_Re_300/surface/Summary_Line_Profiles_Pos3.png}}
+\caption{Surface validation for the $30^\circ$ packing at Pos\,3, $Re_P=300$: (a)~time-averaged velocity-magnitude field with in-plane streamlines, experiment (left) Vs simulation (right); (b)~velocity-magnitude profiles across the plane at four streamwise heights, simulation (red) Vs PIV (blue) with the shaded experimental uncertainty band.}
+\label{fig:validation_surface_re300}
 \end{figure}
 
 \subsubsection{Layer-Resolved Development}
@@ -570,7 +564,7 @@ Since the flow is concentrated into isolated channels bounded by strong shear la
 
 These discrepancies are therefore expected and do not diminish the validity of the simulations. Rather, the pronounced differences between the layer-wise velocity profiles from L12 to L17 provide direct evidence that flow locking is absent in the irregular topology. This behaviour is also observed at $Re_P=300$, where the simulations again reproduce the distinct flow pattern of each layer in close agreement with the corresponding PIV measurements, confirming that the absence of flow locking is a robust geometric characteristic rather than a low-Reynolds-number effect.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \subfloat[exp.\ (left) vs.\ sim.\ (right) velocity-magnitude contours and streamlines]{%
 \includegraphics[width=0.9\linewidth]{irregular_Re_100/layers/Combined_Exp_Sim_Pos3_Re100.png}}\\
@@ -580,7 +574,7 @@ These discrepancies are therefore expected and do not diminish the validity of t
 \label{fig:validation_layers_irreg}
 \end{figure}
 
-\section{Flow Locking Framework}
+\subsection{Flow Locking Framework}
 \label{sec:locking}
 
 This section introduces the central concept of the present work: \emph{flow locking}. Previous studies~\citep{velten2026} observed qualitatively that the pore-scale flow repeats from layer to layer, following the rotation of the packing geometry, but did not quantify this behaviour or examine its dependence on topology. Here, flow locking is defined as the recurrence of the time-averaged pore-scale flow after accounting for the prescribed geometric rotation and is quantified through a scalar locking order parameter.
@@ -589,22 +583,34 @@ Flow locking has important implications for both modelling and reactor design. I
 
 The analysis is performed by de-rotating the mean velocity field of each layer by $-n\theta$ into a common reference frame. For a perfectly locked flow, the de-rotated layers collapse onto a single repeating pore-scale pattern, fully described by one geometric period ($N=180^\circ/\theta$). In contrast, the irregular packing provides a natural control, as its de-rotated layers possess no underlying periodicity.
 
-This behaviour is illustrated qualitatively in Fig.~\ref{fig:topocontrast}. After de-rotation, the developed layers of the $30^\circ$ packing become nearly indistinguishable, each exhibiting the same central jet and symmetric slit jets. In the irregular packing, no such collapse is observed and each layer retains a distinct flow structure. To place these observations on a quantitative basis, the following section introduces a locking order parameter that measures the similarity between de-rotated velocity fields.
+This behaviour \hl{which behavior?} is illustrated qualitatively in Fig.~\ref{fig:topocontrast}. After de-rotation, the developed layers of the $30^\circ$ packing become nearly indistinguishable, each exhibiting the same central jet and symmetric slit jets. In the irregular packing, no such collapse is observed and each layer retains a distinct flow structure. To place these observations on a quantitative basis, the following section introduces a locking order parameter that measures the similarity between de-rotated velocity fields. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\linewidth]{30_Re_100/all_layers/Parallel_Sim_Velocity_Fields_Pos3_Re100_2col.png}
+\caption{De-rotated simulation velocity-magnitude fields with in-plane streamlines for all developed layers of the $30^\circ$ packing at $Re_P=100$. The periodic geometry produces a single repeating flow pattern across all developed layers.}
+\label{fig:velocity_fields_30}
+\end{figure}\begin{figure}[htbp]
+\centering
+\subfloat[$30^\circ$]{\includegraphics[width=0.98\linewidth]{images/30_Re_100/all_layers/Sim_Line_Profiles_from_Bottom_Pos3_Re100.png}}\\
+\subfloat[$40^\circ$]{\includegraphics[width=0.98\linewidth]{images/40_Re_100/all_layers/Sim_Line_Profiles_from_Bottom_Pos3_Re100.png}}\\
+\subfloat[Irregular]{\includegraphics[width=0.98\linewidth]{images/irregular_Re_100/all_layers/Sim_Line_Profiles_from_Bottom_Pos3_Re100.png}}
+
+\caption{Per-layer velocity profiles at Pos\,3 ($Re_P=100$) for the (a)~$30^\circ$, (b)~$40^\circ$, and (c)~irregular packings. The periodic packings collapse onto a common profile, whereas the irregular packing exhibits significant layer-to-layer variability.}
+\label{fig:line_profiles_topology}
+\end{figure}
 
 
-
-\todo[inline]{ The definition of the mean L is not provided, and the method used to calculate it is unclear. - DONE}}
-
-\subsection{Flow Locking in Periodic and Irregular Packings}
+\subsubsection{Flow Locking in Periodic and Irregular Packings}
 \label{sec:locking:topologies}
 
-The locking metric demonstrates that pore-scale flow in periodically stacked packings is highly reproducible from one geometric period to the next (Fig.~\ref{fig:Ln}). After de-rotation, the $30^\circ$ packing exhibits near-perfect agreement between all developed layers ($\overline{L}=0.998$), indicating that the time-averaged flow reaches a repeating state despite the complex pore geometry. The $40^\circ$ packing exhibits similarly strong locking ($\overline{L}=0.993$), demonstrating that this behaviour is a general consequence of rotational periodicity rather than a unique feature of a single topology.
+Figure~\ref{fig:Ln} shows Locking order parameter for the three topologies at $Re_P = 100$. As shown in Figure~\ref{fig:Ln}-a, following de-rotation, the locking metric remains nearly constant across all fully developed layer pairs in the $30^\circ$ packing, with values approaching unity ($\overline{L}=0.998$). The negligible variation in the locking metric indicates that successive geometric periods exhibit nearly identical pore-scale flow fields. This observation suggests that the time-averaged flow converges to a geometrically repeating state despite the complexity of the pore structure. The $40^\circ$ packing exhibits similarly strong locking ($\overline{L}=0.993$), demonstrating that this behaviour is a general consequence of rotational periodicity rather than a unique feature of a single topology.
 
 The near-unity similarity values indicate that the rotational geometry repeatedly reorganises the flow into the same arrangement of jets and recirculation zones after each geometric period. Although individual jets accelerate, decelerate, and interact with bar wakes within a layer, the overall pore-scale transport pattern is reconstructed from one period to the next.
 
 To verify that the observed locking originates from the packing topology rather than the comparison procedure, the same analysis was applied to the irregular configuration. In contrast to the periodic packings, the de-rotated layers exhibit little mutual similarity ($\overline{L}=0.46$), with each layer retaining a distinct flow structure. The collapse observed for the periodic packings therefore arises from the underlying rotational periodicity and not from the de-rotation or the similarity metric itself. The irregular packing thus provides a natural control that validates flow locking as a genuine topology-induced phenomenon.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \subfloat[$30^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{30_Re_100_flow_locking.png}}\\
 \subfloat[$40^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{40_Re_100_flow_locking.png}}\\
@@ -619,32 +625,26 @@ with no systematic repeat, confirming that the geometric period is required for 
 \end{figure}
 
 
-\subsection{Flow Organisation}
+\subsubsection{Flow Organisation}
 \label{sec:organisation}
 
 Having established the existence of flow locking, we now examine the pore-scale flow structures responsible for this behaviour. After de-rotation into a common reference frame, the mean velocity fields collapse onto a repeating pattern consisting of high-velocity jets passing through the slit openings and recirculation zones in the wakes of the bars. Although stationary in the de-rotated frame, these structures follow the layer-by-layer rotation of the packing and therefore trace spiral transport pathways through the bed. At Pos\,3, the flow is characterised by a dominant central jet flanked by two symmetric slit jets (Fig.~\ref{fig:topocontrast}), a pattern that is reproduced throughout the developed region.
 
-\begin{figure}[H]
-\centering
-\subfloat[$30^\circ$]{\includegraphics[width=0.85\linewidth]{30_Re_100/surface/pos3_Surface_plot.png}}\\
-\subfloat[$40^\circ$]{\includegraphics[width=0.85\linewidth]{40_Re_100/surface/pos3_Surface_plot.png}}\\
-\subfloat[Irregular]{\includegraphics[width=0.85\linewidth]{irregular_Re_100/surface/pos3_Surface_plot.png}}
-\caption{Mean flow organisation at Pos\,3 ($Re_P=100$) for the three packing topologies (experiment left, simulation right). The periodic packings develop coherent slit jets and recirculation zones that repeat from layer to layer, whereas the irregular packing forms a dominant preferential channel with disordered recirculation.}
-\label{fig:topocontrast}
-\end{figure}
+
 
 The periodic packings organise the flow in distinctly different ways. The $30^\circ$ packing exhibits the most coherent structure, with well-defined slit jets and stable recirculation zones. Increasing the rotation angle to $40^\circ$ produces more inclined jets and enhanced transverse transport while preserving the overall periodic organisation. In contrast, the irregular packing loses this coherent structure entirely, with the flow concentrating into a dominant preferential channel surrounded by irregular recirculation. The progressive loss of coherent flow organisation is consistent with the reduction in flow locking, confirming that the recurring pore-scale flow structures are imposed by the rotationally periodic geometry.
 
-The contrast between the $30^\circ$ and $40^\circ$ topologies originates from the angle through which the flow must be redirected between successive layers. As the packing rotates by $\theta$, a jet leaving one slit must align with a differently oriented slit in the layer above. For the $30^\circ$ packing this redirection is relatively small, allowing the jet structure to be preserved from layer to layer and resulting in near-perfect flow locking ($\overline{L}=0.998$). Increasing the rotation to $40^\circ$ requires stronger transverse momentum redistribution, producing more inclined jets and stronger inter-layer shear layers. Although the flow remains highly organised at $Re_P=100$ ($\overline{L}=0.993$), these larger velocity gradients make the flow more susceptible to instability as the Reynolds number increases (Sec.~\ref{sec:locking:reynolds}). The larger rotational increment therefore organises the flow less rigidly and reduces the robustness of the locked state.
+The contrast between the $30^\circ$ and $40^\circ$ topologies originates from the angle through which the flow must be redirected between successive layers. As the packing rotates by $\theta$, a jet leaving one slit must align with a differently oriented slit in the layer above. For the $30^\circ$ packing this redirection is relatively small, allowing the jet structure to be preserved from layer to layer and resulting in near-perfect flow locking ($\overline{L}=0.998$). Increasing the rotation to $40^\circ$ requires stronger transverse momentum redistribution, producing more inclined jets and stronger inter-layer shear layers. Although the flow remains highly organised at $Re_P=100$ ($\overline{L}=0.993$), these \hl{(What does 'these' refer to???)} larger velocity gradients make the flow more susceptible to instability as the Reynolds number increases (Sec.~\ref{sec:locking:reynolds}). The larger rotational increment therefore organises the flow less rigidly and reduces the robustness of the locked state.\hl{(Here, a discussion is introduced without presenting the results for higher Reynolds numbers.!!!)}
 
 These findings demonstrate that flow locking is not merely a geometric consequence of the packing arrangement, but a topology-controlled transport mechanism. A strongly locked flow preserves coherent transport pathways through successive layers, leading to more predictable local residence times and interstitial transport. Conversely, weakening the locked state promotes transverse momentum exchange and mixing between neighbouring flow paths. The ability to strengthen or weaken flow locking through the packing topology therefore provides a potential route for tailoring pore-scale transport in structured packed-bed reactors, with direct implications for heat transfer, mass transfer, and catalytic reactor performance.
 
-\subsection{Breakdown of Flow Locking with Reynolds Number}
+\subsubsection{Breakdown of Flow Locking with Reynolds Number}
 \label{sec:locking:reynolds}
 
-Increasing Reynolds number weakens flow locking, although the extent of the breakdown depends strongly on the packing geometry (Fig.~\ref{fig:Ln_re300}). At $Re_P=300$, the $30^\circ$ packing remains strongly locked ($\overline{L}=0.959$), indicating that the repeating pore-scale flow is largely preserved. In contrast, the $40^\circ$ packing exhibits a substantial reduction in locking ($\overline{L}=0.632$), with the similarity matrix breaking into distinct groups rather than collapsing onto a single repeating pattern. The larger rotational increment is therefore more sensitive to increasing Reynolds number.
+To investigate the influence of Reynolds number on flow locking, simulations are also performed at ($Re_P=300$). As shown in Fig.~\ref{fig:Ln_re300}, an increase in Reynolds number is found to weaken the flow-locking behaviour; however, the extent of this breakdown depends strongly on the underlying packing geometry.
+ At $Re_P=300$, the $30^\circ$ packing remains strongly locked ($\overline{L}=0.959$), indicating that the repeating pore-scale flow is largely preserved. In contrast, the $40^\circ$ packing exhibits a substantial reduction in locking ($\overline{L}=0.632$), with the similarity matrix breaking into distinct groups rather than collapsing onto a single repeating pattern. The larger rotational increment is therefore more sensitive to increasing Reynolds number.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \subfloat[$30^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{30_Re_300_flow_locking.png}}\\
 \subfloat[$40^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{40_Re_300_flow_locking.png}}
@@ -652,9 +652,9 @@ Increasing Reynolds number weakens flow locking, although the extent of the brea
 \label{fig:Ln_re300}
 \end{figure}
 
-The reduction in locking first appears in the fluctuation field rather than in the mean flow. For the $30^\circ$ packing, the mean velocity changes only slightly between $Re_P=100$ and $300$, whereas the resolved turbulent kinetic energy increases substantially and varies more strongly from layer to layer. This indicates that fluctuations disrupt the repeating flow before the mean structure is noticeably altered.
+(The reduction in locking first appears in the fluctuation field rather than in the mean flow . For the $30^\circ$ packing, the mean velocity changes only slightly between $Re_P=100$ and $300$, whereas the resolved turbulent kinetic energy increases substantially and varies more strongly from layer to layer (Fig.~\ref{fig:tkefield}). As shown in Fig.~\ref{fig:tkefield}, this additional fluctuation energy concentrates in the jet shear layers and bar wakes, indicating that fluctuations disrupt the repeating flow before the mean structure is noticeably altered.\hl{(what led you to this conclusion???where is the results??)})
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{fig_tke_field_40.png}
 \caption{Resolved turbulent kinetic energy in a representative layer of the $40^\circ$ packing at $Re_P=100$ (top) and $300$ (bottom). Fluctuations intensify primarily within the jet shear layers and bar wakes, identifying the regions where flow locking first deteriorates.}
