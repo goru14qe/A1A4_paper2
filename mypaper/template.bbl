@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -41,6 +41,18 @@ Eppinger T, Jurtz N, Aglave R (2014) Automated workflow for spatially resolved
   Proceedings of the 10th International Conference on CFD in Oil \& Gas,
   Metallurgical and process Industries, pp 17--19
 
+\bibitem[{Fei et~al(2023)Fei, Qin, Zhao, Derome, and Carmeliet}]{Fei2023}
+Fei L, Qin F, Zhao J, Derome D, Carmeliet J (2023) Lattice boltzmann modelling
+  of isothermal two-component evaporation in porous media. Journal of Fluid
+  Mechanics 955:A18, \doi{10.1017/jfm.2022.1048}
+
+\bibitem[{Fei et~al(2020)Fei, Yang, Chen, Mo, and Luo}]{fei2020}
+Fei LË, Yang JÊ, Chen YÈ, Mo HË, Luo KHÁ (2020) Mesoscopic simulation of
+  three-dimensional pool boiling based on a phase-change cascaded lattice
+  boltzmann method. Physics of Fluids 32(10):103312, \doi{10.1063/5.0023639},
+  \urlprefix\url{https://doi.org/10.1063/5.0023639},
+  \eprint{https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0023639/15660215/103312_1_online.pdf}
+
 \bibitem[{Feng et~al(2015)Feng, Sagaut, and Tao}]{feng2015three}
 Feng Y, Sagaut P, Tao W (2015) A three dimensional lattice model for thermal
   compressible flow on standard lattices. J Comput Phys 303:514--529
@@ -50,7 +62,44 @@ Feng Y, Sagaut P, Tao W (2015) A three dimensional lattice model for thermal
 Freund H, Zeiser T, Huber F, Klemm E, Brenner G, Durst F, Emig G (2003)
   Numerical simulations of single phase reacting flows in randomly packed
   fixed-bed reactors and experimental validation. Chem Eng Sci
-  58(3--6):903--910, \doi{https://doi.org/10.1016/S0009-2509(02)00622-X}
+  58(3-6):903--910, \doi{https://doi.org/10.1016/S0009-2509(02)00622-X}
+
+\bibitem[{Gharibi and Ashrafizaadeh(2020{\natexlab{a}})}]{GHARIBI2020-2}
+Gharibi F, Ashrafizaadeh M (2020{\natexlab{a}}) Darcy and inertial fluid flow
+  simulations in porous media using the non-orthogonal central moments lattice
+  boltzmann method. Journal of Petroleum Science and Engineering 194:107572,
+  \doi{https://doi.org/10.1016/j.petrol.2020.107572},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0920410520306410}
+
+\bibitem[{Gharibi and Ashrafizaadeh(2020{\natexlab{b}})}]{gharibi2020}
+Gharibi F, Ashrafizaadeh M (2020{\natexlab{b}}) Simulation of
+  high-viscosity-ratio multicomponent fluid flow using a pseudopotential model
+  based on the nonorthogonal central-moments lattice boltzmann method. Phys Rev
+  E 101:043311, \doi{10.1103/PhysRevE.101.043311},
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevE.101.043311}
+
+\bibitem[{Gharibi et~al(2024{\natexlab{a}})Gharibi, Ghavaminia, Ashrafizaadeh,
+  Zhou, and Th√©venin}]{GHARIBI2024-2}
+Gharibi F, Ghavaminia A, Ashrafizaadeh M, Zhou H, Th√©venin D
+  (2024{\natexlab{a}}) High viscosity ratio multicomponent flow simulations in
+  porous media using a pseudo-potential central moment lattice boltzmann
+  method. Chemical Engineering Science 297:120289,
+  \doi{https://doi.org/10.1016/j.ces.2024.120289},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S000925092400589X}
+
+\bibitem[{Gharibi et~al(2024{\natexlab{b}})Gharibi, Hosseini, and
+  Th√©venin}]{GHARIBI2024}
+Gharibi F, Hosseini SA, Th√©venin D (2024{\natexlab{b}}) A hybrid lattice
+  boltzmann/immersed boundary method/finite-difference model for thermal
+  fluid-solid interactions. International Communications in Heat and Mass
+  Transfer 155:107525,
+  \doi{https://doi.org/10.1016/j.icheatmasstransfer.2024.107525},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0735193324002872}
+
+\bibitem[{Gharibi et~al(2025)Gharibi, Fard, and Th√©venin}]{Gharibi2025}
+Gharibi F, Fard AE, Th√©venin D (2025) Dynamic behaviour of a thermal spheroid
+  particle in shear flows. Journal of Fluid Mechanics 1013:A40,
+  \doi{10.1017/jfm.2025.10280}
 
 \bibitem[{He and Luo(1997)}]{Xiaoyi}
 He X, Luo L (1997) Theory of the lattice {B}oltzmann method: {F}rom the
@@ -82,12 +131,26 @@ Hosseini S, Huang F, Thevenin D (2022) Lattice {B}oltzmann model for simulation
 Huang F, Noel R, Berg P, Hosseini S (2022) Simulation of the {FDA} nozzle
   benchmark: {A} lattice {B}oltzmann study. Comput Meth Prog Biomed 221:106863
 
+\bibitem[{Khalili et~al(2017)Khalili, Rahnama, Jafari, Gharibi, and
+  Jahanshahi~Javaran}]{Khalili2017}
+Khalili B, Rahnama M, Jafari S, Gharibi F, Jahanshahi~Javaran E (2017) Lattice
+  boltzmann simulation of solid particles motion in a three dimensional flow
+  using smoothed profile method. Journal of Applied Fluid Mechanics
+  10(4):1091--1103, \doi{10.18869/acadpub.jafm.73.241.26537}
+
 \bibitem[{Khayamyan et~al(2017)Khayamyan, Lundstr{\"o}m, Hellstr{\"o}m, Gren,
   and Lycksam}]{Khayamyan.2017}
 Khayamyan S, Lundstr{\"o}m T, Hellstr{\"o}m J, Gren P, Lycksam H (2017)
   Measurements of transitional and turbulent flow in a randomly packed bed of
   spheres with particle image velocimetry. Transp Porous Med 116(1):413--431,
   \doi{https://doi.org/10.1007/s11242-016-0781-0}
+
+\bibitem[{Krause et~al(2017)Krause, Klemens, Henn, Trunk, and
+  Nirschl}]{KRAUSE2017}
+Krause MJ, Klemens F, Henn T, Trunk R, Nirschl H (2017) Particle flow
+  simulations with homogenised lattice boltzmann methods. Particuology
+  34:1--13, \doi{https://doi.org/10.1016/j.partic.2016.11.001},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S167420011730041X}
 
 \bibitem[{Krueger et~al(2017)Krueger, Kusumaatmaja, Kuzmin, Shardt, Silva, and
   Viggen}]{kruger2017lattice}
@@ -104,6 +167,14 @@ Larsson I, Lundstr{\"o}m T, Lycksam H (2018) Tomographic {PIV} of flow through
 Li L, Iskander M (2022) Visualization of interstitial pore fluid flow. J
   Imaging 8(2):32, \doi{https://doi.org/10.3390/jimaging8020032}
 
+\bibitem[{Liu et~al(2016)Liu, Kang, Leonardi, Schmieschek, Narv{\'a}ez, Jones,
+  Williams, Valocchi, and Harting}]{Liu2016}
+Liu H, Kang Q, Leonardi CR, Schmieschek S, Narv{\'a}ez A, Jones BD, Williams
+  JR, Valocchi AJ, Harting J (2016) Multiphase lattice boltzmann simulations
+  for porous media applications. Computational Geosciences 20(4):777--805,
+  \doi{10.1007/s10596-015-9542-3},
+  \urlprefix\url{https://doi.org/10.1007/s10596-015-9542-3}
+
 \bibitem[{Lumley(1967)}]{lumley1967}
 Lumley J (1967) The structure of inhomogeneous turbulent flows. In: Yaglom A,
   Tatarski V (eds) Atmospheric Turbulence and Radio Wave Propagation, Nauka,
@@ -115,12 +186,27 @@ Martins F, {Da Silva} C, Lessig C, Z{\"a}hringer K (2018) Ray-tracing based
   image correction of optical distortion for {PIV} measurements in packed beds.
   J Adv Opt Photon 1(2):71--94, \doi{https://doi.org/10.32604/jaop.2018.03870}
 
+\bibitem[{Mazloomi~M et~al(2015)Mazloomi~M, Chikatamarla, and
+  Karlin}]{Mazloomi2015}
+Mazloomi~M A, Chikatamarla SS, Karlin IV (2015) Entropic lattice boltzmann
+  method for multiphase flows. Phys Rev Lett 114:174502,
+  \doi{10.1103/PhysRevLett.114.174502},
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.114.174502}
+
 \bibitem[{Neeraj et~al(2023)Neeraj, Velten, Janiga, Z{\"a}hringer,
   Th{\'e}venin, Hosseini, and Varnik}]{neeraj2023}
 Neeraj T, Velten C, Janiga G, Z{\"a}hringer K, Th{\'e}venin D, Hosseini S,
   Varnik F (2023) Modeling gas flows in packed beds with the lattice
   {B}oltzmann method: Validation against experiments. Flow Turbul Combust
   111:463--491, \doi{10.1007/s10494-023-00444-z}
+
+\bibitem[{Pan et~al(2006)Pan, Luo, and Miller}]{PAN2006}
+Pan C, Luo LS, Miller CT (2006) An evaluation of lattice boltzmann schemes for
+  porous medium flow simulation. Computers & Fluids 35(8):898--909,
+  \doi{https://doi.org/10.1016/j.compfluid.2005.03.008},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0045793005001520},
+  proceedings of the First International Conference for Mesoscopic Methods in
+  Engineering and Science
 
 \bibitem[{Patankar et~al(1977)Patankar, Liu, and
   Sparrow}]{patankar1977periodic}
@@ -138,6 +224,13 @@ Poelma C (2020) Measurement in opaque flows: a review of measurement techniques
   for dispersed multiphase flows. Acta Mech 231(6):2089--2111,
   \doi{https://doi.org/10.1007/s00707-020-02683-x}
 
+\bibitem[{Rettinger and R√ºde(2018)}]{RETTINGER2018}
+Rettinger C, R√ºde U (2018) A coupled lattice boltzmann method and discrete
+  element method for discrete particle simulations of particulate flows.
+  Computers & Fluids 172:706--719,
+  \doi{https://doi.org/10.1016/j.compfluid.2018.01.023},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S004579301830029X}
+
 \bibitem[{Sadowski et~al(2025)Sadowski, Demir, and {di
   Mare}}]{sadowski2025mean}
 Sadowski W, Demir H, {di Mare} F (2025) Mean flow properties in a packed bed
@@ -148,6 +241,14 @@ Sadowski W, Demir H, {di Mare} F (2025) Mean flow properties in a packed bed
 Sirovich L (1987) Turbulence and the dynamics of coherent structures. {P}art
   {I}: {C}oherent structures. Q Appl Math 45(3):561--571,
   \doi{https://doi.org/10.1090/qam/910462}
+
+\bibitem[{Stockinger et~al(2024)Stockinger, Raiolo, Alamian, Hadjadj, Nieken,
+  and {S. Shadloo}}]{STOCKINGER2024}
+Stockinger C, Raiolo A, Alamian R, Hadjadj A, Nieken U, {S Shadloo} M (2024)
+  Lattice boltzmann simulations of heterogeneous combustion reactions for
+  application in porous media. Engineering Analysis with Boundary Elements
+  166:105817, \doi{https://doi.org/10.1016/j.enganabound.2024.105817},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0955799724002923}
 
 \bibitem[{Sullivan et~al(2005)Sullivan, Sani, Johns, and Gladden}]{Sullivan}
 Sullivan S, Sani F, Johns M, Gladden L (2005) Simulation of packed bed reactors
@@ -166,6 +267,13 @@ Velten C, H{\"u}lz K, Z{\"a}hringer K (2026) Allowing optical measurements in a
   {3D} packed bed with gas flow: A novel reactor concept. Particuology
   108:293--306, \doi{10.1016/j.partic.2025.11.018}
 
+\bibitem[{Wu et~al(2025)Wu, Luo, Shen, Gharibi, Th√©venin, and Chen}]{wu2025}
+Wu GÂ, Luo MÁ, Shen JÊ, Gharibi F, Th√©venin D, Chen SÈ (2025) Lattice
+  boltzmann-immersed boundary method simulation of liquid bridge between two
+  moving particles. Physics of Fluids 37(12):123341, \doi{10.1063/5.0300991},
+  \urlprefix\url{https://doi.org/10.1063/5.0300991},
+  \eprint{https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0300991/20835744/123341_1_5.0300991.pdf}
+
 \bibitem[{Xiaoyi and Shu(2012)}]{Shu}
 Xiaoyi G, Shu C (2012) Lattice {B}oltzmann Method and Its Applications in
   Engineering. World Scientific Publishing Company
@@ -174,5 +282,13 @@ Xiaoyi G, Shu C (2012) Lattice {B}oltzmann Method and Its Applications in
 Zhao-Li G, Chu-Guang Z, Bao-Chang S (2002) Non-equilibrium extrapolation method
   for velocity and pressure boundary conditions in the lattice {B}oltzmann
   method. Chin Phys 11(4):366
+
+\bibitem[{Zhou et~al(2026)Zhou, Gharibi, Xu, Kharaghani, and
+  Th√©venin}]{ZHOU2026}
+Zhou H, Gharibi F, Xu X, Kharaghani A, Th√©venin D (2026) Effect of bread
+  microstructure on internal liquid penetration using the lattice boltzmann
+  method combined with x-ray micro-computed tomography. Current Research in
+  Food Science 12:101380, \doi{https://doi.org/10.1016/j.crfs.2026.101380},
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S2665927126000808}
 
 \end{thebibliography}

@@ -1,6 +1,0 @@
-irregular: Mean off-diagonal L = 0.459 
-
-30_100: Mean off-diagonal L = 0.998
-30_300 : Mean off-diagonal L = 0.959
-40_100: Mean off-diagonal L = 0.993
-40_300: Mean off-diagonal L = 0.632
