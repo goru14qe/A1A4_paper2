@@ -127,12 +127,18 @@ The Lattice Boltzmann Method (LBM) has emerged as a promising computational appr
 Leveraging these capabilities, an experimentally validated lattice Boltzmann model is employed to investigate whether the recurring pore-scale flow observed in periodically stacked packings originates from the underlying rotational topology. The similarity of the flow fields between successive layers is quantified and compared for periodic and irregular packing configurations, providing a framework to analyse topology-induced flow organisation.
 
 To address these questions, the present work combines pore-scale lattice Boltzmann simulations~\citep{kruger2017lattice,Sullivan} with particle image velocimetry measurements for three packing topologies: the periodic $30^\circ$ and $40^\circ$ stacks and an irregular configuration. The simulations reproduce the complete bounded experimental apparatus and are validated against layer-resolved velocity measurements. Building on this validated framework, flow locking is explored as the recurrence of pore-scale flow structures imposed by the underlying packing topology. It is quantified using an objective similarity metric, and its dependence on topology and Reynolds number is examined. Comparisons between periodic and irregular packings are used to establish the role of rotational periodicity in organizing pore-scale flow structures and to provide a physical basis for the use of reduced periodic computational domains.
+\hl{the introducton became too long after adding some new points that we discussed, as a reader please feel free to remove/shorten the text}
 
 \section{Geometry Description}
 \label{sec:geometry}
-The reference configuration in this work is a packing system consisting of polyhedral bar modules, based on the experimental setup described in detail by~\citet{velten2026}. Within the packing, each module containing five parallel bars of height $l_\mathrm{ch} = 10\,\mathrm{mm}$ separated by slits of width $l_P = 5\,\mathrm{mm}$, housed within a circular cross-section of diameter $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$, as shown in Figure (Fig to be added.~\ref{tba fig:geometry}. The porosity of packing, defined as the volume of the void relative to the volume of the overall module, is $\varphi = 0.332$. Modules are 3D-printed from PA \,12 by laser sintering (tolerance $0.3\%$) and can rotate against each other in increments of $5^\circ$ by $37$ indexing slits on the rim, spanning $0$-$180^\circ$~\citep{velten2026}.
+The reference configuration in this work is a packing system consisting of polyhedral bar modules, based on the experimental setup described in detail by~\citet{velten2026}. Within the packing, each module containing five parallel bars of height $l_\mathrm{ch} = 10\,\mathrm{mm}$ separated by slits of width $l_P = 5\,\mathrm{mm}$, housed within a circular cross-section of diameter $d_\mathrm{inlet} = 62.12\,\mathrm{mm}$, as shown in Fig.~\ref{fig:geometry}. The porosity of packing, defined as the volume of the void relative to the volume of the overall module, is $\varphi = 0.332$. Modules are 3D-printed from PA \,12 by laser sintering (tolerance $0.3\%$) and can rotate against each other in increments of $5^\circ$ by $37$ indexing slits on the rim, spanning $0$-$180^\circ$~\citep{velten2026}.
 
-\todo[inline]{Only the geometry considered in the present work is shown; components not included in the computational domain are omitted. Based on the geometry shown here, describe the geometry in more detail. Please check the following text for correctness.}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{images/geometry_description.png}
+\caption{Geometry of the rotationally stacked packed bed (adapted from~\citet{velten2026}). Left: Schematic of a single bar module showing the $5\,\mathrm{mm}$ slit width, $10\,\mathrm{mm}$ bar height, and $30^\circ$ stacking angle. Right: Cross-sectional views of six successive layers (L13--L18) of the $30^\circ$ packing, illustrating the rotational offset between layers. Blue and red lines indicate the measurement positions (Pos1, Pos3, Pos5, Pos7) used for velocity-field extraction. Only the geometry considered in the present work is shown; components not included in the computational domain are omitted.}
+\label{fig:geometry}
+\end{figure}
 
 In the present work, the inlet section of the experimental setup, which was designed to ensure a homogeneous inlet flow, was not included in the computational domain. Instead, a uniform inlet of the same circular cross-section as the bed was used, extended upstream by a short straight section ($60\,\mathrm{mm}$) sufficient for the velocity profile to homogenize before it reaches the first module.
 %The bed is bounded by a gas inlet zone - a diffuser filled with $3\,\mathrm{mm}$ glass beads followed by a tranquilisation zone that distributes the flow homogeneously over the circular cross-section $A = 3031\,\mathrm{mm^2}$ - and, on top of the $18$th layer, a rectangular optical outlet box ($70\times70\,\mathrm{mm^2}$
@@ -197,20 +203,21 @@ In practice the plain BGK operator is frequently replaced by more elaborate coll
 \begin{equation}
     \Omega_i = \mathcal{T}^{-1}W\mathcal{T}(f^{\rm eq}_i - f_i) + \Xi_i\label{eq:correc1}
 \end{equation}
-where $\mathcal{T}$ maps the populations into moment space, $\mathcal{T}^{-1}$ is its inverse and $W$ collects the relaxation rates on its diagonal. The transform $\mathcal{T}$ is built from the modified central Hermite polynomials $\widetilde{\mathcal{H}}_n(\bm{c}_i)$, which for the D2Q9 lattice take the form:\hl{(Our work is three-dimensional, and a 2D solver was not used in this study!!!)}
-\begin{subequations}
-	\begin{align}
-	\widetilde{\mathcal{H}}_0 &= 1, \\
-	\widetilde{\mathcal{H}}_x &= c_{i,x}-u_x, \\
-	\widetilde{\mathcal{H}}_y &= c_{i,y}-u_y, \\
-	\widetilde{\mathcal{H}}_{xy} &= (c_{i,x}-u_x) (c_{i,y}-u_y), \\
-	\widetilde{\mathcal{H}}_{xx-yy} &= {(c_{i,x}-u_x)}^2 - {(c_{i,y}-u_y)}^2, \\
-	\widetilde{\mathcal{H}}_{xx+yy} &= {(c_{i,x}-u_x)}^2 + {(c_{i,y}-u_y)}^2 - 2c_s^2,\\
-	\widetilde{\mathcal{H}}_{xxy} &= {(c_{i,x}-u_x)}^2(c_{i,y}-u_y) - c_s^2(c_{i,y}-u_y),\\
-	\widetilde{\mathcal{H}}_{xyy} &= {(c_{i,y}-u_y)}^2(c_{i,x}-u_x) - c_s^2(c_{i,x}-u_x),\\
-	\widetilde{\mathcal{H}}_{xxyy} &= \left[{(c_{i,x}-u_x)}^2 - c_s^2\right] \left[{(c_{i,y}-u_y)}^2 - c_s^2\right].
-	\end{align}
-\end{subequations}
+where $\mathcal{T}$ maps the populations into moment space, $\mathcal{T}^{-1}$ is its inverse and $W$ collects the relaxation rates on its diagonal. The transform $\mathcal{T}$ is built from the modified central Hermite polynomials $\widetilde{\mathcal{H}}_n(\bm{c}_i)$.% which for the D2Q9 lattice take the form:\hl{(Our work is three-dimensional, and a 2D solver was not used in this study!!!)}
+% \begin{subequations}
+% 	\begin{align}
+% 	\widetilde{\mathcal{H}}_0 &= 1, \\
+% 	\widetilde{\mathcal{H}}_x &= c_{i,x}-u_x, \\
+% 	\widetilde{\mathcal{H}}_y &= c_{i,y}-u_y, \\
+% 	\widetilde{\mathcal{H}}_{xy} &= (c_{i,x}-u_x) (c_{i,y}-u_y), \\
+% 	\widetilde{\mathcal{H}}_{xx-yy} &= {(c_{i,x}-u_x)}^2 - {(c_{i,y}-u_y)}^2, \\
+% 	\widetilde{\mathcal{H}}_{xx+yy} &= {(c_{i,x}-u_x)}^2 + {(c_{i,y}-u_y)}^2 - 2c_s^2,\\
+% 	\widetilde{\mathcal{H}}_{xxy} &= {(c_{i,x}-u_x)}^2(c_{i,y}-u_y) - c_s^2(c_{i,y}-u_y),\\
+% 	\widetilde{\mathcal{H}}_{xyy} &= {(c_{i,y}-u_y)}^2(c_{i,x}-u_x) - c_s^2(c_{i,x}-u_x),\\
+% 	\widetilde{\mathcal{H}}_{xxyy} &= \left[{(c_{i,x}-u_x)}^2 - c_s^2\right] \left[{(c_{i,y}-u_y)}^2 - c_s^2\right].
+% 	\end{align}
+% \end{subequations}
+%%
 Projecting the equilibrium onto this basis yields the corresponding central Hermite coefficients $\widetilde{a}^{\rm eq}_n$, which for the D2Q9 equilibrium are:
 \begin{subequations}
 	\begin{align}
@@ -308,7 +315,7 @@ Two scalar quantities summarise the locking behaviour. The mean locking strength
 L_{mn},
 \label{eq:Lbar}
 \end{equation}
-is the average similarity between all distinct layer pairs and provides a single measure of the overall strength of flow locking. \hl{Here $N_L$ is ... ??? - DONE. } Here $N_L$ is the number of developed layers included in the analysis, and the sum runs over all $N_L(N_L-1)/2$ distinct layer pairs $m<n$. Values of $\overline{L}$ approaching unity indicate that the de-rotated flow structures are nearly identical throughout the packing, whereas lower values correspond to progressively weaker locking.
+is the average similarity between all distinct layer pairs and provides a single measure of the overall strength of flow locking. Here $N_L$ is the number of developed layers included in the analysis, and the sum runs over all $N_L(N_L-1)/2$ distinct layer pairs $m<n$. Values of $\overline{L}$ approaching unity indicate that the de-rotated flow structures are nearly identical throughout the packing, whereas lower values correspond to progressively weaker locking.
 The second quantity, the per-layer locking,
 
 \begin{equation}
@@ -421,7 +428,7 @@ This section presents a systematic assessment of the numerical framework in thre
 
 \subsection{Grid Independence Study}
 \label{sec:numerics:grid}
-To determine an appropriate grid resolution, spatial convergence was assessed at ${Re}_P = 100$ on a representative subdomain of the $40^\circ$ packing , \hl{as shown in Figure~()},instead of the full bed, enabling the comparison of several grid resolutions while maintaining a moderate computational cost.
+To determine an appropriate grid resolution, spatial convergence was assessed at ${Re}_P = 100$ on a representative subdomain of the $40^\circ$ packing, as shown in Fig. ~\ref{ fig:grid},instead of the full bed, enabling the comparison of several grid resolutions while maintaining a moderate computational cost.
 The decisive geometric length scale is the $5\,\mathrm{mm}$ slit width $l_P$, which is common to all three topologies and represents the smallest geometric feature that must be resolved by the grid. Accordingly, the grid resolution is reported as the number of lattice nodes spanning one slit width. Three uniform grids - coarse, medium and fine - were considered, with their respective spacings $\delta x$, time steps $\delta t$ and total node counts summarized in Table~\ref{tab:grid}. The finest grid resolves each slit with $33$ nodes, the coarsest with $12.5$.
 The relaxation time is held at $\tau \approx 0.530$ across all three levels.
 \begin{table}[H]
@@ -440,27 +447,26 @@ $\tau$                           & $0.5301$             & $0.5301$             &
 \end{tabular}
 \end{table}
 \todo[inline]{ Add the geometry figure here and also determine the exact position of the surface where the results were reported.}
-Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the same extraction surface for the three grid resolutions. All grids reproduce the characteristic three-jet structure emerging from the slits, although the coarse grid yields more diffuse jets and a higher peak velocity. In contrast, the medium and fine grids are nearly indistinguishable. The peak jet velocity differs by $11\%$ between the coarse and medium grids but by only $0.5\%$ between the medium and fine grids, while the mean velocity of the surface varies by less than $3\%$. Therefore, grid independence is considered achieved at medium resolution, which was adopted for the $Re_P=100$ simulations. This grid requires roughly one third of the nodes of the fine grid and, owing to its larger time step, reduces computational cost by approximately an order of magnitude while maintaining agreement in both peak and mean velocities.The higher-Reynolds-number case ($Re_P=300$) was simulated on a correspondingly finer grid (Table~\ref{tab:simparams}) to adequately resolve the thinner shear layers.
-\todo[inline]{ The font size in the figure should be increased for better readability.}
+Fig. ~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the same extraction surface for the three grid resolutions. All grids reproduce the characteristic three-jet structure emerging from the slits, although the coarse grid yields more diffuse jets and a higher peak velocity. In contrast, the medium and fine grids are nearly indistinguishable. The peak jet velocity differs by $11\%$ between the coarse and medium grids but by only $0.5\%$ between the medium and fine grids, while the mean velocity of the surface varies by less than $3\%$. Therefore, grid independence is considered achieved at medium resolution, which was adopted for the $Re_P=100$ simulations. This grid requires roughly one third of the nodes of the fine grid and, owing to its larger time step, reduces computational cost by approximately an order of magnitude while maintaining agreement in both peak and mean velocities.The higher-Reynolds-number case ($Re_P=300$) was simulated on a correspondingly finer grid (Table~\ref{tab:simparams}) to adequately resolve the thinner shear layers.
 
 \begin{figure}[htbp]
 \centering
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\linewidth]{grid_coarse.png}
-    \caption{Coarse}
+    \caption{Coarse Mesh}
 \end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.45\textwidth}
+
+\begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\linewidth]{grid_medium.png}
-    \caption{Medium}
+    \caption{Medium Mesh}
 \end{subfigure}
 \vspace{0.5cm}
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[b]{0.47\textwidth}
     \centering
     \includegraphics[width=\linewidth]{grid_fine.png}
-    \caption{Fine}
+    \caption{Fine Mesh}
 \end{subfigure}
 \caption{Time-averaged velocity-magnitude field on a common extraction surface of the $40^\circ$ subdomain for the three grid levels of Table~\ref{tab:grid}. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical.}
 \label{fig:grid}
@@ -469,7 +475,7 @@ Figure~\ref{fig:grid} compares the time-averaged velocity-magnitude field on the
 \subsection{Symmetry and Consistency Verification}
 \label{sec:numerics:symmetry}
 Each layer of packing system contains four slits, resulting in four measurement planes that could, in principle, be analysed independently. However, presenting all planes for every Reynolds number would lead to a substantial amount of redundant data. Owing to the geometric arrangement of the slits, the measurement locations form two point-symmetric pairs about the column axis: Pos,1 and Pos,7, and Pos,3 and Pos,5 (Sec.~\ref{sec:geometry:coords}). As an internal consistency check, the simulations should therefore reproduce identical flow structures within each symmetric pair.
-Figure~\ref{fig:symmetry} compares the time-averaged velocity-magnitude contours and in-plane streamlines for both symmetric pairs, Pos\,3/Pos\,5 and Pos\,1/Pos\,7, for the $30^\circ$ packing at $Re_P=100$. Within each pair the two planes exhibit near-perfect mirror symmetry, with the central high-velocity jet, the neighbouring slit jets, and the recirculation regions mapping directly onto their reflected counterparts. This confirms that each symmetric pair contains equivalent flow information. Consequently, only one representative plane from each pair is retained for the detailed analysis presented in the following sections, substantially reducing the amount of data without loss of physical insight. The accompanying velocity-magnitude line profiles at four streamwise heights (Fig.~\ref{fig:symmetry}b,d) are virtually indistinguishable within each pair, confirming that the symmetry holds quantitatively and not merely in the qualitative field structure.
+Fig.~\ref{fig:symmetry} compares the time-averaged velocity-magnitude contours and in-plane streamlines for both symmetric pairs, Pos\,3/Pos\,5 and Pos\,1/Pos\,7, for the $30^\circ$ packing at $Re_P=100$. Within each pair the two planes exhibit near-perfect mirror symmetry, with the central high-velocity jet, the neighbouring slit jets, and the recirculation regions mapping directly onto their reflected counterparts. This confirms that each symmetric pair contains equivalent flow information. Consequently, only one representative plane from each pair is retained for the detailed analysis presented in the following sections, substantially reducing the amount of data without loss of physical insight. The accompanying velocity-magnitude line profiles at four streamwise heights (Fig.~\ref{fig:symmetry}b,d) are virtually indistinguishable within each pair, confirming that the symmetry holds quantitatively and not merely in the qualitative field structure.
 \begin{figure}[htbp]
 \centering
 \subfloat[Pos\,3 vs Pos\,5: velocity-magnitude contours with in-plane streamlines]{\includegraphics[width=0.9\linewidth]{symmetry/Symmetry_Contour_PosPos3.png}}\\
@@ -482,7 +488,6 @@ comparing each plane (solid) with its point-symmetric partner (dashed).
 Both pairs coincide to within line width, verifying the $180^\circ$ symmetry of the simulated mean flow.}
 \label{fig:symmetry}
 \end{figure}
-\todo[inline]{ Please replace dashed lines in this figure with  symbols to facilitate comparison. - DONE}
 
 
 \subsection{Validation against PIV Measurements}\label{sec:validation}
@@ -537,7 +542,7 @@ with $\mathrm{NRMSE}$ of $5$-$9\%$ and $R^2$ up to $0.93$. The residual error is
 Beyond the surface fields, the measurements also resolve the flow within the individual packing layers, allowing the simulation to be validated layer by layer in the fully developed region. The
 complete dataset includes in-slit velocity fields and profiles for each measured layer (L13-L17), packing topology, Reynolds number and measurement position. o avoid presenting a large number of contour plots, only two contrasting cases at $Re_P = 100$,t Pos\,3 are shown: the regular $30^\circ$ packing and the irregular packing. Together, these cases demonstrate both accuracy of the numerical method and the distinctly different flow development associated with the two packing arrangements.
 
-As shown in Figure ~\ref{fig:validation_layers}, for the regular $30^\circ$ packing, there is a very good agreement between the simulated and measured velocity-magnitude fields. The velocity-magnitude contours and corresponding in-plane streamlines (Fig.~\ref{fig:validation_layers}a) accurately reproduce the jet-recirculation structure observed in each layer.
+As shown in Fig. ~\ref{fig:validation_layers}, for the regular $30^\circ$ packing, there is a very good agreement between the simulated and measured velocity-magnitude fields. The velocity-magnitude contours and corresponding in-plane streamlines (Fig.~\ref{fig:validation_layers}a) accurately reproduce the jet-recirculation structure observed in each layer.
 The remaining discrepancies are primarily confined to thin shear layers at the jet boundaries, where the large velocity gradients amplify small differences between the numerical predictions and the PIV measurements. The per-layer line velocity-magnitude profiles extracted $2\,\mathrm{mm}$ above the lower face
 (Fig.~\ref{fig:validation_layers}b) show that the five layers L13-L17 carry essentially the same profile. The simulation accurately reproduces the measured profile in each layer, capturing the central jet, the flanking secondary jets, and the inter-jet minima at the correct locations. A small, systematic offset is however visible: the simulated central peak and the secondary-jet maxima sit a few percent below the measured ones, while the inter-jet minima are correspondingly slightly higher. The two observations are linked and point to a single cause. The slit jets and their bounding shear layers are the steepest-gradient features in the domain, and each jet core is resolved by only a handful of lattice nodes across its width; there the leading truncation error of the scheme acts as a weak numerical dissipation that clips the tip of the jet. Because the total mass flux through the plane is
 conserved, the momentum shaved from the peak is not lost but redistributed into the adjacent low-velocity region exactly the signature seen, lower maxima together with raised minima at unchanged jet position and width. A finer lattice would narrow this gap, but at a steep cost
@@ -602,7 +607,7 @@ This collapse of the de-rotated layers onto a common pore-scale pattern, and its
 \subsubsection{Flow Locking in Periodic and Irregular Packings}
 \label{sec:locking:topologies}
 
-Figure~\ref{fig:Ln} shows Locking order parameter for the three topologies at $Re_P = 100$. As shown in Figure~\ref{fig:Ln}-a, following de-rotation, the locking metric remains nearly constant across all fully developed layer pairs in the $30^\circ$ packing, with values approaching unity ($\overline{L}=0.998$). The negligible variation in the locking metric indicates that successive geometric periods exhibit nearly identical pore-scale flow fields. This observation suggests that the time-averaged flow converges to a geometrically repeating state despite the complexity of the pore structure. The $40^\circ$ packing exhibits similarly strong locking ($\overline{L}=0.993$), demonstrating that this behaviour is a general consequence of rotational periodicity rather than a unique feature of a single topology.
+Fig. ~\ref{fig:Ln} shows Locking order parameter for the three topologies at $Re_P = 100$. As shown in Fig. ~\ref{fig:velocity_fields_30}, following de-rotation, the locking metric remains nearly constant across all fully developed layer pairs in the $30^\circ$ packing, with values approaching unity ($\overline{L}=0.998$). The negligible variation in the locking metric indicates that successive geometric periods exhibit nearly identical pore-scale flow fields. This observation suggests that the time-averaged flow converges to a geometrically repeating state despite the complexity of the pore structure. The $40^\circ$ packing exhibits similarly strong locking ($\overline{L}=0.993$), demonstrating that this behaviour is a general consequence of rotational periodicity rather than a unique feature of a single topology.
 
 The near-unity similarity values indicate that the rotational geometry repeatedly reorganises the flow into the same arrangement of jets and recirculation zones after each geometric period. Although individual jets accelerate, decelerate, and interact with bar wakes within a layer, the overall pore-scale transport pattern is reconstructed from one period to the next.
 
@@ -610,9 +615,9 @@ To verify that the observed locking originates from the packing topology rather 
 
 \begin{figure}[htbp]
 \centering
-\subfloat[$30^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{30_Re_100_flow_locking.png}}\\
-\subfloat[$40^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{40_Re_100_flow_locking.png}}\\
-\subfloat[irregular, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{irregular_Re_100_flow_locking.png}}
+\subfloat[$30^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{Locking/Final_Ln_30_deg_Re=100_Pos3.png}}\\
+\subfloat[$40^\circ$, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{Locking/Final_Ln_40_deg_Re=100_Pos3.png}}\\
+\subfloat[irregular, $Re_P=100$]{\includegraphics[width=0.85\linewidth]{Locking/Final_Ln_IR_deg_Re300_Pos3.png}}
 \caption{Locking order parameter for the three topologies at $Re_P = 100$ (Pos\,3). Left:
 the layer-to-layer matrix $L$ (Eq.~\ref{eq:Ln}) evaluated on the pairwise fluid mask;
 right: per-layer locking $L(n)$ against the across-layer mean field. The
@@ -644,9 +649,9 @@ To investigate the influence of Reynolds number on flow locking, simulations are
 
 \begin{figure}[htbp]
 \centering
-\subfloat[$30^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{30_Re_300_flow_locking.png}}\\
-\subfloat[$40^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{40_Re_300_flow_locking.png}}
-\caption{Locking metric at $Re_P=300$ for the (a) $30^\circ$ and (b) $40^\circ$ packings. The $30^\circ$ packing remains strongly locked ($\overline{L}=0.959$), whereas the $40^\circ$ packing shows a marked reduction in locking ($\overline{L}=0.632$), demonstrating the greater Reynolds-number sensitivity of the larger rotational increment.}
+\subfloat[$30^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{Locking/Final_Ln_30_deg_Re300_Pos3.png}}\\
+\subfloat[$40^\circ$, $Re_P=300$]{\includegraphics[width=0.85\linewidth]{Locking/Final_Ln_40_deg_Re300_Pos3.png}}
+\caption{Locking metric at $Re_P=300$ for the (a) $30^\circ$ and (b) $40^\circ$ packings.Both packings remains strongly locked at $30^\circ$ ($\overline{L}=0.973$) and $40^\circ$ ($\overline{L}=0.981$), both comparatively lower at higher Reynolds-number.}
 \label{fig:Ln_re300}
 \end{figure}
 
