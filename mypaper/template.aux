@@ -2,17 +2,21 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\newlabel{FirstPage}{{}{1}{}{section*.1}{}}
+\@writefile{toc}{\contentsline {title}{Analysis of Flow Organisation at Pore Scale in Rotationally-Stacked Packed Beds Using the Lattice Boltzmann Method}{1}{section*.2}\protected@file@percent }
 \citation{Dixon,Aglave}
 \citation{Augier,freund2003numerical}
 \citation{Zhisong}
+\@writefile{toc}{\contentsline {abstract}{Abstract}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{2}{section*.3}\protected@file@percent }
+\newlabel{intro}{{I}{2}{}{section*.3}{}}
 \citation{neeraj2023}
 \citation{Larsson.2018,li2022visualization}
 \citation{Sederman1997,Gladden2017}
-\citation{velten2026}
+\citation{velten2026,velten2026b}
 \citation{demir2026pressure}
 \citation{sadowski2025mean}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
-\newlabel{intro}{{1}{2}{Introduction}{section.1}{}}
+\citation{patankar1977periodic,ou2024parameter}
 \citation{kruger2017lattice,Sullivan}
 \citation{KRAUSE2017,Khalili2017,RETTINGER2018,GHARIBI2024,Gharibi2025}
 \citation{Mazloomi2015,Liu2016,gharibi2020,fei2020,GHARIBI2024-2,wu2025}
@@ -23,169 +27,185 @@
 \citation{velten2026}
 \citation{velten2026}
 \citation{velten2026}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Geometry Description}{4}{section.2}\protected@file@percent }
-\newlabel{sec:geometry}{{2}{4}{Geometry Description}{section.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Left: Example geometry of a rotationally-stacked packed bed with a total of 18 layers L1 to L18 (reprinted from~\citet  {velten2026}). The surrounding cylindrical wall containing the flow is not shown to reveal the internal structure of the topology. Right: (top-left corner) Single element; then (from left to right and top to bottom), successively stacked beds involving one, two\ldots  six layers (L13 showing only the first layer, L18 all six layers tightly stacked on top of each other), with a constant rotation angle $\theta =30^\circ $ between two successive layers in the present case. The white regions shown in L13 to L16 indicate line-of-sight channels connecting directly inlet of the first element to outlet of the last element in a straight way; in the present case, such channels completely disappear after reaching L17, i.e., when stacking five elements on each other. The blue and red lines indicate the locations considered for PIV measurements and later comparisons, with labels (Pos1, Pos3, Pos5, Pos7) shown for L17. The regions delimited by blue or red lines shown for L14 correspond to straight through-passages connecting a lower module to the one above it~\citep  {velten2026}. For $\theta =30^\circ $, 2 such passages are found at positions Pos1 and Pos7 (white regions delimited by a blue boundary), and 3 passages at positions Pos3 and Pos5 (red boundary).}}{5}{figure.caption.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Geometry Description}{5}{section*.4}\protected@file@percent }
+\newlabel{sec:geometry}{{II}{5}{}{section*.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Left: Example geometry of a rotationally stacked packed bed with a total of 18 layers L1 to L18 (reprinted from~\cite  {velten2026}). The surrounding cylindrical wall containing the flow is not shown to reveal the internal structure of the topology. Right: (top-left corner) Single element; then (from left to right and top to bottom), successively stacked beds involving one, two\ldots  six layers (L13 showing only the first layer, L18 all six layers tightly stacked on top of each other), with a constant rotation angle $\theta =30^\circ $ between two successive layers in the present case. The white regions shown in L13 to L16 indicate line-of-sight channels connecting directly inlet of the first element to outlet of the last element in a straight way; in the present case, such channels completely disappear after reaching L17, i.e., when stacking five elements on each other. The blue and red lines indicate the locations considered for PIV measurements in each layer and are used for later comparisons, with labels (Pos1, Pos3, Pos5, Pos7) in each layer. The regions delimited by blue or red lines shown for L14 correspond to straight through-passages connecting a lower module to the one above it~\cite  {velten2026}. For $\theta =30^\circ $, two such passages are found at positions Pos1 and Pos7 (white regions delimited by a blue boundary), and three passages at positions Pos3 and Pos5 (red boundary).}}{6}{figure.caption.5}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:geometry}{{1}{5}{Left: Example geometry of a rotationally-stacked packed bed with a total of 18 layers L1 to L18 (reprinted from~\citet {velten2026}). The surrounding cylindrical wall containing the flow is not shown to reveal the internal structure of the topology. Right: (top-left corner) Single element; then (from left to right and top to bottom), successively stacked beds involving one, two\ldots six layers (L13 showing only the first layer, L18 all six layers tightly stacked on top of each other), with a constant rotation angle $\theta =30^\circ $ between two successive layers in the present case. The white regions shown in L13 to L16 indicate line-of-sight channels connecting directly inlet of the first element to outlet of the last element in a straight way; in the present case, such channels completely disappear after reaching L17, i.e., when stacking five elements on each other. The blue and red lines indicate the locations considered for PIV measurements and later comparisons, with labels (Pos1, Pos3, Pos5, Pos7) shown for L17. The regions delimited by blue or red lines shown for L14 correspond to straight through-passages connecting a lower module to the one above it~\citep {velten2026}. For $\theta =30^\circ $, 2 such passages are found at positions Pos1 and Pos7 (white regions delimited by a blue boundary), and 3 passages at positions Pos3 and Pos5 (red boundary)}{figure.caption.1}{}}
+\newlabel{fig:geometry}{{1}{6}{Left: Example geometry of a rotationally stacked packed bed with a total of 18 layers L1 to L18 (reprinted from~\cite {velten2026}). The surrounding cylindrical wall containing the flow is not shown to reveal the internal structure of the topology. Right: (top-left corner) Single element; then (from left to right and top to bottom), successively stacked beds involving one, two\ldots six layers (L13 showing only the first layer, L18 all six layers tightly stacked on top of each other), with a constant rotation angle $\theta =30^\circ $ between two successive layers in the present case. The white regions shown in L13 to L16 indicate line-of-sight channels connecting directly inlet of the first element to outlet of the last element in a straight way; in the present case, such channels completely disappear after reaching L17, i.e., when stacking five elements on each other. The blue and red lines indicate the locations considered for PIV measurements in each layer and are used for later comparisons, with labels (Pos1, Pos3, Pos5, Pos7) in each layer. The regions delimited by blue or red lines shown for L14 correspond to straight through-passages connecting a lower module to the one above it~\cite {velten2026}. For $\theta =30^\circ $, two such passages are found at positions Pos1 and Pos7 (white regions delimited by a blue boundary), and three passages at positions Pos3 and Pos5 (red boundary)}{figure.caption.5}{}}
 \citation{velten2026}
 \citation{velten2026}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Measurement Positions and Coordinate System}{9}{section*.6}\protected@file@percent }
+\newlabel{sec:geometry:coords}{{II\,A}{9}{}{section*.6}{}}
 \citation{velten2026}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Measurement Positions and Coordinate System}{7}{subsection.2.1}\protected@file@percent }
-\newlabel{sec:geometry:coords}{{2.1}{7}{Measurement Positions and Coordinate System}{subsection.2.1}{}}
+\newlabel{eq:derotation}{{2}{10}{}{equation.2}{}}
+\newlabel{eq:transform}{{3}{10}{}{equation.3}{}}
 \citation{velten2026}
 \citation{velten2026}
-\newlabel{eq:derotation}{{1}{8}{Measurement Positions and Coordinate System}{equation.1}{}}
-\newlabel{eq:transform}{{2}{8}{Measurement Positions and Coordinate System}{equation.2}{}}
-\newlabel{eq:transform_vel}{{3}{8}{Measurement Positions and Coordinate System}{equation.3}{}}
-\newlabel{eq:velmag}{{4}{8}{Measurement Positions and Coordinate System}{equation.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Distance $a_{\mathrm  {Pos},n}$ from the reactor centre to each measurement position \citep  {velten2026}.}}{8}{table.caption.2}\protected@file@percent }
-\newlabel{tab:pos}{{1}{8}{Distance $a_{\mathrm {Pos},n}$ from the reactor centre to each measurement position \citep {velten2026}}{table.caption.2}{}}
 \citation{hosseini2022lattice}
 \citation{Xiaoyi}
 \citation{neeraj2023}
 \citation{Bhadauria}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Measurement positions and coordinate system for the rotationally stacked packed bed. Left: Schematic showing the four measurement positions (Pos1, Pos3, Pos5, Pos7) above the porous structure, illustrating their spatial arrangement and point-symmetric pairs (Pos1/Pos7 and Pos3/Pos5, see also Fig.~\ref {fig:geometry}). Right: Example velocity-magnitude fields $v_\mathrm  {mag}$ in layers L13 to L17 at position Pos3, demonstrating the layer-resolved flow field extraction used for validation against PIV measurements before de-rotation.}}{9}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:coords}{{2}{9}{Measurement positions and coordinate system for the rotationally stacked packed bed. Left: Schematic showing the four measurement positions (Pos1, Pos3, Pos5, Pos7) above the porous structure, illustrating their spatial arrangement and point-symmetric pairs (Pos1/Pos7 and Pos3/Pos5, see also Fig.~\ref {fig:geometry}). Right: Example velocity-magnitude fields $v_\mathrm {mag}$ in layers L13 to L17 at position Pos3, demonstrating the layer-resolved flow field extraction used for validation against PIV measurements before de-rotation}{figure.caption.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Numerical Methods}{9}{section.3}\protected@file@percent }
-\newlabel{sec:numerics}{{3}{9}{Numerical Methods}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Lattice Boltzmann Formulation}{9}{subsection.3.1}\protected@file@percent }
-\newlabel{sec:numerics:lbm}{{3.1}{9}{Lattice Boltzmann Formulation}{subsection.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Distance $a_{\mathrm  {Pos},n}$ from the reactor centre to each measurement position \cite  {velten2026}.}}{11}{table.caption.7}\protected@file@percent }
+\newlabel{tab:pos}{{I}{11}{Distance $a_{\mathrm {Pos},n}$ from the reactor centre to each measurement position \cite {velten2026}}{table.caption.7}{}}
+\newlabel{eq:transform_vel}{{4}{11}{}{equation.4}{}}
+\newlabel{eq:velmag}{{5}{11}{}{equation.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Numerical Methods}{11}{section*.9}\protected@file@percent }
+\newlabel{sec:numerics}{{III}{11}{}{section*.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Lattice Boltzmann Formulation}{11}{section*.10}\protected@file@percent }
+\newlabel{sec:numerics:lbm}{{III\,A}{11}{}{section*.10}{}}
 \citation{Bhadauria,Shu}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Measurement positions and coordinate system for the rotationally stacked packed bed. Left: Schematic showing the four measurement positions (Pos1, Pos3, Pos5, Pos7) above the porous structure, illustrating their spatial arrangement and point-symmetric pairs (Pos1/Pos7 and Pos3/Pos5, see also Fig.~\ref {fig:geometry}). Right: Example velocity-magnitude fields $|V|$ obtained numerically in layers L13 to L17 at position Pos3 before transformation into the in-plane system, demonstrating the layer-resolved flow field extraction used for validation against PIV measurements.}}{12}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:coords}{{2}{12}{Measurement positions and coordinate system for the rotationally stacked packed bed. Left: Schematic showing the four measurement positions (Pos1, Pos3, Pos5, Pos7) above the porous structure, illustrating their spatial arrangement and point-symmetric pairs (Pos1/Pos7 and Pos3/Pos5, see also Fig.~\ref {fig:geometry}). Right: Example velocity-magnitude fields $|V|$ obtained numerically in layers L13 to L17 at position Pos3 before transformation into the in-plane system, demonstrating the layer-resolved flow field extraction used for validation against PIV measurements}{figure.caption.8}{}}
 \citation{hosseini2020compressibility,feng2015three}
+\citation{hosseini2022consistent,hosseini2024combustion}
 \citation{hosseini2022lattice}
 \citation{hosseini2021central,huang2022simulation}
-\newlabel{eq:correction}{{8}{10}{Lattice Boltzmann Formulation}{equation.8}{}}
+\newlabel{eq:correction}{{9}{13}{}{equation.9}{}}
+\citation{hosseini2022lattice}
+\citation{hosseini2022consistent}
+\newlabel{eq:correc1}{{11}{14}{}{equation.11}{}}
+\newlabel{Eq:LBM-3dh}{{12}{14}{}{equation.12}{}}
 \citation{hosseini2022lattice,hosseini2020compressibility}
 \citation{hosseini2022lattice,neeraj2023}
 \citation{kruger2017lattice}
-\newlabel{eq:correc1}{{10}{11}{Lattice Boltzmann Formulation}{equation.10}{}}
-\newlabel{Eq:LBM-3dh}{{11}{11}{Lattice Boltzmann Formulation}{equation.11}{}}
-\newlabel{eq:correction_MRT}{{15}{11}{Lattice Boltzmann Formulation}{equation.15}{}}
 \citation{bouzidi2001momentum}
+\citation{bouzidi2001momentum}
+\newlabel{eq:correction_MRT}{{16}{15}{}{equation.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Computational Domain and Boundary Conditions}{15}{section*.11}\protected@file@percent }
+\newlabel{sec:numerics:domain}{{III\,B}{15}{}{section*.11}{}}
+\newlabel{Eq:CE_moments_eq}{{18}{15}{}{equation.18b}{}}
 \citation{zhao2002non}
 \citation{lumley1967,sirovich1987,berkooz1993pod}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Computational Domain and Boundary Conditions}{12}{subsection.3.2}\protected@file@percent }
-\newlabel{sec:numerics:domain}{{3.2}{12}{Computational Domain and Boundary Conditions}{subsection.3.2}{}}
-\newlabel{Eq:CE_moments_eq}{{17}{12}{Computational Domain and Boundary Conditions}{equation.17b}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Locking Order Parameter $L(n)$}{12}{subsection.3.3}\protected@file@percent }
-\newlabel{sec:locking:Ln}{{3.3}{12}{Locking Order Parameter \texorpdfstring {$L(n)$}{L(n)}}{subsection.3.3}{}}
-\newlabel{eq:Ln}{{19}{13}{Locking Order Parameter \texorpdfstring {$L(n)$}{L(n)}}{equation.19}{}}
-\newlabel{eq:Lbar}{{20}{13}{Locking Order Parameter \texorpdfstring {$L(n)$}{L(n)}}{equation.20}{}}
-\newlabel{eq:Lofn}{{21}{13}{Locking Order Parameter \texorpdfstring {$L(n)$}{L(n)}}{equation.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Locking Order Parameter $L(n)$}{16}{section*.12}\protected@file@percent }
+\newlabel{sec:locking:Ln}{{III\,C}{16}{}{section*.12}{}}
+\newlabel{eq:Ln}{{20}{16}{}{equation.20}{}}
+\newlabel{eq:Lbar}{{21}{17}{}{equation.21}{}}
+\newlabel{eq:Lofn}{{22}{17}{}{equation.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Simulation Parameters}{17}{section*.13}\protected@file@percent }
+\newlabel{sec:numerics:params}{{IV}{17}{}{section*.13}{}}
 \citation{velten2026}
 \citation{velten2026}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Simulation Parameters}{14}{section.4}\protected@file@percent }
-\newlabel{sec:numerics:params}{{4}{14}{Simulation Parameters}{section.4}{}}
-\newlabel{eq:rep}{{22}{14}{Simulation Parameters}{equation.22}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Discretisation parameters used in the final simulations for the two Reynolds numbers. The grid is set by the resolution required at each Re$_p$; the same grid is used for all topologies sharing a given Re$_p$.}}{14}{table.caption.4}\protected@file@percent }
-\newlabel{tab:simparams}{{2}{14}{Discretisation parameters used in the final simulations for the two Reynolds numbers. The grid is set by the resolution required at each Re$_p$; the same grid is used for all topologies sharing a given Re$_p$}{table.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results and Discussion}{15}{section.5}\protected@file@percent }
-\newlabel{sec:results}{{5}{15}{Results and Discussion}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Grid Sensitivity Study}{15}{subsection.5.1}\protected@file@percent }
-\newlabel{sec:numerics:grid}{{5.1}{15}{Grid Sensitivity Study}{subsection.5.1}{}}
+\newlabel{eq:rep}{{23}{18}{}{equation.23}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Discretisation parameters used in the final simulations for the two Reynolds numbers. The grid is set by the resolution required at each Re$_p$; the same grid is used for all topologies sharing a given Re$_p$.}}{19}{table.caption.14}\protected@file@percent }
+\newlabel{tab:simparams}{{II}{19}{Discretisation parameters used in the final simulations for the two Reynolds numbers. The grid is set by the resolution required at each Re$_p$; the same grid is used for all topologies sharing a given Re$_p$}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results and Discussion}{19}{section*.15}\protected@file@percent }
+\newlabel{sec:results}{{V}{19}{}{section*.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Grid Sensitivity Study}{19}{section*.16}\protected@file@percent }
+\newlabel{sec:numerics:grid}{{V\,A}{19}{}{section*.16}{}}
 \citation{celik2008}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Discretisation levels used in the grid-sensitivity study, performed on a representative subdomain of the $40^\circ $ packing. Resolution is quoted as the number of lattice nodes across the $5\,\mathrm  {mm}$ gap. Peak and mean velocity magnitudes are evaluated on the extraction surface of Fig.~\ref {fig:grid} (mean taken after interpolation onto a common $0.15\,\mathrm  {mm}$ grid); errors are relative to the fine grid.}}{16}{table.caption.5}\protected@file@percent }
-\newlabel{tab:grid}{{3}{16}{Discretisation levels used in the grid-sensitivity study, performed on a representative subdomain of the $40^\circ $ packing. Resolution is quoted as the number of lattice nodes across the $5\,\mathrm {mm}$ gap. Peak and mean velocity magnitudes are evaluated on the extraction surface of Fig.~\ref {fig:grid} (mean taken after interpolation onto a common $0.15\,\mathrm {mm}$ grid); errors are relative to the fine grid}{table.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Grid sensitivity study on a representative subdomain of the regular packing with $\theta =40^\circ $. (a)~Geometry showing the extraction plane position for grid convergence assessment. (b-d)~Time-averaged fields of velocity magnitude $v_\mathrm  {mag}$ on the extraction surface for the three grid levels of Table~\ref {tab:grid}, keeping the same colour scale. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical, see Table~\ref {tab:grid} for quantitative values.}}{17}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:grid}{{3}{17}{Grid sensitivity study on a representative subdomain of the regular packing with $\theta =40^\circ $. (a)~Geometry showing the extraction plane position for grid convergence assessment. (b-d)~Time-averaged fields of velocity magnitude $v_\mathrm {mag}$ on the extraction surface for the three grid levels of Table~\ref {tab:grid}, keeping the same colour scale. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical, see Table~\ref {tab:grid} for quantitative values}{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Symmetry Verification}{17}{subsection.5.2}\protected@file@percent }
-\newlabel{sec:numerics:symmetry}{{5.2}{17}{Symmetry Verification}{subsection.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Symmetry verification for the $30^\circ $ packing at Re$_p = 100$, for the two point-symmetric measurement pairs. (a,b)~Pos3 and Pos5; (c,d)~Pos1 and Pos7. (a,c)~Time-averaged contours of velocity magnitude with in-plane streamlines, showing that each plane maps onto the mirror image of its partner. (b,d)~Line profiles of time-averaged velocity magnitude across the gaps at four streamwise heights, comparing each plane (solid lines) with its point-symmetric partner (symbols) plotted after inverting the $x$ coordinate. Both pairs coincide to within line width, verifying the perfect symmetry of the simulated mean flow.}}{19}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:symmetry}{{4}{19}{Symmetry verification for the $30^\circ $ packing at Re$_p = 100$, for the two point-symmetric measurement pairs. (a,b)~Pos3 and Pos5; (c,d)~Pos1 and Pos7. (a,c)~Time-averaged contours of velocity magnitude with in-plane streamlines, showing that each plane maps onto the mirror image of its partner. (b,d)~Line profiles of time-averaged velocity magnitude across the gaps at four streamwise heights, comparing each plane (solid lines) with its point-symmetric partner (symbols) plotted after inverting the $x$ coordinate. Both pairs coincide to within line width, verifying the perfect symmetry of the simulated mean flow}{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Discretisation levels used in the grid-sensitivity study, performed on a representative subdomain of the $40^\circ $ packing. Resolution is quoted as the number of lattice nodes across the $5\,\mathrm  {mm}$ gap. Peak and mean velocity magnitudes are evaluated on the extraction surface of Fig.~\ref {fig:grid} (mean taken after interpolation onto a common $0.15\,\mathrm  {mm}$ grid); errors are relative to the fine grid.}}{20}{table.caption.17}\protected@file@percent }
+\newlabel{tab:grid}{{III}{20}{Discretisation levels used in the grid-sensitivity study, performed on a representative subdomain of the $40^\circ $ packing. Resolution is quoted as the number of lattice nodes across the $5\,\mathrm {mm}$ gap. Peak and mean velocity magnitudes are evaluated on the extraction surface of Fig.~\ref {fig:grid} (mean taken after interpolation onto a common $0.15\,\mathrm {mm}$ grid); errors are relative to the fine grid}{table.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Symmetry Verification}{21}{section*.19}\protected@file@percent }
+\newlabel{sec:numerics:symmetry}{{V\,B}{21}{}{section*.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Grid sensitivity study on a representative subdomain of the regular packing with $\theta =40^\circ $. (a)~Geometry showing the extraction plane position for grid convergence assessment. (b-d)~Time-averaged fields of velocity magnitude $|V|$ on the extraction surface for the three grid levels of Table~\ref {tab:grid}, keeping the same colour scale. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical, see Table~\ref {tab:grid} for quantitative values.}}{22}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:grid}{{3}{22}{Grid sensitivity study on a representative subdomain of the regular packing with $\theta =40^\circ $. (a)~Geometry showing the extraction plane position for grid convergence assessment. (b-d)~Time-averaged fields of velocity magnitude $|V|$ on the extraction surface for the three grid levels of Table~\ref {tab:grid}, keeping the same colour scale. The jet structure is preserved across all resolutions; the medium and fine fields are nearly identical, see Table~\ref {tab:grid} for quantitative values}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Symmetry verification for the $30^\circ $ packing at Re$_p = 100$, for the two point-symmetric measurement pairs. (a,b)~Pos3 and Pos5; (c,d)~Pos1 and Pos7. (a,c)~Time-averaged contours of velocity magnitude with in-plane streamlines, showing that each plane approximately maps onto the mirror image of its partner. (b,d)~Line profiles of time-averaged velocity magnitude across the gaps at four streamwise heights, comparing each plane (solid lines) with its point-symmetric partner (symbols) plotted after inverting the $x$ coordinate. The central jets of both pairs coincide closely, whereas the magnitudes of some side peaks differ (e.g., Pos3 vs Pos5 at $z=180$\,mm), so the symmetry of the simulated mean flow is approximate.}}{23}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:symmetry}{{4}{23}{Symmetry verification for the $30^\circ $ packing at Re$_p = 100$, for the two point-symmetric measurement pairs. (a,b)~Pos3 and Pos5; (c,d)~Pos1 and Pos7. (a,c)~Time-averaged contours of velocity magnitude with in-plane streamlines, showing that each plane approximately maps onto the mirror image of its partner. (b,d)~Line profiles of time-averaged velocity magnitude across the gaps at four streamwise heights, comparing each plane (solid lines) with its point-symmetric partner (symbols) plotted after inverting the $x$ coordinate. The central jets of both pairs coincide closely, whereas the magnitudes of some side peaks differ (e.g., Pos3 vs Pos5 at $z=180$\,mm), so the symmetry of the simulated mean flow is approximate}{figure.caption.20}{}}
+\citation{velten2026,velten2026b}
 \citation{velten2026}
 \citation{velten2026}
-\citation{velten2026}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Validation against PIV Measurements}{20}{subsection.5.3}\protected@file@percent }
-\newlabel{sec:validation}{{5.3}{20}{Validation against PIV Measurements}{subsection.5.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Comparison Procedure and Error Metrics}{20}{subsubsection.5.3.1}\protected@file@percent }
-\newlabel{sec:validation:procedure}{{5.3.1}{20}{Comparison Procedure and Error Metrics}{subsubsection.5.3.1}{}}
-\newlabel{eq:rmse}{{24}{20}{Comparison Procedure and Error Metrics}{equation.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Velocity Fields at the Freeboard}{20}{subsubsection.5.3.2}\protected@file@percent }
-\newlabel{sec:validation:surface}{{5.3.2}{20}{Velocity Fields at the Freeboard}{subsubsection.5.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Symmetry verification for the $30^\circ $ packing at Re$_p = 100$ (continued from the previous page).}}{24}{figure.caption.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Validation against PIV Measurements}{24}{section*.22}\protected@file@percent }
+\newlabel{sec:validation}{{V\,C}{24}{}{section*.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Comparison Procedure and Error Metrics}{24}{section*.23}\protected@file@percent }
+\newlabel{sec:validation:procedure}{{V\,C\,1}{24}{}{section*.23}{}}
 \citation{velten2026b}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=100$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data.}}{22}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:validation_surface_re100}{{5}{22}{Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=100$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data}{figure.caption.8}{}}
+\newlabel{eq:rmse}{{25}{25}{}{equation.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Velocity Fields at the Freeboard}{25}{section*.24}\protected@file@percent }
+\newlabel{sec:validation:surface}{{V\,C\,2}{25}{}{section*.24}{}}
 \citation{velten2026}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=300$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data.}}{23}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:validation_surface_re300}{{6}{23}{Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=300$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Comparisons Within the Packing}{23}{subsubsection.5.3.3}\protected@file@percent }
-\newlabel{sec:validation:layers}{{5.3.3}{23}{Comparisons Within the Packing}{subsubsection.5.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs simulation (right). (b)~Profiles of velocity magnitude profile at different vertical positions within element L15. Simulation results are shown as green lines, experimental data as blue lines together with the layer-to-layer standard deviation (blue shaded area).}}{25}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:validation_layers_40re100}{{7}{25}{Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs simulation (right). (b)~Profiles of velocity magnitude profile at different vertical positions within element L15. Simulation results are shown as green lines, experimental data as blue lines together with the layer-to-layer standard deviation (blue shaded area)}{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 300$ for Pos3 (layers L11-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at different vertical positions within the elements. Simulation results of the individual layers are shown as thin coloured lines, experimental data of layer L14 as a thick blue line, together with the standard deviation over all experimental layers (shaded area).}}{27}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:validation_layers_40re300}{{8}{27}{Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 300$ for Pos3 (layers L11-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at different vertical positions within the elements. Simulation results of the individual layers are shown as thin coloured lines, experimental data of layer L14 as a thick blue line, together with the standard deviation over all experimental layers (shaded area)}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Comparisons Within the Packing}{26}{section*.27}\protected@file@percent }
+\newlabel{sec:validation:layers}{{V\,C\,3}{26}{}{section*.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=100$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data.}}{27}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:validation_surface_re100}{{5}{27}{Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=100$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=300$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data.}}{28}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:validation_surface_re300}{{6}{28}{Validation at the freeboard for the packing with $\theta =30^\circ $ at Pos3 for Re$_p=300$: (a)~time-averaged fields of velocity magnitude with in-plane streamlines, experiment (left) vs. simulation (right); (b)~profiles of velocity magnitude across the plane at four streamwise heights, simulation (red) vs. PIV (blue) with the blue band showing $\pm 1\sigma $ of the shot-to-shot velocity fluctuations in the PIV data}{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right). (b)~Profiles of velocity magnitude at different vertical positions within the elements. Simulation results are shown as thin coloured lines, experimental data as blue lines together with the layer-to-layer standard deviation (blue shaded area).}}{30}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:validation_layers_40re100}{{7}{30}{Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right). (b)~Profiles of velocity magnitude at different vertical positions within the elements. Simulation results are shown as thin coloured lines, experimental data as blue lines together with the layer-to-layer standard deviation (blue shaded area)}{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 300$ for Pos3 (layers L11-L17; L11 and L12 are shown in addition to L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~Profiles of velocity magnitude at different vertical positions within the elements. Simulation results of the individual layers are shown as thin coloured lines, experimental data of layer L14 as a thick blue line, together with the standard deviation over all experimental layers (shaded area).}}{31}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:validation_layers_40re300}{{8}{31}{Comparisons for the packing at $\theta =40^\circ $ and Re$_p = 300$ for Pos3 (layers L11-L17; L11 and L12 are shown in addition to L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~Profiles of velocity magnitude at different vertical positions within the elements. Simulation results of the individual layers are shown as thin coloured lines, experimental data of layer L14 as a thick blue line, together with the standard deviation over all experimental layers (shaded area)}{figure.caption.29}{}}
 \citation{velten2026}
 \citation{ou2024parameter,patankar1977periodic}
 \citation{lichtenegger2016recurrence}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparisons for the irregular packing at Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at a height of $2\,\mathrm  {mm}$ within each element, simulation (red, dashed) vs.\ PIV, (blue line for the time average, light-blue band for $\pm 1\sigma $ of the shot-to-shot velocity fluctuations) for each individual layer. All results are shown after de-rotation.}}{29}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:validation_layers_irreg}{{9}{29}{Comparisons for the irregular packing at Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at a height of $2\,\mathrm {mm}$ within each element, simulation (red, dashed) vs.\ PIV, (blue line for the time average, light-blue band for $\pm 1\sigma $ of the shot-to-shot velocity fluctuations) for each individual layer. All results are shown after de-rotation}{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Flow Locking Framework}{29}{subsection.5.4}\protected@file@percent }
-\newlabel{sec:locking}{{5.4}{29}{Flow Locking Framework}{subsection.5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces De-rotated results for the time-averaged velocity magnitude obtained by LBM together with in-plane streamlines for all layers L3 to L17 of the packing with $\theta =30^\circ $ at Re$_p=100$. The periodic geometry produces a single repeating flow pattern across all developed layers, with noticeable differences observed only for L03, still impacted by the inflow condition.}}{30}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:velocity_fields_30}{{10}{30}{De-rotated results for the time-averaged velocity magnitude obtained by LBM together with in-plane streamlines for all layers L3 to L17 of the packing with $\theta =30^\circ $ at Re$_p=100$. The periodic geometry produces a single repeating flow pattern across all developed layers, with noticeable differences observed only for L03, still impacted by the inflow condition}{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Profiles of time-averaged velocity magnitude obtained by LBM at different heights within a module after de-rotation in each layer L03 to L17 at Pos3 for Re$_p=100$ in the topology (a)~$\theta =30^\circ $, (b)~$\theta =40^\circ $, and (c)~irregular packing. The periodic packings collapse mostly onto a common profile (though the first layer, L03, is still strongly impacted by the inflow condition), whereas the irregular packing exhibits very strong layer-to-layer variability throughout the whole bed.}}{31}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:line_profiles_topology}{{11}{31}{Profiles of time-averaged velocity magnitude obtained by LBM at different heights within a module after de-rotation in each layer L03 to L17 at Pos3 for Re$_p=100$ in the topology (a)~$\theta =30^\circ $, (b)~$\theta =40^\circ $, and (c)~irregular packing. The periodic packings collapse mostly onto a common profile (though the first layer, L03, is still strongly impacted by the inflow condition), whereas the irregular packing exhibits very strong layer-to-layer variability throughout the whole bed}{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Flow Locking in Periodic and Irregular Packings}{32}{subsubsection.5.4.1}\protected@file@percent }
-\newlabel{sec:locking:topologies}{{5.4.1}{32}{Flow Locking in Periodic and Irregular Packings}{subsubsection.5.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Locking order parameter at Pos3 for the $30^\circ $ and $40^\circ $ packings at Re$_p = 100$ and for the irregular packing at Re$_p = 300$. Left: layer-to-layer matrix $L$ (Eq.~\ref {eq:Ln}); Right: per-layer locking $L(n)$ against the mean field involving all layers. The (a)~$30^\circ $ and (b)~$40^\circ $ packings remain constant at $L \approx 1.00$ and $0.99$ respectively, whereas (c)~the irregular packing is much lower ($\overline  {L}=0.46$, individual layer-pair values between $0.10$ and $0.68$, $L(n)$ between $0.67$ and $0.83$), confirming that the geometric period is required for locking.}}{33}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:Ln}{{12}{33}{Locking order parameter at Pos3 for the $30^\circ $ and $40^\circ $ packings at Re$_p = 100$ and for the irregular packing at Re$_p = 300$. Left: layer-to-layer matrix $L$ (Eq.~\ref {eq:Ln}); Right: per-layer locking $L(n)$ against the mean field involving all layers. The (a)~$30^\circ $ and (b)~$40^\circ $ packings remain constant at $L \approx 1.00$ and $0.99$ respectively, whereas (c)~the irregular packing is much lower ($\overline {L}=0.46$, individual layer-pair values between $0.10$ and $0.68$, $L(n)$ between $0.67$ and $0.83$), confirming that the geometric period is required for locking}{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Flow Organisation}{33}{subsubsection.5.4.2}\protected@file@percent }
-\newlabel{sec:organisation}{{5.4.2}{33}{Flow Organisation}{subsubsection.5.4.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3}Impact of Reynolds Number}{34}{subsubsection.5.4.3}\protected@file@percent }
-\newlabel{sec:locking:reynolds}{{5.4.3}{34}{Impact of Reynolds Number}{subsubsection.5.4.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Locking metric at Re$_p=300$ for the (a) $30^\circ $ and (b) $40^\circ $ periodic packings. Both packings remains strongly locked ($\overline  {L}=0.973$ at $30^\circ $, $\overline  {L}=0.981$ at $40^\circ $), but at a slightly lower level than at Re$_p=100$ ($\overline  {L}=0.998$ and $0.993$).}}{35}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:Ln_re300}{{13}{35}{Locking metric at Re$_p=300$ for the (a) $30^\circ $ and (b) $40^\circ $ periodic packings. Both packings remains strongly locked ($\overline {L}=0.973$ at $30^\circ $, $\overline {L}=0.981$ at $40^\circ $), but at a slightly lower level than at Re$_p=100$ ($\overline {L}=0.998$ and $0.993$)}{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{35}{section.6}\protected@file@percent }
-\bibstyle{spbasic}
-\bibdata{references.bib}
-\bibcite{Augier}{{1}{2010}{{Augier et~al}}{{Augier, Idoux, and Delenne}}}
-\bibcite{berkooz1993pod}{{2}{1993}{{Berkooz et~al}}{{Berkooz, Holmes, and Lumley}}}
-\bibcite{Bhadauria}{{3}{2009}{{Bhadauria}}{{}}}
-\bibcite{bouzidi2001momentum}{{4}{2001}{{Bouzidi et~al}}{{Bouzidi, Firdaouss, and Lallemand}}}
-\bibcite{celik2008}{{5}{2008}{{Celik et~al}}{{Celik, Ghia, Roache, Freitas, Coleman, and Raad}}}
-\bibcite{demir2026pressure}{{6}{2026}{{Demir et~al}}{{Demir, Sadowski, and {di Mare}}}}
-\bibcite{Dixon}{{7}{2020}{{Dixon and Partopour}}{{}}}
-\bibcite{Aglave}{{8}{2014}{{Eppinger et~al}}{{Eppinger, Jurtz, and Aglave}}}
-\bibcite{Fei2023}{{9}{2023}{{Fei et~al}}{{Fei, Qin, Zhao, Derome, and Carmeliet}}}
-\bibcite{fei2020}{{10}{2020}{{Fei et~al}}{{Fei, Yang, Chen, Mo, and Luo}}}
-\bibcite{feng2015three}{{11}{2015}{{Feng et~al}}{{Feng, Sagaut, and Tao}}}
-\bibcite{freund2003numerical}{{12}{2003}{{Freund et~al}}{{Freund, Zeiser, Huber, Klemm, Brenner, Durst, and Emig}}}
-\bibcite{GHARIBI2020-2}{{13}{2020{}}{{Gharibi and Ashrafizaadeh}}{{}}}
-\bibcite{gharibi2020}{{14}{2020{}}{{Gharibi and Ashrafizaadeh}}{{}}}
-\bibcite{GHARIBI2024-2}{{15}{2024{}}{{Gharibi et~al}}{{Gharibi, Ghavaminia, Ashrafizaadeh, Zhou, and Thévenin}}}
-\bibcite{GHARIBI2024}{{16}{2024{}}{{Gharibi et~al}}{{Gharibi, Hosseini, and Thévenin}}}
-\bibcite{Gharibi2025}{{17}{2025}{{Gharibi et~al}}{{Gharibi, Fard, and Thévenin}}}
-\bibcite{Gladden2017}{{18}{2017}{{Gladden and Sederman}}{{}}}
-\bibcite{Xiaoyi}{{19}{1997}{{He and Luo}}{{}}}
-\bibcite{hosseini2020compressibility}{{20}{2020}{{Hosseini et~al}}{{Hosseini, Darabiha, and Th{\'e}venin}}}
-\bibcite{hosseini2021central}{{21}{2021}{{Hosseini et~al}}{{Hosseini, Berg, Huang, Roloff, Janiga, and Thevenin}}}
-\bibcite{hosseini2022lattice}{{22}{2022}{{Hosseini et~al}}{{Hosseini, Huang, and Thevenin}}}
-\bibcite{huang2022simulation}{{23}{2022}{{Huang et~al}}{{Huang, Noel, Berg, and Hosseini}}}
-\bibcite{Khalili2017}{{24}{2017}{{Khalili et~al}}{{Khalili, Rahnama, Jafari, Gharibi, and Jahanshahi~Javaran}}}
-\bibcite{KRAUSE2017}{{25}{2017}{{Krause et~al}}{{Krause, Klemens, Henn, Trunk, and Nirschl}}}
-\bibcite{kruger2017lattice}{{26}{2017}{{Krueger et~al}}{{Krueger, Kusumaatmaja, Kuzmin, Shardt, Silva, and Viggen}}}
-\bibcite{Larsson.2018}{{27}{2018}{{Larsson et~al}}{{Larsson, Lundstr{\"o}m, and Lycksam}}}
-\bibcite{li2022visualization}{{28}{2022}{{Li and Iskander}}{{}}}
-\bibcite{lichtenegger2016recurrence}{{29}{2016}{{Lichtenegger and Pirker}}{{}}}
-\bibcite{Liu2016}{{30}{2016}{{Liu et~al}}{{Liu, Kang, Leonardi, Schmieschek, Narv{\'a}ez, Jones, Williams, Valocchi, and Harting}}}
-\bibcite{lumley1967}{{31}{1967}{{Lumley}}{{}}}
-\bibcite{Mazloomi2015}{{32}{2015}{{Mazloomi~M et~al}}{{Mazloomi~M, Chikatamarla, and Karlin}}}
-\bibcite{neeraj2023}{{33}{2023}{{Neeraj et~al}}{{Neeraj, Velten, Janiga, Z{\"a}hringer, Th{\'e}venin, Hosseini, and Varnik}}}
-\bibcite{ou2024parameter}{{34}{2024}{{Ou et~al}}{{Ou, Xue, Wan, Wei, Chi, and Th{\'e}venin}}}
-\bibcite{Zhisong}{{35}{2025}{{Ou et~al}}{{Ou, Xue, Wan, and Th{\'e}venin}}}
-\bibcite{PAN2006}{{36}{2006}{{Pan et~al}}{{Pan, Luo, and Miller}}}
-\bibcite{patankar1977periodic}{{37}{1977}{{Patankar et~al}}{{Patankar, Liu, and Sparrow}}}
-\bibcite{RETTINGER2018}{{38}{2018}{{Rettinger and Rüde}}{{}}}
-\bibcite{sadowski2025mean}{{39}{2025}{{Sadowski et~al}}{{Sadowski, Demir, and {di Mare}}}}
-\bibcite{Sederman1997}{{40}{1997}{{Sederman et~al}}{{Sederman, Johns, Bramley, Alexander, and Gladden}}}
-\bibcite{sirovich1987}{{41}{1987}{{Sirovich}}{{}}}
-\bibcite{STOCKINGER2024}{{42}{2024}{{Stockinger et~al}}{{Stockinger, Raiolo, Alamian, Hadjadj, Nieken, and {S. Shadloo}}}}
-\bibcite{Sullivan}{{43}{2005}{{Sullivan et~al}}{{Sullivan, Sani, Johns, and Gladden}}}
-\bibcite{velten2026b}{{44}{2026}{{Velten and Z{\"a}hringer}}{{}}}
-\bibcite{velten2026}{{45}{2026}{{Velten et~al}}{{Velten, H{\"u}lz, and Z{\"a}hringer}}}
-\bibcite{wu2025}{{46}{2025}{{Wu et~al}}{{Wu, Luo, Shen, Gharibi, Thévenin, and Chen}}}
-\bibcite{Shu}{{47}{2012}{{Xiaoyi and Shu}}{{}}}
-\bibcite{zhao2002non}{{48}{2002}{{Zhao-Li et~al}}{{Zhao-Li, Chu-Guang, and Bao-Chang}}}
-\bibcite{ZHOU2026}{{49}{2026}{{Zhou et~al}}{{Zhou, Gharibi, Xu, Kharaghani, and Thévenin}}}
-\gdef \@abspage@last{39}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Flow Locking Framework}{32}{section*.31}\protected@file@percent }
+\newlabel{sec:locking}{{V\,D}{32}{}{section*.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparisons for the irregular packing at Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at a height of $2\,\mathrm  {mm}$ within each element, simulation (red, dashed) vs.\ PIV, (blue line for the time average, light-blue band for $\pm 1\sigma $ of the shot-to-shot velocity fluctuations) for each individual layer. All results are shown in the in-plane coordinate system.}}{33}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:validation_layers_irreg}{{9}{33}{Comparisons for the irregular packing at Re$_p = 100$ for Pos3 (layers L13-L17). (a)~Time-averaged contours of velocity magnitude with in-plane streamlines, experiment (left) vs.\ simulation (right); (b)~profiles of velocity magnitude at a height of $2\,\mathrm {mm}$ within each element, simulation (red, dashed) vs.\ PIV, (blue line for the time average, light-blue band for $\pm 1\sigma $ of the shot-to-shot velocity fluctuations) for each individual layer. All results are shown in the in-plane coordinate system}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Results in the in-plane system for the time-averaged velocity magnitude obtained by LBM together with in-plane streamlines for all layers L03 to L17 of the packing with $\theta =30^\circ $ at Re$_p=100$. The periodic geometry produces a single repeating flow pattern across all developed layers, with noticeable differences observed only for L03, still impacted by the inflow condition.}}{34}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:velocity_fields_30}{{10}{34}{Results in the in-plane system for the time-averaged velocity magnitude obtained by LBM together with in-plane streamlines for all layers L03 to L17 of the packing with $\theta =30^\circ $ at Re$_p=100$. The periodic geometry produces a single repeating flow pattern across all developed layers, with noticeable differences observed only for L03, still impacted by the inflow condition}{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Flow Locking in Periodic and Irregular Packings}{34}{section*.34}\protected@file@percent }
+\newlabel{sec:locking:topologies}{{V\,D\,1}{34}{}{section*.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Profiles of time-averaged velocity magnitude obtained by LBM at different heights within a module in each layer L03 to L17 at Pos3 for Re$_p=100$ in the topology (a)~$\theta =30^\circ $, (b)~$\theta =40^\circ $, and (c)~irregular packing. The periodic packings collapse mostly onto a common profile (though the first layer, L03, is still strongly impacted by the inflow condition), whereas the irregular packing exhibits very strong layer-to-layer variability throughout the whole bed.}}{35}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:line_profiles_topology}{{11}{35}{Profiles of time-averaged velocity magnitude obtained by LBM at different heights within a module in each layer L03 to L17 at Pos3 for Re$_p=100$ in the topology (a)~$\theta =30^\circ $, (b)~$\theta =40^\circ $, and (c)~irregular packing. The periodic packings collapse mostly onto a common profile (though the first layer, L03, is still strongly impacted by the inflow condition), whereas the irregular packing exhibits very strong layer-to-layer variability throughout the whole bed}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Flow Organisation}{36}{section*.36}\protected@file@percent }
+\newlabel{sec:organisation}{{V\,D\,2}{36}{}{section*.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Locking order parameter at Pos3 for the $30^\circ $ and $40^\circ $ packings at Re$_p = 100$ and for the irregular packing at Re$_p = 300$. Left: layer-to-layer matrix $L$ (Eq.~(\ref {eq:Ln})); Right: per-layer locking $L(n)$ against the mean field involving all layers. The values for the (a)~$30^\circ $ and (b)~$40^\circ $ packings remain constant at $L \approx 1.00$ and $0.99$ respectively, whereas (c)~values for the irregular packing are much lower ($\overline  {L}=0.46$, individual layer-pair values between $0.10$ and $0.68$, $L(n)$ between $0.67$ and $0.83$), confirming that a constant rotation angle is required for locking.}}{37}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:Ln}{{12}{37}{Locking order parameter at Pos3 for the $30^\circ $ and $40^\circ $ packings at Re$_p = 100$ and for the irregular packing at Re$_p = 300$. Left: layer-to-layer matrix $L$ (Eq.~(\ref {eq:Ln})); Right: per-layer locking $L(n)$ against the mean field involving all layers. The values for the (a)~$30^\circ $ and (b)~$40^\circ $ packings remain constant at $L \approx 1.00$ and $0.99$ respectively, whereas (c)~values for the irregular packing are much lower ($\overline {L}=0.46$, individual layer-pair values between $0.10$ and $0.68$, $L(n)$ between $0.67$ and $0.83$), confirming that a constant rotation angle is required for locking}{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Impact of Reynolds Number}{38}{section*.37}\protected@file@percent }
+\newlabel{sec:locking:reynolds}{{V\,D\,3}{38}{}{section*.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{38}{section*.39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Locking metric at Re$_p=300$ for the (a) $30^\circ $ and (b) $40^\circ $ periodic packings. Both packings remain strongly locked ($\overline  {L}=0.973$ at $30^\circ $, $\overline  {L}=0.981$ at $40^\circ $), but at a slightly lower level than at Re$_p=100$ ($\overline  {L}=0.998$ and $0.993$).}}{39}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:Ln_re300}{{13}{39}{Locking metric at Re$_p=300$ for the (a) $30^\circ $ and (b) $40^\circ $ periodic packings. Both packings remain strongly locked ($\overline {L}=0.973$ at $30^\circ $, $\overline {L}=0.981$ at $40^\circ $), but at a slightly lower level than at Re$_p=100$ ($\overline {L}=0.998$ and $0.993$)}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{40}{section*.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {}AUTHOR DECLARATIONS}{40}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {}Author Contributions}{40}{section*.42}\protected@file@percent }
+\bibdata{templateNotes,references}
+\bibcite{Dixon}{{1}{2020}{{Dixon\ and\ Partopour}}{{}}}
+\bibcite{Aglave}{{2}{2014}{{Aglave, Eppinger,\ and\ Jurtz}}{{}}}
+\bibcite{Augier}{{3}{2010}{{Augier, Idoux,\ and\ Delenne}}{{}}}
+\bibcite{freund2003numerical}{{4}{2003}{{Freund\ \emph  {et~al.}}}{{Freund, Zeiser, Huber, Klemm, Brenner, Durst,\ and\ Emig}}}
+\bibcite{Zhisong}{{5}{2025}{{Ou\ \emph  {et~al.}}}{{Ou, Xue, Wan,\ and\ Th{\'e}venin}}}
+\bibcite{neeraj2023}{{6}{2023}{{Neeraj\ \emph  {et~al.}}}{{Neeraj, Velten, Janiga, Z{\"a}hringer, Th{\'e}venin, Hosseini,\ and\ Varnik}}}
+\bibcite{Larsson.2018}{{7}{2018}{{Larsson, Lundstr{\"o}m,\ and\ Lycksam}}{{}}}
+\bibcite{li2022visualization}{{8}{2022}{{Li\ and\ Iskander}}{{}}}
+\bibcite{Sederman1997}{{9}{1997}{{Sederman\ \emph  {et~al.}}}{{Sederman, Johns, Bramley, Alexander,\ and\ Gladden}}}
+\bibcite{Gladden2017}{{10}{2017}{{Gladden\ and\ Sederman}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}DATA AVAILABILITY}{41}{section*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{41}{section*.44}\protected@file@percent }
+\bibcite{velten2026}{{11}{2026}{{Velten, H{\"u}lz,\ and\ Z{\"a}hringer}}{{}}}
+\bibcite{velten2026b}{{12}{2026}{{Velten\ and\ Z{\"a}hringer}}{{}}}
+\bibcite{demir2026pressure}{{13}{2026}{{Demir, Sadowski,\ and\ {di Mare}}}{{}}}
+\bibcite{sadowski2025mean}{{14}{2025}{{Sadowski, Demir,\ and\ {di Mare}}}{{}}}
+\bibcite{patankar1977periodic}{{15}{1977}{{Patankar, Liu,\ and\ Sparrow}}{{}}}
+\bibcite{ou2024parameter}{{16}{2024}{{Ou\ \emph  {et~al.}}}{{Ou, Xue, Wan, Wei, Chi,\ and\ Th{\'e}venin}}}
+\bibcite{kruger2017lattice}{{17}{2017}{{Krüger\ \emph  {et~al.}}}{{Krüger, Kusumaatmaja, Kuzmin, Shardt, Silva,\ and\ Viggen}}}
+\bibcite{Sullivan}{{18}{2005}{{Sullivan\ \emph  {et~al.}}}{{Sullivan, Sani, Johns,\ and\ Gladden}}}
+\bibcite{KRAUSE2017}{{19}{2017}{{Krause\ \emph  {et~al.}}}{{Krause, Klemens, Henn, Trunk,\ and\ Nirschl}}}
+\bibcite{Khalili2017}{{20}{2017}{{Khalili\ \emph  {et~al.}}}{{Khalili, Rahnama, Jafari, Gharibi,\ and\ Jahanshahi~Javaran}}}
+\bibcite{RETTINGER2018}{{21}{2018}{{Rettinger\ and\ Rüde}}{{}}}
+\bibcite{GHARIBI2024}{{22}{2024}{{Gharibi, Hosseini,\ and\ Thévenin}}{{}}}
+\bibcite{Gharibi2025}{{23}{2025}{{Gharibi, Fard,\ and\ Thévenin}}{{}}}
+\bibcite{Mazloomi2015}{{24}{2015}{{Mazloomi~M., Chikatamarla,\ and\ Karlin}}{{}}}
+\bibcite{Liu2016}{{25}{2016}{{Liu\ \emph  {et~al.}}}{{Liu, Kang, Leonardi, Schmieschek, Narv{\'a}ez, Jones, Williams, Valocchi,\ and\ Harting}}}
+\bibcite{gharibi2020}{{26}{2020{}}{{Gharibi\ and\ Ashrafizaadeh}}{{}}}
+\bibcite{fei2020}{{27}{2020}{{Fei\ \emph  {et~al.}}}{{Fei, Yang, Chen, Mo,\ and\ Luo}}}
+\bibcite{GHARIBI2024-2}{{28}{2024}{{Gharibi\ \emph  {et~al.}}}{{Gharibi, Ghavaminia, Ashrafizaadeh, Zhou,\ and\ Thévenin}}}
+\bibcite{wu2025}{{29}{2025}{{Wu\ \emph  {et~al.}}}{{Wu, Luo, Shen, Gharibi, Thévenin,\ and\ Chen}}}
+\bibcite{PAN2006}{{30}{2006}{{Pan, Luo,\ and\ Miller}}{{}}}
+\bibcite{GHARIBI2020-2}{{31}{2020{}}{{Gharibi\ and\ Ashrafizaadeh}}{{}}}
+\bibcite{STOCKINGER2024}{{32}{2024}{{Stockinger\ \emph  {et~al.}}}{{Stockinger, Raiolo, Alamian, Hadjadj, Nieken,\ and\ Shadloo}}}
+\bibcite{Fei2023}{{33}{2023}{{Fei\ \emph  {et~al.}}}{{Fei, Qin, Zhao, Derome,\ and\ Carmeliet}}}
+\bibcite{ZHOU2026}{{34}{2026}{{Zhou\ \emph  {et~al.}}}{{Zhou, Gharibi, Xu, Kharaghani,\ and\ Thévenin}}}
+\bibcite{hosseini2022lattice}{{35}{2022}{{Hosseini, Huang,\ and\ Th{\'e}venin}}{{}}}
+\bibcite{Xiaoyi}{{36}{1997}{{He\ and\ Luo}}{{}}}
+\bibcite{Bhadauria}{{37}{2011}{{Mohamad}}{{}}}
+\bibcite{Shu}{{38}{2012}{{Guo\ and\ Shu}}{{}}}
+\bibcite{hosseini2020compressibility}{{39}{2020}{{Hosseini, Darabiha,\ and\ Th{\'e}venin}}{{}}}
+\bibcite{feng2015three}{{40}{2015}{{Feng, Sagaut,\ and\ Tao}}{{}}}
+\bibcite{hosseini2022consistent}{{41}{2022}{{Hosseini, Dorschner,\ and\ Karlin}}{{}}}
+\bibcite{hosseini2024combustion}{{42}{2024}{{Hosseini\ \emph  {et~al.}}}{{Hosseini, Boivin, Th\'evenin,\ and\ Karlin}}}
+\bibcite{hosseini2021central}{{43}{2021}{{Hosseini\ \emph  {et~al.}}}{{Hosseini, Berg, Huang, Roloff, Janiga,\ and\ Th{\'e}venin}}}
+\bibcite{huang2022simulation}{{44}{2022}{{Huang\ \emph  {et~al.}}}{{Huang, No{\"e}l, Berg,\ and\ Hosseini}}}
+\bibcite{bouzidi2001momentum}{{45}{2001}{{Bouzidi, Firdaouss,\ and\ Lallemand}}{{}}}
+\bibcite{zhao2002non}{{46}{2002}{{Guo, Zheng,\ and\ Shi}}{{}}}
+\bibcite{lumley1967}{{47}{1967}{{Lumley}}{{}}}
+\bibcite{sirovich1987}{{48}{1987}{{Sirovich}}{{}}}
+\bibcite{berkooz1993pod}{{49}{1993}{{Berkooz, Holmes,\ and\ Lumley}}{{}}}
+\bibcite{celik2008}{{50}{2008}{{Celik\ \emph  {et~al.}}}{{Celik, Ghia, Roache, Freitas, Coleman,\ and\ Raad}}}
+\bibcite{lichtenegger2016recurrence}{{51}{2016}{{Lichtenegger\ and\ Pirker}}{{}}}
+\bibstyle{aipnum4-1}
+\citation{REVTEX41Control}
+\citation{aip41Control}
+\newlabel{LastBibItem}{{51}{45}{}{section*.44}{}}
+\newlabel{LastPage}{{}{45}{}{}{}}
+\gdef \@abspage@last{45}

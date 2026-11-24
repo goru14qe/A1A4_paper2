@@ -1,0 +1,65 @@
+Dear Tanya,
+
+Please find below my comments on the manuscript. As you can imagine, I have focused mainly on the lattice Boltzmann part.
+Nevertheless, you will also find a few notes on other aspects; these concern mostly the consistency of our arguments.
+
+To make your work easier, I have inserted my suggestions directly into the LaTeX source (uploaded on Overleaf
+ and also attached here, together with the updated references.bib and a compiled PDF). 
+
+Added text appears in blue and remarks to you appear in magenta as [FV n], where n refers to the items below.
+
+You can generate a clean version by replacing "\showrevisionstrue" with "\showrevisionsfalse" in the preamble of the tex-file.
+Equation numbers in the comments below refer to this revised version of the manuscript.
+
+The most important points are items 1, 5, 7, 8 and 11 (the comments and their index follow the order of the manuscript).
+
+I hope these comments will be useful. If the manuscript has already been submitted, they can be taken into account during the revision.
+
+If you need any further assistance, please do not hesitate to contact me. We could also arrange a Zoom meeting
+ and go through my suggestions together.
+
+Best wishes,
+
+Fathollah
+
+--- Beginning of comments ---
+
+1. Flow locking (central point): the metric compares single layers. For any constant rotation angle, all layers have the same neighbourhood once their rotation is removed (screw symmetry: rotation by θ plus shift by one layer). The layer-to-layer recurrence therefore follows from the constant angle, not from the 6- or 9-layer period. I have added a short paragraph in Sec. II and replaced "rotational periodicity" by "constant rotation angle" throughout.
+
+2. Sec. II: please give the sequence of angles of the irregular packing (placeholder added).
+
+3. Sec. II A: the definition of α_i is commented out but still used; please reinstate it together with the sign convention of θ.
+
+4. Sec. III A: "entropy-minimising" corrected to "entropy-maximising".
+
+5. Correction term, Eqs. (7) and (14): the spatial derivative must act on the deviation tensor, not on the Hermite polynomial; a factor dt is added. Corrected following Hosseini et al., J. Fluid Mech. 2022, and Hosseini et al., Prog. Energy Combust. Sci. 2024 (added to the bib file). Please confirm the prefactor of Eq. (14) against Ref. [hosseini2022lattice]. The same error is present in Eqs. (4) and (13) of our 2023 paper.
+
+6. Eq. (8) is correct; I only added an equivalent explicit form.
+
+7. Eq. (13): in the relation for ω_b, the thermodynamic factor was on the wrong side (check: the BGK limit must give a bulk viscosity of 2/3 of the shear viscosity). Corrected following Eq. (2.78) of Hosseini et al. 2022. Please also give the values of ω_b and ω_a used.
+
+8. Eq. (16b): the second term must be the population leaving the fluid node away from the wall, as in Bouzidi et al. Also corrected: the direction in Eq. (17), "boundary node" replaced by "fluid node adjacent to the wall", and a short explanation of the notation added.
+
+9. The locking metric is not mean-subtracted, so unrelated fields with a common through-flow still give positive values; one sentence added.
+
+10. Sec. IV: the lattice speed of sound is about 2.9 m/s (Re_p = 100) and 5.8 m/s (Re_p = 300), giving Mach numbers of about 0.16 and 0.24. I have added a short paragraph stating this openly; please insert the actual peak velocity at Re_p = 300.
+
+11. Related to item 10: in LBM, the pressure drop across the bed appears as a density variation, and a rough estimate hints towards relatively large values. Please check the density and mass flux at inlet vs. outlet and the mean velocity per layer, and insert the value in the placeholder.
+
+12. Convergence criterion: a residual between successive time steps is a steady-state criterion and almost automatically met here. Is it relative? Alternatively, use the convergence of the running mean.
+
+13. Grid study: the observed order is 2.2 in Sec. V A but 2.1 in Sec. V C 2 (my recalculation gives 2.14); changed to 2.1, please check.
+
+14. Numerical dissipation (Sec. V C and Conclusions): the argument that dissipation lowers the jet peaks, more so at Re_p = 300, contradicts our own grid study (the coarse grid gives a higher peak) and the finer grid used at Re_p = 300. Paragraph rewritten.
+
+15. Fig. 7: text says L14, caption says L15; "thick blue line" vs. "blue lines". Only you can resolve this. Added "(layer-to-layer spread)" for the shaded band.
+
+16. Sec. V C 3: the "zero in the mean" argument on manufacturing imperfections removed.
+
+17. Fig. 12: I suggest showing the irregular case at Re_p = 100, so that topology and Reynolds number are not confounded.
+
+18. Sec. V D 2: the mechanistic explanation for a higher coherence at 30° removed, since the difference is too small for a ranking.
+
+19. Small items in blue only (notation, a unit, a missing word, symmetry wording).
+
+--- End of comments ---

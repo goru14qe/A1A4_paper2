@@ -1,0 +1,39 @@
+ALT TEXT FOR FIGURES AND TABLES
+Manuscript: Analysis of Flow Organisation at Pore Scale in Rotationally Stacked Packed Beds Using the Lattice Boltzmann Method
+(Numbered in order of appearance; 13 figures, 3 tables, no multimedia items.)
+
+FIGURES
+
+Figure 1. Rendering of a packed bed built from 18 identical bar-and-slit layers, each rotated by a constant angle relative to the one below. A second panel shows a single element and the successive stacking of one to six layers.
+
+Figure 2. Top-view schematic of the four measurement positions Pos1, Pos3, Pos5 and Pos7 above the packing, with the global and in-plane coordinate axes. Beside it, velocity-magnitude maps for layers L13 to L17 at Pos3 before transformation into the in-plane system.
+
+Figure 3. Grid-sensitivity study on a sub-domain of the 40-degree packing. One panel locates the Pos3 extraction plane; three further panels show time-averaged velocity-magnitude fields on that plane for the coarse, medium and fine meshes, with jets of similar structure in all.
+
+Figure 4. Symmetry check for the 30-degree packing at Re_p = 100. Velocity-magnitude contours with streamlines and line profiles at four heights compare Pos3 with Pos5 and Pos1 with Pos7; the central jets coincide closely, while some side peaks differ in magnitude.
+
+Figure 5. Validation at the freeboard for the 30-degree packing at Pos3, Re_p = 100. Top: PIV (left) and simulated (right) velocity-magnitude fields with streamlines. Bottom: profiles at four heights, simulation in red and PIV in blue with a standard-deviation band.
+
+Figure 6. Validation at the freeboard for the 30-degree packing at Pos3, Re_p = 300. Top: PIV (left) and simulated (right) velocity-magnitude fields with streamlines. Bottom: profiles at four heights, simulation in red and PIV in blue with a standard-deviation band.
+
+Figure 7. Comparison for the 40-degree packing at Re_p = 100, layers L13 to L17 at Pos3. Top: PIV and simulated velocity-magnitude contours with streamlines. Bottom: velocity profiles at several heights, simulation as coloured lines and PIV as blue lines with layer-to-layer spread.
+
+Figure 8. Comparison for the 40-degree packing at Re_p = 300, layers L11 to L17 at Pos3. Top: PIV and simulated velocity-magnitude contours with streamlines. Bottom: profiles at several heights, simulation as coloured lines and layer L14 PIV as a thick blue line with a spread band.
+
+Figure 9. Comparison for the irregular packing at Re_p = 100, layers L13 to L17 at Pos3. Top: PIV and simulated velocity-magnitude contours with streamlines differ strongly from layer to layer. Bottom: profiles at 2 mm height, simulation dashed red against PIV in blue with a band.
+
+Figure 10. Simulated time-averaged velocity-magnitude fields with in-plane streamlines for layers L03 to L17 of the 30-degree packing at Re_p = 100. All developed layers show the same repeating jet pattern; only the first layer, L03, differs noticeably.
+
+Figure 11. Simulated velocity-magnitude profiles at different heights for layers L03 to L17 at Pos3, Re_p = 100, for the 30-degree, 40-degree and irregular packings. The periodic packings collapse onto a common profile except L03; the irregular packing varies strongly between layers.
+
+Figure 12. Locking order parameter at Pos3 for the 30-degree and 40-degree packings at Re_p = 100 and the irregular packing at Re_p = 300. Each row has a layer-to-layer similarity matrix and per-layer values: near 1 for the periodic packings, much lower for the irregular one.
+
+Figure 13. Locking metric at Re_p = 300 for the 30-degree and 40-degree periodic packings, shown as layer-to-layer similarity matrices and per-layer values. Both remain strongly locked, with mean values of 0.973 and 0.981, slightly below those at Re_p = 100.
+
+TABLES
+
+Table 1. Distance of each of the four measurement positions from the reactor centre, along the depth axis: Pos1 at -22.5 mm, Pos3 at -7.5 mm, Pos5 at +7.5 mm and Pos7 at +22.5 mm.
+
+Table 2. Discretisation parameters of the final simulations for Re_p = 100 and Re_p = 300: grid size, total node count, grid spacing, time step, relaxation time, and nodes per 5 mm gap width. The finer Re_p = 300 grid has half the spacing.
+
+Table 3. Coarse, medium and fine grid levels of the grid-sensitivity study on the 40-degree packing, listing resolution per 5 mm gap, spacing, time step and node count, with peak and mean velocity magnitudes and their errors relative to the fine grid.

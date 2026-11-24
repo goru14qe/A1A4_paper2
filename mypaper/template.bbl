@@ -1,157 +1,205 @@
-\begin{thebibliography}{49}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi
-\providecommand{\eprint}[2][]{\url{#2}}
-
-\bibitem[{Augier et~al(2010)Augier, Idoux, and Delenne}]{Augier}
-Augier F, Idoux F, Delenne JY (2010) Numerical simulations of transfer and transport properties inside packed beds of spherical particles. Chem Eng Sci 65(3):1055--1064, \doi{10.1016/j.ces.2009.09.059}
-
-\bibitem[{Berkooz et~al(1993)Berkooz, Holmes, and Lumley}]{berkooz1993pod}
-Berkooz G, Holmes P, Lumley J (1993) The proper orthogonal decomposition in the analysis of turbulent flows. Annu Rev Fluid Mech 25(1):539--575, \doi{10.1146/annurev.fl.25.010193.002543}
-
-\bibitem[{Bhadauria(2009)}]{Bhadauria}
-Bhadauria B (2009) Lattice {B}oltzmann Method Fundamentals and Engineering Applications with Computer Codes. Springer Science \& Business Media
-
-\bibitem[{Bouzidi et~al(2001)Bouzidi, Firdaouss, and Lallemand}]{bouzidi2001momentum}
-Bouzidi M, Firdaouss M, Lallemand P (2001) Momentum transfer of a {B}oltzmann-lattice fluid with boundaries. Phys Fluids 13(11):3452--3459
-
-\bibitem[{Celik et~al(2008)Celik, Ghia, Roache, Freitas, Coleman, and Raad}]{celik2008}
-Celik IB, Ghia U, Roache PJ, Freitas CJ, Coleman H, Raad PE (2008) Procedure for estimation and reporting of uncertainty due to discretization in {CFD} applications. Journal of Fluids Engineering 130(7):078001, \doi{10.1115/1.2960953}
-
-\bibitem[{Demir et~al(2026)Demir, Sadowski, and {di Mare}}]{demir2026pressure}
-Demir H, Sadowski W, {di Mare} F (2026) Modelling of pressure drop in periodic square-bar packed beds. Particuol
-
-\bibitem[{Dixon and Partopour(2020)}]{Dixon}
-Dixon A, Partopour B (2020) Computational fluid dynamics for fixed bed reactor design. Annu Rev Chem Biomol Eng 11:109--130
-
-\bibitem[{Eppinger et~al(2014)Eppinger, Jurtz, and Aglave}]{Aglave}
-Eppinger T, Jurtz N, Aglave R (2014) Automated workflow for spatially resolved packed bed reactors with spherical and non-spherical particles. In: Proceedings of the 10th International Conference on CFD in Oil \& Gas, Metallurgical and process Industries, pp 17--19
-
-\bibitem[{Fei et~al(2023)Fei, Qin, Zhao, Derome, and Carmeliet}]{Fei2023}
-Fei L, Qin F, Zhao J, Derome D, Carmeliet J (2023) Lattice boltzmann modelling of isothermal two-component evaporation in porous media. J Fluid Mech 955:A18, \doi{10.1017/jfm.2022.1048}
-
-\bibitem[{Fei et~al(2020)Fei, Yang, Chen, Mo, and Luo}]{fei2020}
-Fei L�, Yang J�, Chen Y�, Mo H�, Luo KH� (2020) Mesoscopic simulation of three-dimensional pool boiling based on a phase-change cascaded lattice boltzmann method. Phys Fluids 32(10):103312, \doi{10.1063/5.0023639}
-
-\bibitem[{Feng et~al(2015)Feng, Sagaut, and Tao}]{feng2015three}
-Feng Y, Sagaut P, Tao W (2015) A three dimensional lattice model for thermal compressible flow on standard lattices. J Comput Phys 303:514--529
-
-\bibitem[{Freund et~al(2003)Freund, Zeiser, Huber, Klemm, Brenner, Durst, and Emig}]{freund2003numerical}
-Freund H, Zeiser T, Huber F, Klemm E, Brenner G, Durst F, Emig G (2003) Numerical simulations of single phase reacting flows in randomly packed fixed-bed reactors and experimental validation. Chem Eng Sci 58(3-6):903--910, \doi{10.1016/S0009-2509(02)00622-X}
-
-\bibitem[{Gharibi and Ashrafizaadeh(2020{\natexlab{a}})}]{GHARIBI2020-2}
-Gharibi F, Ashrafizaadeh M (2020{\natexlab{a}}) Darcy and inertial fluid flow simulations in porous media using the non-orthogonal central moments lattice boltzmann method. J Pet Sci Eng 194:107572, \doi{10.1016/j.petrol.2020.107572}
-
-\bibitem[{Gharibi and Ashrafizaadeh(2020{\natexlab{b}})}]{gharibi2020}
-Gharibi F, Ashrafizaadeh M (2020{\natexlab{b}}) Simulation of high-viscosity-ratio multicomponent fluid flow using a pseudopotential model based on the nonorthogonal central-moments lattice boltzmann method. Phys Rev E 101:043311, \doi{10.1103/PhysRevE.101.043311}
-
-\bibitem[{Gharibi et~al(2024{\natexlab{a}})Gharibi, Ghavaminia, Ashrafizaadeh, Zhou, and Thévenin}]{GHARIBI2024-2}
-Gharibi F, Ghavaminia A, Ashrafizaadeh M, Zhou H, Thévenin D (2024{\natexlab{a}}) High viscosity ratio multicomponent flow simulations in porous media using a pseudo-potential central moment lattice boltzmann method. Chem Eng Sci 297:120289, \doi{10.1016/j.ces.2024.120289}
-
-\bibitem[{Gharibi et~al(2024{\natexlab{b}})Gharibi, Hosseini, and Thévenin}]{GHARIBI2024}
-Gharibi F, Hosseini SA, Thévenin D (2024{\natexlab{b}}) A hybrid lattice boltzmann/immersed boundary method/finite-difference model for thermal fluid-solid interactions. Int Commun Heat Mass Transf 155:107525, \doi{10.1016/j.icheatmasstransfer.2024.107525}
-
-\bibitem[{Gharibi et~al(2025)Gharibi, Fard, and Thévenin}]{Gharibi2025}
-Gharibi F, Fard AE, Thévenin D (2025) Dynamic behaviour of a thermal spheroid particle in shear flows. J Fluid Mech 1013:A40, \doi{10.1017/jfm.2025.10280}
-
-\bibitem[{Gladden and Sederman(2017)}]{Gladden2017}
-Gladden LF, Sederman AJ (2017) Magnetic resonance imaging and velocity mapping in chemical engineering applications. Annu Rev Chem Biomol Eng 8:227--247, \doi{10.1146/annurev-chembioeng-061114-123222}
-
-\bibitem[{He and Luo(1997)}]{Xiaoyi}
-He X, Luo L (1997) Theory of the lattice {B}oltzmann method: {F}rom the {B}oltzmann equation to the lattice {B}oltzmann equation. Phys Rev E 56(6):6811--6817, \doi{10.1103/PhysRevE.56.6811}
-
-\bibitem[{Hosseini et~al(2020)Hosseini, Darabiha, and Th{\'e}venin}]{hosseini2020compressibility}
-Hosseini S, Darabiha N, Th{\'e}venin D (2020) Compressibility in lattice {B}oltzmann on standard stencils: effects of deviation from reference temperature. Philos Trans R Soc A 378(2175):20190399, \doi{10.1098/rsta.2019.0399}
-
-\bibitem[{Hosseini et~al(2021)Hosseini, Berg, Huang, Roloff, Janiga, and Thevenin}]{hosseini2021central}
-Hosseini S, Berg P, Huang F, Roloff C, Janiga G, Thevenin D (2021) Central moments multiple relaxation time {LBM} for hemodynamic simulations in intracranial aneurysms: An in-vitro validation study using {PIV} and {PC-MRI}. Comput Biol Med 131:104251
-
-\bibitem[{Hosseini et~al(2022)Hosseini, Huang, and Thevenin}]{hosseini2022lattice}
-Hosseini S, Huang F, Thevenin D (2022) Lattice {B}oltzmann model for simulation of flow in intracranial aneurysms considering non-newtonian effects. Phys Fluids 34(7):073105
-
-\bibitem[{Huang et~al(2022)Huang, Noel, Berg, and Hosseini}]{huang2022simulation}
-Huang F, Noel R, Berg P, Hosseini S (2022) Simulation of the {FDA} nozzle benchmark: {A} lattice {B}oltzmann study. Comput Meth Prog Biomed 221:106863
-
-\bibitem[{Khalili et~al(2017)Khalili, Rahnama, Jafari, Gharibi, and Jahanshahi~Javaran}]{Khalili2017}
-Khalili B, Rahnama M, Jafari S, Gharibi F, Jahanshahi~Javaran E (2017) Lattice boltzmann simulation of solid particles motion in a three dimensional flow using smoothed profile method. J Appl Fluid Mech 10(4):1091--1103, \doi{10.18869/acadpub.jafm.73.241.26537}
-
-\bibitem[{Krause et~al(2017)Krause, Klemens, Henn, Trunk, and Nirschl}]{KRAUSE2017}
-Krause MJ, Klemens F, Henn T, Trunk R, Nirschl H (2017) Particle flow simulations with homogenised lattice boltzmann methods. Particuol 34:1--13, \doi{10.1016/j.partic.2016.11.001}
-
-\bibitem[{Krueger et~al(2017)Krueger, Kusumaatmaja, Kuzmin, Shardt, Silva, and Viggen}]{kruger2017lattice}
-Krueger T, Kusumaatmaja H, Kuzmin A, Shardt O, Silva G, Viggen E (2017) The Lattice {B}oltzmann Method: Principles and Practice. Springer
-
-\bibitem[{Larsson et~al(2018)Larsson, Lundstr{\"o}m, and Lycksam}]{Larsson.2018}
-Larsson I, Lundstr{\"o}m T, Lycksam H (2018) Tomographic {PIV} of flow through ordered thin porous media. Exp Fluids 59(6), \doi{10.1007/s00348-018-2548-6}
-
-\bibitem[{Li and Iskander(2022)}]{li2022visualization}
-Li L, Iskander M (2022) Visualization of interstitial pore fluid flow. J Imaging 8(2):32, \doi{10.3390/jimaging8020032}
-
-\bibitem[{Lichtenegger and Pirker(2016)}]{lichtenegger2016recurrence}
-Lichtenegger T, Pirker S (2016) Recurrence {CFD} -- a novel approach to simulate multiphase flows with strongly separated time scales. Chem Eng Sci 153:394--410, \doi{10.1016/j.ces.2016.07.036}
-
-\bibitem[{Liu et~al(2016)Liu, Kang, Leonardi, Schmieschek, Narv{\'a}ez, Jones, Williams, Valocchi, and Harting}]{Liu2016}
-Liu H, Kang Q, Leonardi CR, Schmieschek S, Narv{\'a}ez A, Jones BD, Williams JR, Valocchi AJ, Harting J (2016) Multiphase lattice boltzmann simulations for porous media applications. Comput Geosci 20(4):777--805, \doi{10.1007/s10596-015-9542-3}
-
-\bibitem[{Lumley(1967)}]{lumley1967}
-Lumley J (1967) The structure of inhomogeneous turbulent flows. In: Yaglom A, Tatarski V (eds) Atmospheric Turbulence and Radio Wave Propagation, Nauka, Moscow, pp 166--178
-
-\bibitem[{Mazloomi~M et~al(2015)Mazloomi~M, Chikatamarla, and Karlin}]{Mazloomi2015}
-Mazloomi~M A, Chikatamarla SS, Karlin IV (2015) Entropic lattice boltzmann method for multiphase flows. Phys Rev Lett 114:174502, \doi{10.1103/PhysRevLett.114.174502}
-
-\bibitem[{Neeraj et~al(2023)Neeraj, Velten, Janiga, Z{\"a}hringer, Th{\'e}venin, Hosseini, and Varnik}]{neeraj2023}
-Neeraj T, Velten C, Janiga G, Z{\"a}hringer K, Th{\'e}venin D, Hosseini S, Varnik F (2023) Modeling gas flows in packed beds with the lattice {B}oltzmann method: Validation against experiments. Flow Turbul Combust 111:463--491, \doi{10.1007/s10494-023-00444-z}
-
-\bibitem[{Ou et~al(2024)Ou, Xue, Wan, Wei, Chi, and Th{\'e}venin}]{ou2024parameter}
-Ou Z, Xue Q, Wan Y, Wei H, Chi C, Th{\'e}venin D (2024) A parameter-free and monolithic approach for multiscale simulations of flow, transport, and chemical reactions in porous media. J Comput Phys 514:113203
-
-\bibitem[{Ou et~al(2025)Ou, Xue, Wan, and Th{\'e}venin}]{Zhisong}
-Ou Z, Xue Q, Wan Y, Th{\'e}venin D (2025) A monolithic fluid-structure interaction approach for multiscale flows with deformable porous media. Phys Fluids 37(8):083109, \doi{10.1063/5.0281315}
-
-\bibitem[{Pan et~al(2006)Pan, Luo, and Miller}]{PAN2006}
-Pan C, Luo LS, Miller CT (2006) An evaluation of lattice boltzmann schemes for porous medium flow simulation. Comput Fluids 35(8):898--909, \doi{10.1016/j.compfluid.2005.03.008}, proceedings of the First International Conference for Mesoscopic Methods in Engineering and Science
-
-\bibitem[{Patankar et~al(1977)Patankar, Liu, and Sparrow}]{patankar1977periodic}
-Patankar S, Liu C, Sparrow E (1977) Fully developed flow and heat transfer in ducts having streamwise-periodic variations of cross-sectional area. J Heat Transfer 99(2):180--186, \doi{10.1115/1.3450666}
-
-\bibitem[{Rettinger and Rüde(2018)}]{RETTINGER2018}
-Rettinger C, Rüde U (2018) A coupled lattice boltzmann method and discrete element method for discrete particle simulations of particulate flows. Comput Fluids 172:706--719, \doi{10.1016/j.compfluid.2018.01.023}
-
-\bibitem[{Sadowski et~al(2025)Sadowski, Demir, and {di Mare}}]{sadowski2025mean}
-Sadowski W, Demir H, {di Mare} F (2025) Mean flow properties in a packed bed with varying geometry. In: 2nd International Workshop on Reacting Particle-Gas Systems, Magdeburg, Germany, pp 16--18
-
-\bibitem[{Sederman et~al(1997)Sederman, Johns, Bramley, Alexander, and Gladden}]{Sederman1997}
-Sederman AJ, Johns ML, Bramley AS, Alexander P, Gladden LF (1997) Magnetic resonance imaging of liquid flow and pore structure within packed beds. Chem Eng Sci 52(14):2239--2250, \doi{10.1016/S0009-2509(97)00057-2}
-
-\bibitem[{Sirovich(1987)}]{sirovich1987}
-Sirovich L (1987) Turbulence and the dynamics of coherent structures. {P}art {I}: {C}oherent structures. Q Appl Math 45(3):561--571, \doi{10.1090/qam/910462}
-
-\bibitem[{Stockinger et~al(2024)Stockinger, Raiolo, Alamian, Hadjadj, Nieken, and {S. Shadloo}}]{STOCKINGER2024}
-Stockinger C, Raiolo A, Alamian R, Hadjadj A, Nieken U, {S Shadloo} M (2024) Lattice boltzmann simulations of heterogeneous combustion reactions for application in porous media. Eng Anal Bound Elem 166:105817, \doi{10.1016/j.enganabound.2024.105817}
-
-\bibitem[{Sullivan et~al(2005)Sullivan, Sani, Johns, and Gladden}]{Sullivan}
-Sullivan S, Sani F, Johns M, Gladden L (2005) Simulation of packed bed reactors using lattice {B}oltzmann methods. Chem Eng Sci 60:3405--3418, \doi{10.1016/j.ces.2005.01.038}
-
-\bibitem[{Velten and Z{\"a}hringer(2026)}]{velten2026b}
-Velten C, Z{\"a}hringer K (2026) Experimental investigation of the influence of a jet injection on the gas flow field inside an idealized packed-bed model with structured parallel bars. Transp Porous Media 153(6):76, \doi{10.1007/s11242-026-02328-y}
-
-\bibitem[{Velten et~al(2026)Velten, H{\"u}lz, and Z{\"a}hringer}]{velten2026}
-Velten C, H{\"u}lz K, Z{\"a}hringer K (2026) Allowing optical measurements in a {3D} packed bed with gas flow: A novel reactor concept. Particuol 108:293--306, \doi{10.1016/j.partic.2025.11.018}
-
-\bibitem[{Wu et~al(2025)Wu, Luo, Shen, Gharibi, Thévenin, and Chen}]{wu2025}
-Wu G�, Luo M�, Shen J�, Gharibi F, Thévenin D, Chen S� (2025) Lattice boltzmann-immersed boundary method simulation of liquid bridge between two moving particles. Phys Fluids 37(12):123341, \doi{10.1063/5.0300991}
-
-\bibitem[{Xiaoyi and Shu(2012)}]{Shu}
-Xiaoyi G, Shu C (2012) Lattice {B}oltzmann Method and Its Applications in Engineering. World Scientific Publishing Company
-
-\bibitem[{Zhao-Li et~al(2002)Zhao-Li, Chu-Guang, and Bao-Chang}]{zhao2002non}
-Zhao-Li G, Chu-Guang Z, Bao-Chang S (2002) Non-equilibrium extrapolation method for velocity and pressure boundary conditions in the lattice {B}oltzmann method. Chin Phys 11(4):366
-
-\bibitem[{Zhou et~al(2026)Zhou, Gharibi, Xu, Kharaghani, and Thévenin}]{ZHOU2026}
-Zhou H, Gharibi F, Xu X, Kharaghani A, Thévenin D (2026) Effect of bread microstructure on internal liquid penetration using the lattice boltzmann method combined with x-ray micro-computed tomography. Curr Res Food Sci 12:101380, \doi{10.1016/j.crfs.2026.101380}
-
-\end{thebibliography}
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (1) range
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{51}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Dixon}\ and\ \citenamefont {Partopour}(2020)}]{Dixon}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Dixon}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Partopour}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Computational fluid dynamics for fixed bed reactor design},}\ }\href {\doibase 10.1146/annurev-chembioeng-092319-075328} {\bibfield  {journal} {\bibinfo  {journal} {Annu. Rev. Chem. Biomol. Eng.}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages} {109--130} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aglave}, \citenamefont {Eppinger},\ and\ \citenamefont {Jurtz}(2014)}]{Aglave}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Aglave}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Eppinger}}, \ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Jurtz}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Automated workflow for spatially resolved fixed bed reactors with spherical and non-spherical particles},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Proceedings of the 10th International Conference on CFD in Oil \& Gas, Metallurgical and Process Industries}}}\ (\bibinfo {year} {2014})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Augier}, \citenamefont {Idoux},\ and\ \citenamefont {Delenne}(2010)}]{Augier}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Augier}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Idoux}}, \ and\ \bibinfo {author} {\bibfnamefont {J.-Y.}\ \bibnamefont {Delenne}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Numerical simulations of transfer and transport properties inside packed beds of spherical particles},}\ }\href {\doibase 10.1016/j.ces.2009.09.059} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {65}},\ \bibinfo {pages} {1055--1064} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Freund}\ \emph {et~al.}(2003)\citenamefont {Freund}, \citenamefont {Zeiser}, \citenamefont {Huber}, \citenamefont {Klemm}, \citenamefont {Brenner}, \citenamefont {Durst},\ and\ \citenamefont {Emig}}]{freund2003numerical}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Freund}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Zeiser}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Huber}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Klemm}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Brenner}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Durst}}, \ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Emig}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Numerical simulations of single phase reacting flows in randomly packed fixed-bed reactors and experimental validation},}\ }\href {\doibase 10.1016/S0009-2509(02)00622-X} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {58}},\ \bibinfo {pages} {903--910} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ou}\ \emph {et~al.}(2025)\citenamefont {Ou}, \citenamefont {Xue}, \citenamefont {Wan},\ and\ \citenamefont {Th{\'e}venin}}]{Zhisong}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Ou}}, \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Xue}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Wan}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A monolithic fluid-structure interaction approach for multiscale flows with deformable porous media},}\ }\href {\doibase 10.1063/5.0281315} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo {pages} {083109} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Neeraj}\ \emph {et~al.}(2023)\citenamefont {Neeraj}, \citenamefont {Velten}, \citenamefont {Janiga}, \citenamefont {Z{\"a}hringer}, \citenamefont {Th{\'e}venin}, \citenamefont {Hosseini},\ and\ \citenamefont {Varnik}}]{neeraj2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Neeraj}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Velten}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Janiga}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Z{\"a}hringer}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}}, \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Varnik}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Modeling gas flows in packed beds with the lattice {B}oltzmann method: Validation against experiments},}\ }\href {\doibase 10.1007/s10494-023-00444-z} {\bibfield  {journal} {\bibinfo  {journal} {Flow Turbul. Combust.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo {pages} {463--491} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Larsson}, \citenamefont {Lundstr{\"o}m},\ and\ \citenamefont {Lycksam}(2018)}]{Larsson.2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~A.~S.}\ \bibnamefont {Larsson}}, \bibinfo {author} {\bibfnamefont {T.~S.}\ \bibnamefont {Lundstr{\"o}m}}, \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Lycksam}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Tomographic {PIV} of flow through ordered thin porous media},}\ }\href {\doibase 10.1007/s00348-018-2548-6} {\bibfield  {journal} {\bibinfo  {journal} {Exp. Fluids}\ }\textbf {\bibinfo {volume} {59}} (\bibinfo {year} {2018}),\ 10.1007/s00348-018-2548-6}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}\ and\ \citenamefont {Iskander}(2022)}]{li2022visualization}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Li}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Iskander}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Visualization of interstitial pore fluid flow},}\ }\href {\doibase 10.3390/jimaging8020032} {\bibfield  {journal} {\bibinfo  {journal} {J. Imaging}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {32} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sederman}\ \emph {et~al.}(1997)\citenamefont {Sederman}, \citenamefont {Johns}, \citenamefont {Bramley}, \citenamefont {Alexander},\ and\ \citenamefont {Gladden}}]{Sederman1997}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Sederman}}, \bibinfo {author} {\bibfnamefont {M.~L.}\ \bibnamefont {Johns}}, \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Bramley}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Alexander}}, \ and\ \bibinfo {author} {\bibfnamefont {L.~F.}\ \bibnamefont {Gladden}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Magnetic resonance imaging of liquid flow and pore structure within packed beds},}\ }\href {\doibase 10.1016/S0009-2509(97)00057-2} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo {pages} {2239--2250} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gladden}\ and\ \citenamefont {Sederman}(2017)}]{Gladden2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~F.}\ \bibnamefont {Gladden}}\ and\ \bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Sederman}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Magnetic resonance imaging and velocity mapping in chemical engineering applications},}\ }\href {\doibase 10.1146/annurev-chembioeng-061114-123222} {\bibfield  {journal} {\bibinfo  {journal} {Annu. Rev. Chem. Biomol. Eng.}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {227--247} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Velten}, \citenamefont {H{\"u}lz},\ and\ \citenamefont {Z{\"a}hringer}(2026)}]{velten2026}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Velten}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {H{\"u}lz}}, \ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Z{\"a}hringer}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Allowing optical measurements in a {3D} packed bed with gas flow: A novel reactor concept},}\ }\href {\doibase 10.1016/j.partic.2025.11.018} {\bibfield  {journal} {\bibinfo  {journal} {Particuol.}\ }\textbf {\bibinfo {volume} {108}},\ \bibinfo {pages} {293--306} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Velten}\ and\ \citenamefont {Z{\"a}hringer}(2026)}]{velten2026b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Velten}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Z{\"a}hringer}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Experimental investigation of the influence of a jet injection on the gas flow field inside an idealized packed-bed model with structured parallel bars},}\ }\href {\doibase 10.1007/s11242-026-02328-y} {\bibfield  {journal} {\bibinfo  {journal} {Transp. Porous Media}\ }\textbf {\bibinfo {volume} {153}},\ \bibinfo {pages} {76} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Demir}, \citenamefont {Sadowski},\ and\ \citenamefont {{di Mare}}(2026)}]{demir2026pressure}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Demir}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Sadowski}}, \ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {{di Mare}}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Modelling of pressure drop in periodic square-bar packed beds},}\ }\href {\doibase 10.1016/j.partic.2026.03.012} {\bibfield  {journal} {\bibinfo  {journal} {Particuol.}\ }\textbf {\bibinfo {volume} {113}},\ \bibinfo {pages} {36--51} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sadowski}, \citenamefont {Demir},\ and\ \citenamefont {{di Mare}}(2025)}]{sadowski2025mean}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Sadowski}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Demir}}, \ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {{di Mare}}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Mean flow properties in a packed bed with varying geometry},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {2nd International Workshop on Reacting Particle-Gas Systems}}}\ (\bibinfo {address} {Magdeburg, Germany},\ \bibinfo {year} {2025})\ pp.\ \bibinfo {pages} {16--18}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Patankar}, \citenamefont {Liu},\ and\ \citenamefont {Sparrow}(1977)}]{patankar1977periodic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~V.}\ \bibnamefont {Patankar}}, \bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont {Liu}}, \ and\ \bibinfo {author} {\bibfnamefont {E.~M.}\ \bibnamefont {Sparrow}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Fully developed flow and heat transfer in ducts having streamwise-periodic variations of cross-sectional area},}\ }\href {\doibase 10.1115/1.3450666} {\bibfield  {journal} {\bibinfo  {journal} {J. Heat Transfer}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo {pages} {180--186} (\bibinfo {year} {1977})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ou}\ \emph {et~al.}(2024)\citenamefont {Ou}, \citenamefont {Xue}, \citenamefont {Wan}, \citenamefont {Wei}, \citenamefont {Chi},\ and\ \citenamefont {Th{\'e}venin}}]{ou2024parameter}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Ou}}, \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Xue}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Wan}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Wei}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Chi}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A parameter-free and monolithic approach for multiscale simulations of flow, transport, and chemical reactions in porous media},}\ }\href {\doibase 10.1016/j.jcp.2024.113203} {\bibfield  {journal} {\bibinfo  {journal} {J. Comput. Phys.}\ }\textbf {\bibinfo {volume} {514}},\ \bibinfo {pages} {113203} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Krüger}\ \emph {et~al.}(2017)\citenamefont {Krüger}, \citenamefont {Kusumaatmaja}, \citenamefont {Kuzmin}, \citenamefont {Shardt}, \citenamefont {Silva},\ and\ \citenamefont {Viggen}}]{kruger2017lattice}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Krüger}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Kusumaatmaja}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kuzmin}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Shardt}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Silva}}, \ and\ \bibinfo {author} {\bibfnamefont {E.~M.}\ \bibnamefont {Viggen}},\ }\href@noop {} {\emph {\bibinfo {title} {The Lattice {B}oltzmann Method: Principles and Practice}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year} {2017})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sullivan}\ \emph {et~al.}(2005)\citenamefont {Sullivan}, \citenamefont {Sani}, \citenamefont {Johns},\ and\ \citenamefont {Gladden}}]{Sullivan}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~P.}\ \bibnamefont {Sullivan}}, \bibinfo {author} {\bibfnamefont {F.~M.}\ \bibnamefont {Sani}}, \bibinfo {author} {\bibfnamefont {M.~L.}\ \bibnamefont {Johns}}, \ and\ \bibinfo {author} {\bibfnamefont {L.~F.}\ \bibnamefont {Gladden}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Simulation of packed bed reactors using lattice {B}oltzmann methods},}\ }\href {\doibase 10.1016/j.ces.2005.01.038} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {60}},\ \bibinfo {pages} {3405--3418} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Krause}\ \emph {et~al.}(2017)\citenamefont {Krause}, \citenamefont {Klemens}, \citenamefont {Henn}, \citenamefont {Trunk},\ and\ \citenamefont {Nirschl}}]{KRAUSE2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont {Krause}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Klemens}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Henn}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Trunk}}, \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Nirschl}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Particle flow simulations with homogenised lattice {B}oltzmann methods},}\ }\href {\doibase 10.1016/j.partic.2016.11.001} {\bibfield  {journal} {\bibinfo  {journal} {Particuol.}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo {pages} {1--13} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Khalili}\ \emph {et~al.}(2017)\citenamefont {Khalili}, \citenamefont {Rahnama}, \citenamefont {Jafari}, \citenamefont {Gharibi},\ and\ \citenamefont {Jahanshahi~Javaran}}]{Khalili2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Khalili}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Rahnama}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Jafari}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Jahanshahi~Javaran}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann simulation of solid particles motion in a three dimensional flow using smoothed profile method},}\ }\href {\doibase 10.18869/acadpub.jafm.73.241.26537} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Fluid Mech.}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {1091--1103} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rettinger}\ and\ \citenamefont {Rüde}(2018)}]{RETTINGER2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Rettinger}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Rüde}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A coupled lattice {B}oltzmann method and discrete element method for discrete particle simulations of particulate flows},}\ }\href {\doibase 10.1016/j.compfluid.2018.01.023} {\bibfield  {journal} {\bibinfo  {journal} {Comput. Fluids}\ }\textbf {\bibinfo {volume} {172}},\ \bibinfo {pages} {706--719} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gharibi}, \citenamefont {Hosseini},\ and\ \citenamefont {Thévenin}(2024)}]{GHARIBI2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Thévenin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A hybrid lattice {B}oltzmann/immersed boundary method/finite-difference model for thermal fluid-solid interactions},}\ }\href {\doibase 10.1016/j.icheatmasstransfer.2024.107525} {\bibfield  {journal} {\bibinfo  {journal} {Int. Commun. Heat Mass Transf.}\ }\textbf {\bibinfo {volume} {155}},\ \bibinfo {pages} {107525} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gharibi}, \citenamefont {Fard},\ and\ \citenamefont {Thévenin}(2025)}]{Gharibi2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont {Fard}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Thévenin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Dynamic behaviour of a thermal spheroid particle in shear flows},}\ }\href {\doibase 10.1017/jfm.2025.10280} {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid Mech.}\ }\textbf {\bibinfo {volume} {1013}},\ \bibinfo {pages} {A40} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mazloomi~M.}, \citenamefont {Chikatamarla},\ and\ \citenamefont {Karlin}(2015)}]{Mazloomi2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Mazloomi~M.}}, \bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont {Chikatamarla}}, \ and\ \bibinfo {author} {\bibfnamefont {I.~V.}\ \bibnamefont {Karlin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Entropic lattice {B}oltzmann method for multiphase flows},}\ }\href {\doibase 10.1103/PhysRevLett.114.174502} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {114}},\ \bibinfo {pages} {174502} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Liu}\ \emph {et~al.}(2016)\citenamefont {Liu}, \citenamefont {Kang}, \citenamefont {Leonardi}, \citenamefont {Schmieschek}, \citenamefont {Narv{\'a}ez}, \citenamefont {Jones}, \citenamefont {Williams}, \citenamefont {Valocchi},\ and\ \citenamefont {Harting}}]{Liu2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Kang}}, \bibinfo {author} {\bibfnamefont {C.~R.}\ \bibnamefont {Leonardi}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Schmieschek}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Narv{\'a}ez}}, \bibinfo {author} {\bibfnamefont {B.~D.}\ \bibnamefont {Jones}}, \bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont {Williams}}, \bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Valocchi}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Harting}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Multiphase lattice {B}oltzmann simulations for porous media applications},}\ }\href {\doibase 10.1007/s10596-015-9542-3} {\bibfield  {journal} {\bibinfo  {journal} {Comput. Geosci.}\ }\textbf {\bibinfo {volume} {20}},\ \bibinfo {pages} {777--805} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gharibi}\ and\ \citenamefont {Ashrafizaadeh}(2020{\natexlab{a}})}]{gharibi2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ashrafizaadeh}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Simulation of high-viscosity-ratio multicomponent fluid flow using a pseudopotential model based on the nonorthogonal central-moments lattice {B}oltzmann method},}\ }\href {\doibase 10.1103/PhysRevE.101.043311} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo {pages} {043311} (\bibinfo {year} {2020}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fei}\ \emph {et~al.}(2020)\citenamefont {Fei}, \citenamefont {Yang}, \citenamefont {Chen}, \citenamefont {Mo},\ and\ \citenamefont {Luo}}]{fei2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fei}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Yang}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Chen}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Mo}}, \ and\ \bibinfo {author} {\bibfnamefont {K.~H.}\ \bibnamefont {Luo}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Mesoscopic simulation of three-dimensional pool boiling based on a phase-change cascaded lattice {B}oltzmann method},}\ }\href {\doibase 10.1063/5.0023639} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo {pages} {103312} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gharibi}\ \emph {et~al.}(2024)\citenamefont {Gharibi}, \citenamefont {Ghavaminia}, \citenamefont {Ashrafizaadeh}, \citenamefont {Zhou},\ and\ \citenamefont {Thévenin}}]{GHARIBI2024-2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Ghavaminia}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ashrafizaadeh}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhou}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Thévenin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {High viscosity ratio multicomponent flow simulations in porous media using a pseudo-potential central moment lattice {B}oltzmann method},}\ }\href {\doibase 10.1016/j.ces.2024.120289} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {297}},\ \bibinfo {pages} {120289} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2025)\citenamefont {Wu}, \citenamefont {Luo}, \citenamefont {Shen}, \citenamefont {Gharibi}, \citenamefont {Thévenin},\ and\ \citenamefont {Chen}}]{wu2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Wu}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Luo}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Shen}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Thévenin}}, \ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann-immersed boundary method simulation of liquid bridge between two moving particles},}\ }\href {\doibase 10.1063/5.0300991} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo {pages} {123341} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pan}, \citenamefont {Luo},\ and\ \citenamefont {Miller}(2006)}]{PAN2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Pan}}, \bibinfo {author} {\bibfnamefont {L.-S.}\ \bibnamefont {Luo}}, \ and\ \bibinfo {author} {\bibfnamefont {C.~T.}\ \bibnamefont {Miller}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {An evaluation of lattice {B}oltzmann schemes for porous medium flow simulation},}\ }\href {\doibase 10.1016/j.compfluid.2005.03.008} {\bibfield  {journal} {\bibinfo  {journal} {Comput. Fluids}\ }\textbf {\bibinfo {volume} {35}},\ \bibinfo {pages} {898--909} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gharibi}\ and\ \citenamefont {Ashrafizaadeh}(2020{\natexlab{b}})}]{GHARIBI2020-2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ashrafizaadeh}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Darcy and inertial fluid flow simulations in porous media using the non-orthogonal central moments lattice {B}oltzmann method},}\ }\href {\doibase 10.1016/j.petrol.2020.107572} {\bibfield  {journal} {\bibinfo  {journal} {J. Pet. Sci. Eng.}\ }\textbf {\bibinfo {volume} {194}},\ \bibinfo {pages} {107572} (\bibinfo {year} {2020}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stockinger}\ \emph {et~al.}(2024)\citenamefont {Stockinger}, \citenamefont {Raiolo}, \citenamefont {Alamian}, \citenamefont {Hadjadj}, \citenamefont {Nieken},\ and\ \citenamefont {Shadloo}}]{STOCKINGER2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Stockinger}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Raiolo}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Alamian}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Hadjadj}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Nieken}}, \ and\ \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont {Shadloo}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann simulations of heterogeneous combustion reactions for application in porous media},}\ }\href {\doibase 10.1016/j.enganabound.2024.105817} {\bibfield  {journal} {\bibinfo  {journal} {Eng. Anal. Bound. Elem.}\ }\textbf {\bibinfo {volume} {166}},\ \bibinfo {pages} {105817} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fei}\ \emph {et~al.}(2023)\citenamefont {Fei}, \citenamefont {Qin}, \citenamefont {Zhao}, \citenamefont {Derome},\ and\ \citenamefont {Carmeliet}}]{Fei2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fei}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Qin}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Zhao}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Derome}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Carmeliet}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann modelling of isothermal two-component evaporation in porous media},}\ }\href {\doibase 10.1017/jfm.2022.1048} {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid Mech.}\ }\textbf {\bibinfo {volume} {955}},\ \bibinfo {pages} {A18} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhou}\ \emph {et~al.}(2026)\citenamefont {Zhou}, \citenamefont {Gharibi}, \citenamefont {Xu}, \citenamefont {Kharaghani},\ and\ \citenamefont {Thévenin}}]{ZHOU2026}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhou}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Gharibi}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Xu}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kharaghani}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Thévenin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Effect of bread microstructure on internal liquid penetration using the lattice {B}oltzmann method combined with {X}-ray micro-computed tomography},}\ }\href {\doibase 10.1016/j.crfs.2026.101380} {\bibfield  {journal} {\bibinfo  {journal} {Curr. Res. Food Sci.}\ }\textbf {\bibinfo {volume} {12}},\ \bibinfo {pages} {101380} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hosseini}, \citenamefont {Huang},\ and\ \citenamefont {Th{\'e}venin}(2022)}]{hosseini2022lattice}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Huang}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann model for simulation of flow in intracranial aneurysms considering non-{N}ewtonian effects},}\ }\href {\doibase 10.1063/5.0098383} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo {pages} {073105} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {He}\ and\ \citenamefont {Luo}(1997)}]{Xiaoyi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {He}}\ and\ \bibinfo {author} {\bibfnamefont {L.-S.}\ \bibnamefont {Luo}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Theory of the lattice {B}oltzmann method: {F}rom the {B}oltzmann equation to the lattice {B}oltzmann equation},}\ }\href {\doibase 10.1103/PhysRevE.56.6811} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {56}},\ \bibinfo {pages} {6811--6817} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mohamad}(2011)}]{Bhadauria}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Mohamad}},\ }\href@noop {} {\emph {\bibinfo {title} {Lattice {B}oltzmann Method Fundamentals and Engineering Applications with Computer Codes}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year} {2011})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Guo}\ and\ \citenamefont {Shu}(2012)}]{Shu}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Guo}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Shu}},\ }\href {\doibase 10.1142/8806} {\emph {\bibinfo {title} {Lattice {B}oltzmann Method and Its Applications in Engineering}}}\ (\bibinfo  {publisher} {World Scientific Publishing Company},\ \bibinfo {year} {2012})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hosseini}, \citenamefont {Darabiha},\ and\ \citenamefont {Th{\'e}venin}(2020)}]{hosseini2020compressibility}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Darabiha}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Compressibility in lattice {B}oltzmann on standard stencils: effects of deviation from reference temperature},}\ }\href {\doibase 10.1098/rsta.2019.0399} {\bibfield  {journal} {\bibinfo  {journal} {Philos. Trans. R. Soc. A}\ }\textbf {\bibinfo {volume} {378}},\ \bibinfo {pages} {20190399} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Feng}, \citenamefont {Sagaut},\ and\ \citenamefont {Tao}(2015)}]{feng2015three}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Feng}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Sagaut}}, \ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Tao}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A three dimensional lattice model for thermal compressible flow on standard lattices},}\ }\href {\doibase 10.1016/j.jcp.2015.09.011} {\bibfield  {journal} {\bibinfo  {journal} {J. Comput. Phys.}\ }\textbf {\bibinfo {volume} {303}},\ \bibinfo {pages} {514--529} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hosseini}, \citenamefont {Dorschner},\ and\ \citenamefont {Karlin}(2022)}]{hosseini2022consistent}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Dorschner}}, \ and\ \bibinfo {author} {\bibfnamefont {I.~V.}\ \bibnamefont {Karlin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Towards a consistent lattice {B}oltzmann model for two-phase fluids},}\ }\href {\doibase 10.1017/jfm.2022.867} {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid Mech.}\ }\textbf {\bibinfo {volume} {953}},\ \bibinfo {pages} {A4} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hosseini}\ \emph {et~al.}(2024)\citenamefont {Hosseini}, \citenamefont {Boivin}, \citenamefont {Th\'evenin},\ and\ \citenamefont {Karlin}}]{hosseini2024combustion}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Boivin}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th\'evenin}}, \ and\ \bibinfo {author} {\bibfnamefont {I.~V.}\ \bibnamefont {Karlin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Lattice {B}oltzmann methods for combustion applications},}\ }\href {\doibase 10.1016/j.pecs.2023.101140} {\bibfield  {journal} {\bibinfo  {journal} {Prog. Energy Combust. Sci.}\ }\textbf {\bibinfo {volume} {102}},\ \bibinfo {pages} {101140} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hosseini}\ \emph {et~al.}(2021)\citenamefont {Hosseini}, \citenamefont {Berg}, \citenamefont {Huang}, \citenamefont {Roloff}, \citenamefont {Janiga},\ and\ \citenamefont {Th{\'e}venin}}]{hosseini2021central}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Berg}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Huang}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Roloff}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Janiga}}, \ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Th{\'e}venin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Central moments multiple relaxation time {LBM} for hemodynamic simulations in intracranial aneurysms: An in-vitro validation study using {PIV} and {PC-MRI}},}\ }\href {\doibase 10.1016/j.compbiomed.2021.104251} {\bibfield  {journal} {\bibinfo  {journal} {Comput. Biol. Med.}\ }\textbf {\bibinfo {volume} {131}},\ \bibinfo {pages} {104251} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huang}\ \emph {et~al.}(2022)\citenamefont {Huang}, \citenamefont {No{\"e}l}, \citenamefont {Berg},\ and\ \citenamefont {Hosseini}}]{huang2022simulation}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Huang}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {No{\"e}l}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Berg}}, \ and\ \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Hosseini}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Simulation of the {FDA} nozzle benchmark: {A} lattice {B}oltzmann study},}\ }\href {\doibase 10.1016/j.cmpb.2022.106863} {\bibfield  {journal} {\bibinfo  {journal} {Comput. Meth. Prog. Biomed.}\ }\textbf {\bibinfo {volume} {221}},\ \bibinfo {pages} {106863} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bouzidi}, \citenamefont {Firdaouss},\ and\ \citenamefont {Lallemand}(2001)}]{bouzidi2001momentum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bouzidi}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Firdaouss}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Lallemand}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Momentum transfer of a {B}oltzmann-lattice fluid with boundaries},}\ }\href {\doibase 10.1063/1.1399290} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {13}},\ \bibinfo {pages} {3452--3459} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Guo}, \citenamefont {Zheng},\ and\ \citenamefont {Shi}(2002)}]{zhao2002non}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.-L.}\ \bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont {C.-G.}\ \bibnamefont {Zheng}}, \ and\ \bibinfo {author} {\bibfnamefont {B.-C.}\ \bibnamefont {Shi}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Non-equilibrium extrapolation method for velocity and pressure boundary conditions in the lattice {B}oltzmann method},}\ }\href {\doibase 10.1088/1009-1963/11/4/310} {\bibfield  {journal} {\bibinfo  {journal} {Chin. Phys.}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages} {366} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lumley}(1967)}]{lumley1967}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Lumley}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The structure of inhomogeneous turbulent flows},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Atmospheric Turbulence and Radio Wave Propagation}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {A.}~\bibnamefont {Yaglom}}\ and\ \bibinfo {editor} {\bibfnamefont {V.}~\bibnamefont {Tatarski}}}\ (\bibinfo  {publisher} {Nauka},\ \bibinfo {address} {Moscow},\ \bibinfo {year} {1967})\ pp.\ \bibinfo {pages} {166--178}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sirovich}(1987)}]{sirovich1987}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Sirovich}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Turbulence and the dynamics of coherent structures. {P}art {I}: {C}oherent structures},}\ }\href {\doibase 10.1090/qam/910462} {\bibfield  {journal} {\bibinfo  {journal} {Q. Appl. Math.}\ }\textbf {\bibinfo {volume} {45}},\ \bibinfo {pages} {561--571} (\bibinfo {year} {1987})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berkooz}, \citenamefont {Holmes},\ and\ \citenamefont {Lumley}(1993)}]{berkooz1993pod}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Berkooz}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Holmes}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Lumley}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The proper orthogonal decomposition in the analysis of turbulent flows},}\ }\href {\doibase 10.1146/annurev.fl.25.010193.002543} {\bibfield  {journal} {\bibinfo  {journal} {Annu. Rev. Fluid Mech.}\ }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages} {539--575} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Celik}\ \emph {et~al.}(2008)\citenamefont {Celik}, \citenamefont {Ghia}, \citenamefont {Roache}, \citenamefont {Freitas}, \citenamefont {Coleman},\ and\ \citenamefont {Raad}}]{celik2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~B.}\ \bibnamefont {Celik}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Ghia}}, \bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont {Roache}}, \bibinfo {author} {\bibfnamefont {C.~J.}\ \bibnamefont {Freitas}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Coleman}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont {Raad}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Procedure for estimation and reporting of uncertainty due to discretization in {CFD} applications},}\ }\href {\doibase 10.1115/1.2960953} {\bibfield  {journal} {\bibinfo  {journal} {J. Fluids Eng.}\ }\textbf {\bibinfo {volume} {130}},\ \bibinfo {pages} {078001} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lichtenegger}\ and\ \citenamefont {Pirker}(2016)}]{lichtenegger2016recurrence}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Lichtenegger}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Pirker}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Recurrence {CFD} -- a novel approach to simulate multiphase flows with strongly separated time scales},}\ }\href {\doibase 10.1016/j.ces.2016.07.036} {\bibfield  {journal} {\bibinfo  {journal} {Chem. Eng. Sci.}\ }\textbf {\bibinfo {volume} {153}},\ \bibinfo {pages} {394--410} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\end{thebibliography}%
